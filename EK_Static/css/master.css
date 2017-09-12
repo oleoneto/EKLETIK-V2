@@ -1,0 +1,351 @@
+/*
+Ekletik Studios
+Author: Leo Neto
+Update: Sep 3, 2017
+w: https://ekletik.com
+e: info@ekletik.com
+*/
+
+
+/*======= Cross Document Styles */
+p span {  color: #d7d7d7; text-transform: uppercase; }
+p, h1, h2, h3, h4, h5, h6 { font-weight: lighter; }
+pre {
+   display: block;
+   padding: 9.5px;
+   margin: 0 0 10px;
+   font-size: 13px;
+   color: #333;
+   word-break: break-all;
+   word-wrap: break-word;
+   /*background-color: #F8F9FA;*/
+   background-color: #F8F9FA;
+   border: 1px solid #eee;
+   border-radius: 4px;
+}
+code {
+    word-break: break-all;
+    word-wrap: break-word;
+	padding: 2px 4px;
+	font-size: 90%;
+	color: #c7254e;
+	background-color: #f9f2f4;
+	border-radius: 4px;
+}
+
+
+
+
+/*======= Typography */
+.markdown h1, .markdown h2, .markdown h3 { padding-top: 25px; }
+.markdown p { padding-top: 10px; }
+.markdown p:first-of-type { padding-top: 0; }
+.heading h1 { font-size: 60px; font-weight: 300; }
+.heading h2 { font-size: 40px; font-weight: 300; }
+.heading h3 { font-size: 25px; font-weight: 300; }
+.heading p  { font-size: 16px; color: #333; margin-top: 10px; }
+.heading p>span { font-size: 12px; font-weight: lighter; }
+.heading h4>span { font-size: 14px; font-weight: 300; }
+.sub-heading h1 { font-size: 60px; font-weight: lighter; }
+.sub-heading h2 { font-size: 40px; font-weight: lighter; }
+.sub-heading h3 { font-size: 25px; font-weight: lighter; }
+.sub-heading p  { font-size: 16px; margin-top: 10px; }
+.sub-heading p>span {  font-size: 12px; font-weight: lighter; }
+@media (max-width: 780px) {
+  .heading h1 { font-size: 40px; font-weight: 300; }
+  .heading h2 { font-size: 25px; font-weight: 300; }
+  .heading h3 { font-size: 15px; font-weight: 300; }
+  .sub-heading h1 { font-size: 40px; font-weight: 300; }
+  .sub-heading h2 { font-size: 25px; font-weight: 300; }
+  .sub-heading h3 { font-size: 15px; font-weight: 300; }
+}
+.center { text-align: center; }
+.text-bold { font-weight: bold !important; }
+.text-light { font-weight: lighter !important; }
+.underlined { text-decoration: underline !important; }
+.music-symbols::after{ content: "  𝄞";}
+.smiley-symbol::after { content: "  😎.";}
+.chevron-link::after { content: "›"; display: inline-block; margin-left: 0.25em; }
+.code-symbols::before{ font-family:monospace; content:"⌘⇧  ";   font-weight:400; display: inline-block; }
+.azinca-flags::after { font-family:monospace;content:"  🇦🇴🇧🇷🇵🇹";  font-weight: 400; display: inline-block; }
+.emojis > p { font-family:monospace; font-weight: 400; display: inline-block; font-size: 30px !important;}
+
+
+
+
+
+/*======= Padding and Margins */
+.m-minus-60 { margin-top: -150px; }
+.m-top-bottom { margin-top: -50px; margin-bottom: 40px; }
+.p-img-around img { padding-bottom: 25px; }
+.p-top-bottom { padding-top: 70px; padding-bottom: 60px; }
+.p-top-10 { padding-top: 10px; }
+.p-top-20 { padding-top: 20px; }
+.p-top-30 { padding-top: 30px; }
+.p-top-40 { padding-top: 40px; }
+.p-top-50 { padding-top: 50px; }
+.p-top-60 { padding-top: 60px; }
+.p-top-100 { padding-top: 100px; }
+.p-top-200 { padding-top: 200px; }
+.p-top-300 { padding-top: 300px; }
+.p-bottom-10 { padding-bottom: 10px; }
+.p-bottom-20 { padding-bottom: 20px; }
+.p-bottom-40 { padding-bottom: 40px; }
+.p-bottom-60 { padding-bottom: 60px; }
+.p-bottom-100 { padding-bottom: 100px; }
+.p-bottom-200 { padding-bottom: 200px; }
+.p-bottom-300 { padding-bottom: 300px; }
+.p-lr-10 { padding-left: 10px; padding-right: 10px; }
+.p-tb-10 { padding-top: 10px; padding-bottom: 10px; }
+.p-tb-20 { padding-top: 20px; padding-bottom: 20px; }
+.p-tb-40 { padding-top: 40px; padding-bottom: 40px; }
+.p-tb-60 { padding-top: 60px; padding-bottom: 60px; }
+
+
+
+
+
+/*====== Color Styles */
+.light-w-border { background: #F8F9FA; border-bottom: 1px solid #eee; }
+.white-w-border { background: #FFFFFF; border-bottom: 1px solid #eee; opacity: 0.98; }
+.blue-ocean { background: #0069FF; }
+.light-grey { background: #F8F9FA; }
+@media (max-width: 990px) {
+  .white-w-border { opacity: 1; }
+}
+
+/**************** COLORS ******************/
+.transparent{opacity: 0.90 !important;}
+.transparent-10 {opacity: 0.10 !important; }
+.transparent-20 {opacity: 0.20 !important; }
+.transparent-40 {opacity: 0.40 !important; }
+.transparent-60 {opacity: 0.60 !important; }
+.transparent-90 {opacity: 0.90 !important; }
+.transparent-98 {opacity: 0.95 !important; }
+.pink{  background: #DE356E !important;  color: #FFFFFF !important;  }
+.pink p, .pink h1, .pink h2, .pink h3, .pink h4, .pink h5, .pink a{  color: #FFFFFF !important;  }
+.red{  background: #ED0418 !important;  color: #FFFFFF;  }
+.red p, .red h1, .red h2, .red h3, .red a{  color: #FFFFFF !important;  }
+.blue{  background: #0069FF !important;  color: #FFFFFF;  }
+.blue p, .blue h1, .blue h2, .blue h3, .blue a{  color: #FFFFFF !important;  }
+.lighblue{  background: #AEC5EB !important;  color: #000000;  }
+.lighblue p, .lighblue h1, .lighblue h2, .lighblue h3, .lighblue a, .lighblue span{  color: #000000 !important;  }
+.darkblue{  background: #114B5F !important;  color: #FFFFFF; }
+.darkblue p, .darkblue h1, .darkblue h2, .darkblue h3, .darkblue a{  color: #FFFFFF !important; }
+.yellow{ background: #FEE850 !important; color: #000000; }
+.yellow p, .yellow h1, .yellow h2, .yellow h3, .yellow a, .yellow span{ color: #000000 !important; }
+.pale{ background: #F8F9FA !important; color: #333; }
+.pale p, .pale h1, .pale h2, .pale h3, .pale a{ color: #333 !important; }
+.black{ background: #000000 !important; color: #FFFFFF; }
+.black p, .black h1, .black h2, .black h3, .black a{ color: #FFFFFF !important; }
+.crimson{ background: #EA1744 !important; color: #F8F9FA; }
+.crimson p, .crimson h1, .crimson h2, .crimson h3, .crimson a{ color: #F8F9FA !important; }
+.orange{  background: #E28413 !important; color: #F8F9FA; }
+.orange p, .orange h1, .orange h2, .orange h3, .orange a{ color: #F8F9FA !important; }
+.white{ background: #FFFFFF !important; }
+.white p, .white h1, .white h2, .white h3, .white a{ color: #333333 !important; }
+
+.white-blue{ background: #FFFFFB !important; }
+.white-blue p, .white-blue h1, .white-blue h2, .white-blue h3, .white-blue a{ color: #0069FF !important; }
+
+.wine{ background: #6B2737 !important; color: #F8F9FA; }
+.wine p, .wine h1, .wine h2, .wine h3, .wine a{ color: #F8F9FA !important; }
+.gray { background: #F8F9FA !important; color: #333333; }
+.gray-border-top { border-top: 1px solid #eeeeee; }
+.gray-border-bottom { border-bottom: 1px solid #eeeeee; }
+.text-crimson { color: #EA1744 !important; }
+.text-blue { color: #0069FF !important; }
+
+
+
+
+
+
+
+
+
+
+/*====== Parallax Scrolling Effect */
+.parallax {
+  position: relative; width: 100vw; height: 500px;
+  background-position: center; background-size: cover;
+  background-repeat: no-repeat; background-attachment: fixed;
+}
+.mini-parallax {
+  position: relative; width: 100vw; height: 250px;
+  background-position: center; background-size: cover;
+  background-repeat: no-repeat; background-attachment: fixed;
+}
+.parallax-ek-2     { background-image: image('/static/img/icon.png'); }
+/*.parallax-ek       { background-image: url('https://ekletik.com/favicon.ico'); }*/
+.parallax-ek {
+    background-color: #0069FF;
+    /*background-image: url('https://source.unsplash.com/OP2EQ5g-Zkw/1600x900');*/
+    background-position: center;
+}
+
+.parallax-team     { background-image: url('http://bit.ly/2xA8t2f'); }
+.parallax-office-1 { background-image: url('http://bit.ly/2wvKXGM'); }
+.parallax-office-2 { background-image: url('http://bit.ly/2xk2QG9'); }
+.parallax-office-3 { background-image: url('http://bit.ly/2xzMhoV'); background-position: bottom;}
+
+
+
+
+
+
+/* ====== Navigation Bar */
+.navbar-brand { font-weight: bold;}
+.navbar-brand { color: #F0D71C !important; }
+.navbar-brand span { color: #0069ff; }
+.navbar-brand img { width: 25px; height: 25px; }
+.nav-item a { color: #0069FF !important; }
+.active { font-weight: bold !important; }
+.navbar-toggler { border: none; }
+.navbar-toggler span { color: #0069FF !important; }
+.navbar .form-control { max-height: 32px; font-size: 14px; font-weight: lighter; }
+.navbar .form-inline button { max-height: 40px; background: none; border: none; }
+.navbar input  { border-radius: 20px; }
+.navbar input:focus { border-color: #0069FF; color: #0069FF; }
+
+/* Debugging needed */
+.navbar .form-inline button { display: none; visibility: hidden; }
+.navbar button {
+  position: absolute;
+  -webkit-margin-start: 120px;
+  -moz-margin-start: 120px;
+}
+.navbar button > i { color: #d7d7d7 !important; }
+/* End debugging section */
+
+@media (max-width: 990px) {
+  .nav { height: 60px; }
+  .navbar button { position: relative; margin: 0px; }
+}
+/*#navigation{  z-index: 1; }*/
+/*#loggedIn { position: absolute;  z-index: 2;  }*/
+
+
+
+
+
+
+
+/*======= Carousel*/
+.carousel-item { max-height: 600px; background: #333333; }
+.carousel-item img {  background-position: center;  opacity: 0.5;  background-size: cover;  }
+.carousel-control-next { display: none; }
+.carousel-control-prev { display: none; }
+.carousel-caption h1 { font-size: 60px; }
+/*.carousel-caption h1::first-letter { font-weight: 100; }*/
+.main-carousel { margin-top: -4px; }
+@media (max-width: 990px){
+    .carousel-caption h1 { font-size: 40px; }
+}
+@media (max-width: 760px){
+    .carousel-item { height: 400px; width: auto; }
+    .carousel-item img { height: 400px; }
+}
+
+
+
+
+
+
+/*======= Blog section */
+.date { text-transform: uppercase; font-weight: 100; font-size: 12px; }
+.blog-section h1 { font-size: 60px; font-weight: 300; }
+.blog-section h2 { font-size: 40px; font-weight: 300; }
+.blog-section h3 { font-size: 25px; font-weight: 300; }
+.blog-section h4 { font-size: 20px; font-weight: 300; }
+.blog-section p>span {  font-size: 12px; font-weight: lighter; }
+.blog-section div { padding-bottom: 25px; }
+.blog-author img { width: 50px; height: 50px; border-radius: 500px; }
+.blog-author-name { margin-top: -35px; margin-left: 65px; }
+.blog-author-date { margin-top: -29px; margin-left: 270px; }
+.blog-author span { color: #0069ff; }
+.blog-author-bio  { padding: 10px; }
+.blog-section pre { margin: 0px; }
+.circle-service-image { max-width: 210px; max-height: 210px; border-radius: 100px; }
+.img-profile { max-width: 210px; max-height: 210px; border-radius: 100px; }
+.img-profile-bg { background-position: center; background-size: cover; background-repeat: no-repeat; position:relative; }
+@media (max-width:780px) {
+  .blog-section h1 { font-size:40px; }
+  .blog-section h2 { font-size:25px; }
+  .blog-section h3 { font-size:15px; }
+}
+.felipe { background-size:cover; height:350px; background-image:url('https://ekletik.com/media/perfis/felipe.jpg'); }
+.leo    { background-size:cover; height:350px; background-image:url('https://ekletik.com/media/perfis/leo.jpg'); }
+.paulo  { background-size:cover; height:350px; background-image:url('https://ekletik.com/media/perfis/paulo.jpg'); }
+/*.team-member p { position: absolute; margin-top: 250px; background: #F8F9FA; }*/
+
+
+
+
+
+
+/*======= Footer */
+footer { height: 150px; }
+footer p { font-size: 12px; }
+footer span { text-transform: capitalize; }
+.footer-user { color:#000; padding-top: 60px; font-weight: 400; font-size: 16px;}
+.footer-copy { color:#000; padding-top: 60px; font-weight: 400; font-size: 16px;}
+.footer-copy::before { content: "Ⓒ & Ⓟ "; }
+/*.footer-copy::after { content: "  🇦🇴 🇺🇸 🇨🇦"; }*/
+.footer-menu { padding-top: -70px; }
+.footer-menu a::after { content: " | "; }
+.footer-menu a:last-of-type::after { content: ""; }
+.footer-social { margin-top: -55px; text-align: right; font-size: 30px; }
+.footer-social a { color: #000; margin-left: 5px; }
+.footer-developer { margin-top: -37px; text-align: right; font-weight:bold; }
+.footer-developer::before { content: "⌘⇧  "}
+@media (max-width: 780px) {
+  .footer-social a { margin-left: 0; font-size: 30px; }
+  .footer-social a:last-of-type { display: none; }
+}
+
+
+
+/*======= Gallery: check galeria.css */
+
+
+
+
+
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
+
+
+/*======= Extra Styles */
+/*#equipa img   { max-width: 300px; max-height: 300px; }*/
+#equipa span  { font-weight: 600; font-size: 16px; }
+#equipa h4 { padding-top: 20px;}
+.form-row div { padding-bottom: 20px; padding-top: 10px; }
+.team-member img:hover { border-top: 0.5px solid #0069FF; }
+
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/

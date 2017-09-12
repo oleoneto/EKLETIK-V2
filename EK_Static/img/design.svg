@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900px" height="900px" viewBox="0 0 900 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Design</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="450.274194" cy="450.274194" r="442.274194"></circle>
+        <rect id="path-2" x="0" y="0" width="518.721278" height="377.661017"></rect>
+        <rect id="path-3" x="-20.1282063" y="47.4004869" width="111.533927" height="16.7435919"></rect>
+        <filter x="-6.3%" y="-29.9%" width="112.6%" height="183.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="0" width="518.322581" height="377.370741"></rect>
+        <rect id="path-6" x="-20.1127355" y="47.3609797" width="111.4482" height="16.7307225"></rect>
+        <filter x="-6.3%" y="-29.9%" width="112.6%" height="183.7%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-8" x="0" y="0" width="503.322581" height="366.449818"></rect>
+        <rect id="path-9" x="-19.5306828" y="46.8746183" width="108.222944" height="16.2465436"></rect>
+        <filter x="-6.5%" y="-30.8%" width="112.9%" height="186.2%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-11" x="0" y="0" width="515.322581" height="375.186556" rx="2"></rect>
+        <rect id="path-12" x="-19.9963249" y="48.0637074" width="110.803149" height="16.6338867"></rect>
+        <filter x="-6.3%" y="-30.1%" width="112.6%" height="184.2%" filterUnits="objectBoundingBox" id="filter-13">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Design">
+            <g id="Oval-3-Copy">
+                <use fill-opacity="0.02" fill="#9013FE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <circle stroke="#FFFFFF" stroke-width="50" cx="450.274194" cy="450.274194" r="417.274194"></circle>
+            </g>
+            <g id="iPad" transform="translate(472.000000, 481.500000) rotate(90.000000) translate(-472.000000, -481.500000) translate(212.500000, 292.500000)">
+                <g id="Rectangle-Copy-2">
+                    <use fill="#6A6D7D" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#000000" stroke-width="1.1" x="-0.55" y="-0.55" width="519.821278" height="378.761017"></rect>
+                </g>
+                <ellipse id="Oval" fill="#F8E71C" cx="275.294057" cy="198.132504" rx="66.389242" ry="69.7649662"></ellipse>
+                <g id="Group" transform="translate(262.314138, 170.514928) rotate(-29.000000) translate(-262.314138, -170.514928) translate(239.814138, 113.014928)">
+                    <g id="Rectangle-4" transform="translate(35.638757, 55.772283) rotate(90.000000) translate(-35.638757, -55.772283) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                    <rect id="Rectangle-4-Copy" fill="#000000" transform="translate(22.547744, 106.567013) rotate(-90.000000) translate(-22.547744, -106.567013) " x="14.5810347" y="84.2422238" width="15.9334181" height="44.6495784"></rect>
+                </g>
+            </g>
+            <g id="iPad-Copy" transform="translate(446.000000, 456.500000) rotate(90.000000) translate(-446.000000, -456.500000) translate(186.500000, 267.500000)">
+                <g id="Rectangle-Copy-2">
+                    <use fill="#9013FE" fill-rule="evenodd" xlink:href="#path-5"></use>
+                    <rect stroke="#000000" stroke-width="1.1" x="-0.55" y="-0.55" width="519.422581" height="378.470741"></rect>
+                </g>
+                <ellipse id="Oval" fill="#F8E71C" cx="275.082462" cy="197.980216" rx="66.3382142" ry="69.7113438"></ellipse>
+                <g id="Group" transform="translate(262.150562, 170.416826) rotate(-29.000000) translate(-262.150562, -170.416826) translate(239.650562, 112.916826)">
+                    <g id="Rectangle-4" transform="translate(35.611364, 55.726341) rotate(90.000000) translate(-35.611364, -55.726341) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-6"></use>
+                    </g>
+                    <rect id="Rectangle-4-Copy" fill="#000000" transform="translate(22.530413, 106.482030) rotate(-90.000000) translate(-22.530413, -106.482030) " x="14.5698275" y="84.1743995" width="15.9211714" height="44.61526"></rect>
+                </g>
+            </g>
+            <g id="iPad-Copy-2" transform="translate(425.500000, 441.000000) rotate(90.000000) translate(-425.500000, -441.000000) translate(173.500000, 257.500000)">
+                <g id="Rectangle-Copy-2">
+                    <use fill="#F8E71C" fill-rule="evenodd" xlink:href="#path-8"></use>
+                    <rect stroke="#000000" stroke-width="1.1" x="-0.55" y="-0.55" width="504.422581" height="367.549818"></rect>
+                </g>
+                <ellipse id="Oval" fill="#F8E71C" cx="267.121711" cy="192.250766" rx="64.418419" ry="67.6939319"></ellipse>
+                <g id="Group" transform="translate(254.589478, 165.219165) rotate(-29.000000) translate(-254.589478, -165.219165) translate(232.589478, 108.719165)">
+                    <g id="Rectangle-4" transform="translate(34.580789, 54.997890) rotate(90.000000) translate(-34.580789, -54.997890) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-9"></use>
+                    </g>
+                    <rect id="Rectangle-4-Copy" fill="#000000" transform="translate(21.878394, 104.284734) rotate(-90.000000) translate(-21.878394, -104.284734) " x="14.1481839" y="82.6226759" width="15.4604206" height="43.3241164"></rect>
+                </g>
+            </g>
+            <g id="iPad-Copy-3" transform="translate(387.000000, 395.000000) rotate(90.000000) translate(-387.000000, -395.000000) translate(129.000000, 207.000000)">
+                <g id="Rectangle-Copy-2">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                    <rect stroke="#000000" stroke-width="8.10000038" x="-4.05000019" y="-4.05000019" width="523.422581" height="383.286557" rx="2"></rect>
+                </g>
+                <ellipse id="Oval" fill="#F8E71C" cx="273.490312" cy="196.834326" rx="65.9542552" ry="69.3078614"></ellipse>
+                <g id="Group" transform="translate(260.434921, 168.804041) rotate(-29.000000) translate(-260.434921, -168.804041) translate(237.934921, 111.304041)">
+                    <g id="Rectangle-4" transform="translate(35.405249, 56.380651) rotate(90.000000) translate(-35.405249, -56.380651) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                        <use fill="#000000" fill-rule="evenodd" xlink:href="#path-12"></use>
+                    </g>
+                    <rect id="Rectangle-4-Copy" fill="#000000" transform="translate(22.400009, 106.842570) rotate(-90.000000) translate(-22.400009, -106.842570) " x="14.4854988" y="84.6640548" width="15.8290212" height="44.3570313"></rect>
+                </g>
+            </g>
+            <path d="M252.5,223 L515.5,223" id="Line" stroke="#000000" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M250.5,259 L513.5,259" id="Line-Copy" stroke="#000000" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M249.5,613 L512.5,613" id="Line-Copy-2" stroke="#000000" stroke-width="4" stroke-linecap="square"></path>
+            <path d="M293.5,578 L474,578" id="Line-Copy-3" stroke="#000000" stroke-width="4" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

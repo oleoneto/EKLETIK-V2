@@ -1,0 +1,92 @@
+/*
+Main code by Traversy Media
+Edited by: Leo Neto
+Date: September 10, 2017
+*/
+
+#wrapper{
+    top: 55px;
+    position: relative;  width: 100%;
+    min-height: 55vw;  overflow: hidden;
+}
+.layer{
+    position: absolute;  width: 100vw;
+    min-height: 55vw;  overflow: hidden;
+}
+.layer .content-wrap{
+    position: absolute;  width: 100vw;  min-height: 55vw;
+}
+
+.layer .content-body{
+    position: absolute;  width: 25%;
+    top: 50%;  transform:translateY(-50%);
+}
+
+.layer img{
+    position: absolute;  width: 35%;
+    top: 50%;  left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+
+
+/***********************/
+.bottom { color: #FFFFFF;  background: #222;  z-index: 1;  }
+.bottom .content-body{  right: 12%;  }
+
+/************************/
+.top    { color: #0069FF; background: #EEE;  z-index: 2;  width: 50vw;  }
+.top .content-body{  left: 12%;  }
+/********************/
+
+
+
+.handle {
+    position: absolute;
+    width:5px;
+    height: 100%;
+    display: block;
+    top:0;
+    left: 50%;
+    z-index: 3;
+    /*background: #0069FF;*/
+}
+
+
+/*!**/
+.skewed .handle{
+    top: 50%;
+    height: 200%;
+    transform-origin: top;
+    transform:rotate(35deg) translateY(-50%);
+}
+.skewed .top{
+    transform: skew(-35deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+.skewed .top .content-wrap{
+    transform: skew(35deg);
+    margin-left: 1000px;
+}
+/**!*/
+
+#wrapper{
+    /*background: url("https://source.unsplash.com/tDcQW4pBlBc/1600x900");*/
+    /*background: url("https://source.unsplash.com/AaEQmoufHLk/1600x900");*/
+    /*background: url("https://source.unsplash.com/k_T9Zj3SE8k/1600x900");*/
+    background: url("https://source.unsplash.com/OP2EQ5g-Zkw/1600x900");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.headerAlt{  display: none;  }
+.content-wrap .headerAlt { font-weight: 300; }
+
+@media (max-width: 980px){  #wrapper .content-body{  font-size: 60%;  }  }
+@media (max-width: 760px) {
+    #wrapper .content-body h2{  display: none;  }
+    #wrapper .content-body p{  display: none;  }
+    #wrapper .headerAlt { display: block; font-size: 30px;}
+}

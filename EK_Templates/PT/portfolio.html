@@ -1,0 +1,42 @@
+{% extends 'master.html' %}
+{% load static from staticfiles %}
+
+{% block title %}:: Portfolio{% endblock %}
+{% block active-portfolio %}active{% endblock %}
+
+{% block gallery %}
+
+				<!-- Gallery -->
+				<div class="gallery bg-white p-top-100 p-bottom-60">
+				<div class="container">
+
+					<div class="heading p-top-60">
+						<p><span>Anda ver a oficina</span></p>
+						<h1>Projectos Recentes</h1>
+					</div>
+
+					<div id="buttons" class="p-top-10 p-bottom-40"></div>
+
+					<div class="row p-bottom-10" id="gallery">
+
+                        {% for i in projects %}
+                        <!-- Project {{ forloop.counter }} -->
+                        <a href="{% url 'project' i.slug %}" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
+							<div>
+								<img class="img-fluid" src="{{ i.artwork.url }}" data-tags="{{ i.type }}" alt="{{ i.title }}">
+							</div>
+						</a>
+
+                        {% endfor %}
+
+					</div>
+
+				</div>
+				</div>
+
+{% endblock %}
+
+
+{% block js %}
+    <script src="{% static 'js/galeria.js' %}"></script>
+{% endblock %}

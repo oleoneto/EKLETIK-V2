@@ -1,0 +1,39 @@
+{% extends 'master.html' %}
+{% load static from staticfiles %}
+
+
+{% block error %}
+<div class="blue">
+      <div class="container p-top-100 p-bottom-200">
+
+        <div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+          <p><span>Método Não Suportado</span></p>
+          <h1>405</h1>
+
+          <h3>O método que utlizou para chegar até esta página <br>
+            não é suportado pelo nosso site. A operação foi abortada.</h3>
+        </div>
+
+
+          <hr>
+          <p class="heading p-top-10 p-bottom-100">
+            <span>Docs Recentes</span>
+          </p>
+
+        <div class="row">
+          {% for i in docs %}
+              {% if forloop.counter <= 3 %}
+              <div class="col-md-4 animated fadeInUp">
+                  <a href="{% url 'doc' i.slug %}" class=""><h4>{{ i.title }}</h4></a>
+                  {% if i.summary %}
+                    <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}" class="underlined">Continue a ler.</a></p>
+                  {% else %}
+                    <p>{{ i.content | slice:'100' }}... <a href="{% url 'doc' i.slug %}" class="underlined">Continue a ler.</a></p>
+                  {% endif %}
+              </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+</div>
+{% endblock %}

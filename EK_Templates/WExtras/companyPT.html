@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<!--==========================
+
+Author: Leo Neto
+Site URL: https://ekletik.com
+Date: August 18, 2017
+
+==========================-->
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Leo Neto @ Ekletik Studios">
+    <link rel="icon" href="img/favicon.ico">
+    <title>EK Studios</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- Google Fonts: Source Sans Pro and Open Sans -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,900,400,600|Encode+Sans" rel="stylesheet" type="text/css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+
+
+
+
+
+
+  <body>
+
+        <!-- NAVIGATION -->
+        <div class="white-w-border fixed-top" id="navigation">
+            <!-- NAVIGATION BAR AND MENU -->
+            <nav class="container navbar navbar-expand-lg navbar-light">
+              <!-- <a class="navbar-brand" href="/">Ekletik <span>Studios</span></a> -->
+              <a href="/" class="navbar-brand">
+                <img src="img/icon-line-blue.png" alt="Ekletik.">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a class="nav-link" href="empresa.html">Empresa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                </ul>
+                <form class="form-inline">
+                  <!-- {% csrf_token %} -->
+                  <input id="searchInput" class="form-control mr-sm-2" type="text" name="keyword" placeholder="Pesquisar..." aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit" id="searchButton">
+                    <i class="fa fa-search text-primary"></i>
+                  </button>
+                </form>
+
+              </div>
+            </nav>
+        </div>
+
+
+        <!-- Hero -->
+        <div class="parallax parallax-ek p-top-40">
+          <div class="carousel-caption d-md-block m-top-bottom heading">
+            <h1>Ekletik Studios</h1>
+            <h3>De Angola para o mundo.</h3>
+          </div>
+        </div>
+
+
+
+
+        <!-- Services -->
+        <div class="bg-light">
+        <div class="container p-top-100 p-bottom-100 heading center">
+
+          <div class="row">
+            <div class="col-md-4 animated fadeInUp">
+              <img class="circle-service-image p-bottom-20" src="img/design.svg" alt="">
+              <h3>Design</h3>
+              <p>Desde os rabiscos em papel aos protótipos digitais,
+                ajudámo-lo a dar forma às suas ideias e a materializar a sua visão.
+                <a href="/portfolio.html">Ver portfolio</a>.</p>
+            </div>
+            <div class="col-md-4 animated fadeInUp">
+              <img class="circle-service-image p-bottom-20" src="img/desenvolvimento.svg" alt="">
+              <h3>Desenvolvimento</h3>
+              <p>Sejam projectos em idiomas humanos ou em linguagens de programação, iremos guiá-lo seguramente à consolidação do seu projecto.</p>
+            </div>
+            <div class="col-md-4 animated fadeInUp">
+              <img class="circle-service-image p-bottom-20" src="img/alojamento.svg" alt="">
+              <h3>Alojamento</h3>
+              <p class="smiley-symbol">Tiramos a massada à gestão do seu negócio online. Mantenha o foco no que sabe fazer melhor e nós o ajudamos com o resto</p>
+            </div>
+          </div>
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Equipa -->
+        <div class="bg-white p-bottom-20">
+        <div class="container">
+
+          <div class="p-top-60 p-bottom-60 heading animated fadeInUp">
+            <p><span>Directores</span></p>
+            <h1>Eklétikos</h1>
+          </div>
+
+          <div class="row p-bottom-40 p-img-around" id="equipa">
+
+            <div class="team-member animated fadeInUp level-1 col-md-4 col-sm-6 col-xs-12">
+                <img class="img-fluid" src="https://ekletik.com/media/perfis/felipe.jpg" alt="Felipe">
+                <h4>Felipe Silva, <span>COO</span></h4>
+                <!-- <p>The 1 <sup>st</sup> person to reply is never the one you really want to get an answer from.</p> -->
+                <p>A primeira pessoa a responder nunca é aquela de quem queremos uma resposta.</p>
+            </div>
+
+            <div class="team-member animated fadeInUp level-2 col-md-4 col-sm-6 col-xs-12">
+                <img class="img-fluid" src="https://ekletik.com/media/perfis/leo.jpg" alt="Leo">
+                <h4>Leo Neto, <span>CTO</span></h4>
+                <!-- <p>An all-round object-oriented language nerd <i>straight out d'jango</i>.</p> -->
+                <p>Um <i>bărbat</i> versado em objectos linguísticos e programação.</p>
+            </div>
+
+            <div class="team-member animated fadeInUp level-1 col-md-4 col-sm-6 col-xs-12">
+                <img class="img-fluid" src="https://ekletik.com/media/perfis/paulo.jpg" alt="Paulo">
+                <h4>Paulo Jaime, <span>CFO</span></h4>
+                <!-- <p>P for performance, proactiveness, productivity, and procrastination.</p> -->
+                <p>P de performance, proatividade, produtividade e procrastinação.</p>
+            </div>
+
+          </div>
+
+        </div>
+        </div>
+
+
+
+<div class="blue-ocean">
+      <div class="container p-top-40 p-bottom-100 text-white">
+
+        <div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+          <p><span>Conheça-nos</span></p>
+          <h1>Missão e Valores</h1>
+
+          <h3>A missão da Ekletik é ajudar empresas e empreendedores <br>
+            a criar e manter uma presença sólida e próspera na internet.</h3>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-4 animated fadeInUp">
+              <h4>Lealdade</h4>
+              <p>Temos grande prazer em oferecer serviços de qualidade a todos os nossos clientes.
+              Se ao acaso não nos for possível dar solução ao seu pedido, teremos todo gosto em recomendá-lo
+              à agências da nossa confiança.</p>
+          </div>
+          <div class="col-md-4 animated fadeInUp">
+              <h4>Comunicação</h4>
+              <p>Convenhamos que, a título de discussão, nem sempre o cliente está com a razão.
+              Por isso, procuramos dialogar com o cliente a fim de sincronizarmos
+              as suas exigências e os nossos serviços.</p>
+          </div>
+          <div class="col-md-4 animated fadeInUp">
+              <h4>Pontualidade</h4>
+            <p>Nos habituámos a trabalhar sob pressão e sabemos como adiar a dita procrastinação.
+              No que tange aos projectos dos nossos clientes, nos esforçamos sempre
+              para que os ponteiros nos sejam favoráveis.</p>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+        <!-- FOOTER -->
+        <footer class="bg-light">
+          <div class="container">
+            <p class="footer-copy">Ekletik Studios</p>
+            <p class="footer-menu">
+              <a href="#">Empresa</a>
+              <a href="#">Portfolio</a>
+              <a href="#">Apis</a>
+              <a href="#">Docs</a>
+            </p>
+            <p class="footer-social">
+              <a target="_blank" href="https://github.com/ekletik/"><i class="fa fa-github"></i></a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA"><i class="fa fa-youtube-play"></i></a>
+            </p>
+          </div>
+        </footer>
+
+
+
+  <!-- Bootstrap 4 and jQuery-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="js/functions.js"></script>
+  </body>
+</html>

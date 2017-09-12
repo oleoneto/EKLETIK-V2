@@ -1,0 +1,63 @@
+{% extends 'master.html' %}
+{% load static from staticfiles %}
+{% block title %}:: Horas{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/clock.css' %}">
+{% endblock %}
+
+
+{% block extras %}
+<div class="blue">
+      <div class="container p-top-100 p-bottom-200">
+
+        <div class="p-top-60 p-bottom-60 heading animated fadeInUp">
+          <h3 id="greeting"></h3>
+          <h1 id="clock"></h1>
+        </div>
+
+
+          <hr>
+          <p class="heading p-top-10 p-bottom-40">
+            <span>Docs Recentes</span>
+          </p>
+
+        <div class="row">
+          {% for i in docs %}
+              {% if forloop.counter <= 3 %}
+              <div class="col-md-4 animated fadeInUp">
+                  <a href="{% url 'doc' i.slug %}" class=""><h4>{{ i.title }}</h4></a>
+                  {% if i.summary %}
+                    <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}" class="underlined">Ler mais.</a></p>
+                  {% else %}
+                    <p>{{ i.content | slice:'100' }}... <a href="{% url 'doc' i.slug %}" class="underlined">Ler mais.</a></p>
+                  {% endif %}
+              </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+
+      </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+{% block extras-OLD%}
+    <div class="block darkblue text-center padding-top-100">
+      <h1 id="greeting"></h1>
+      <h1 id="bigClock" class="bigClock"></h1>
+    </div>
+{% endblock %}
+
+
+
+
+{% block js %}
+    <script src="{% static 'js/clock.js' %}"></script>
+{% endblock %}

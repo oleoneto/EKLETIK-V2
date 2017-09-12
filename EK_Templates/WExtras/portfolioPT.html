@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<!--==========================
+
+Author: Leo Neto
+Site URL: https://ekletik.com
+Date: August 18, 2017
+
+==========================-->
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Leo Neto @ Ekletik Studios">
+    <link rel="icon" href="img/favicon.ico">
+    <title>EK Studios</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- Google Fonts: Source Sans Pro and Open Sans -->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,900,400,600|Encode+Sans" rel="stylesheet" type="text/css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/galeria.css">
+  </head>
+
+
+  <body>
+
+        <!-- NAVIGATION -->
+        <div class="white-w-border fixed-top" id="navigation">
+            <!-- NAVIGATION BAR AND MENU -->
+            <nav class="container navbar navbar-expand-lg navbar-light">
+              <!-- <a class="navbar-brand" href="/">Ekletik <span>Studios</span></a> -->
+              <a href="/" class="navbar-brand">
+                <img src="img/icon-line-blue.png" width="30px" height="30px" alt="Ekletik.">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                </ul>
+                <form class="form-inline" method="POST" action="/results/">
+                  <!-- {% csrf_token %} -->
+                  <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="Pesquisar..." aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">
+                    <i class="fa fa-search text-info"></i>
+                  </button>
+                </form>
+
+              </div>
+            </nav>
+        </div>
+
+
+
+
+        <!-- Gallery -->
+        <div class="gallery bg-white p-top-100 p-bottom-60">
+        <div class="container">
+
+          <div class="heading p-top-60">
+            <p><span>Anda ver a oficina</span></p>
+            <h1>Projectos</h1>
+          </div>
+
+          <div id="buttons" class="p-top-10 p-bottom-40"></div>
+
+          <div class="row p-bottom-10" id="gallery">
+
+            <a href="portfolio-single.html" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
+              <div>
+                <img class="img-fluid" src="https://ekletik.com/media/projectos/ek-xbola.jpg" data-tags="Apps" alt="XBola">
+              </div>
+            </a>
+
+            <a href="portfolio-single.html" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
+              <div>
+                <img class="img-fluid" src="https://ekletik.com/media/projectos/Metaforas3x.png" data-tags="Capas" alt="Metaforas">
+              </div>
+            </a>
+
+            <a href="#" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
+              <div>
+                <img class="img-fluid" src="https://ekletik.com/media/projectos/Artboard2x.jpg" data-tags="Apps" alt="ChatOS">
+              </div>
+            </a>
+
+            <a href="#" class="animated fadeInUp level-2 gallery-item col-md-4 col-sm-6 col-xs-12">
+              <div>
+                <img class="img-fluid" src="https://ekletik.com/media/projectos/Azinca_-_Logo.png" data-tags="Marcas" alt="Azinca">
+              </div>
+            </a>
+
+            <a href="#" class="animated fadeInUp level-2 gallery-item col-md-4 col-sm-6 col-xs-12">
+              <div>
+                <img class="img-fluid" src="img/vibrance.png" data-tags="Capas" alt="Vibrance">
+              </div>
+            </a>
+
+          <a href="#" class="animated fadeInUp level-2 gallery-item col-md-4 col-sm-6 col-xs-12">
+            <div>
+                <img class="img-fluid" src="https://ekletik.com/media/projectos/ek-pontolivre.jpg" data-tags="Marcas" alt="Ponto Livre">
+            </div>
+          </a>
+
+
+          </div>
+        </div>
+        </div>
+
+
+      <!-- <div class="parallax parallax-office-3"></div> -->
+
+        <!-- FOOTER -->
+        <footer class="bg-light">
+          <div class="container">
+            <p class="footer-copy">Ekletik Studios</p>
+            <p class="footer-menu">
+              <a href="#">Empresa</a>
+              <a href="#">Portfolio</a>
+              <a href="#">Apis</a>
+              <a href="#">Docs</a>
+              <a href="player.html">Música</a>
+            </p>
+            <p class="footer-social">
+              <a target="_blank" href="https://github.com/ekletik/"><i class="fa fa-github"></i></a>
+              <a target="_blank" href="https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA"><i class="fa fa-youtube-play"></i></a>
+            </p>
+          </div>
+        </footer>
+
+
+
+  <!-- Bootstrap 4 and jQuery-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <script src="js/galeria.js"></script>
+
+
+  </body>
+</html>
