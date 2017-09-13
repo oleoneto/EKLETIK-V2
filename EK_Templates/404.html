@@ -16,8 +16,9 @@
         </div>
 
 
+      {% if docs %}
           <hr>
-          <p class="heading p-top-10 p-bottom-40">
+          <p class="heading p-top-10 p-bottom-100">
             <span>Docs Recentes</span>
           </p>
 
@@ -27,14 +28,15 @@
               <div class="col-md-4 animated fadeInUp">
                   <a href="{% url 'doc' i.slug %}" class=""><h4>{{ i.title }}</h4></a>
                   {% if i.summary %}
-                    <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}" class="underlined">Continue a ler.</a></p>
+                    <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}" class="underlined">Ler mais.</a></p>
                   {% else %}
-                    <p>{{ i.content | slice:'100' }}... <a href="{% url 'doc' i.slug %}" class="underlined">Continue a ler.</a></p>
+                    <p>{{ i.content | slice:'100' }}... <a href="{% url 'doc' i.slug %}" class="underlined">Ler mais.</a></p>
                   {% endif %}
               </div>
               {% endif %}
           {% endfor %}
         </div>
+      {% endif %}
 
       </div>
 </div>
