@@ -37,6 +37,36 @@ def singleDoc(request, key):
 
 
 
+def django(request):
+    key = "getting-started-django"
+    authordocs = Doc.objects.filter(author__name=key).filter(status='p')
+    relateddocs = Doc.objects.filter(status='p').order_by('-publishedDate')
+    try:
+        doc = Doc.objects.get(slug=key)
+        if not doc:
+            key = "getting-started-django"
+            doc = Doc.objects.get(slug=key)
+            if not doc:
+                key = "django"
+                doc = Doc.objects.get(slug=key)
+    except Doc.DoesNotExist:
+        raise Http404('Doc 404')
+    return render(request, 'PT/doc-single.html', {
+        'doc': doc,
+        'title': doc.title,
+        'content': doc.content,
+        'author': doc.get_author(),
+        'authorID': doc.author_id,
+        'authorPhoto': doc.author.photo.url,
+        'authorGithub': doc.author.github_username,
+        'authorBio': doc.author.author_bio,
+        'language': doc.get_programmingLanguage_display(),
+        'date': doc.publishedDate,
+        'id': doc.id,
+        'authordocs': authordocs,
+        'relateddocs': relateddocs,
+    })
+
 
 
 

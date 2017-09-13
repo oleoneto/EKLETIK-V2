@@ -176,7 +176,12 @@ def azinca(request):
     return redirect('https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA')
 def meight(request):
     return redirect('https://github.com/Ngola')
-
+def leo(request):
+    return redirect('https://github.com/oleoneto')
+def paulo(request):
+    return redirect('https://github.com/pjaime88')
+def felipe(request):
+    return redirect('https://github.com/fsilva24')
 
 
 
@@ -186,3 +191,5 @@ def horas(request):
     return render(request, 'PT/hora.html',{
         'docs': docs,
     })
+
+

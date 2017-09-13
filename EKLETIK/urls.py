@@ -98,6 +98,10 @@ urlpatterns = [
     url(r'^m8', site.meight),
     url(r'^mate', site.meight),
     url(r'^meight', site.meight),
+    url(r'^django', docs.django),
+    url(r'^felipe', site.felipe),
+    url(r'^paulo', site.paulo),
+    url(r'^leo', site.leo),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
