@@ -94,4 +94,4 @@ STATIC_ROOT = '/var/www/ekletik.com/ek_static/'
 MEDIA_ROOT = '/var/www/ekletik.com/ek_media/'
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/mediahub/'
+MEDIA_URL = '/media/'

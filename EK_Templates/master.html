@@ -66,7 +66,7 @@ Reviewed by: {}
                             <li class="nav-item {% block active-company%}{% endblock %}"><a class="nav-link" href="/empresa/">Empresa</a></li>
                             <li class="nav-item {% block active-portfolio%}{% endblock %}"><a class="nav-link" href="/portfolio/">Portfolio</a></li>
                             <li class="nav-item {% block active-docs%}{% endblock %}"><a class="nav-link" href="/docs/">Docs</a></li>
-                            <li class="nav-item {% block active-contact%}{% endblock %}"><a class="nav-link" href="/contacto/">Contacto</a></li>
+                            <li class="nav-item {% block active-contact%}{% endblock %}"><a class="nav-link" href="mailto:info@ekletik.com">Contacto</a></li>
                         </ul>
                         <form class="form-inline" method="POST" action="{% url 'searchResults' %}">
                             {% csrf_token %}
