@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f930efd9-5c68-4b4c-bff5-1d6fef516712" name="Default" comment="" />
+    <list default="true" id="f930efd9-5c68-4b4c-bff5-1d6fef516712" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Static/css/navbar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/forms.py" afterPath="$PROJECT_DIR$/EKSite/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/mainviews.py" afterPath="$PROJECT_DIR$/EKSite/mainviews.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/css/galeria.css" afterPath="$PROJECT_DIR$/EK_Static/css/galeria.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/css/header.css" afterPath="$PROJECT_DIR$/EK_Static/css/header.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/css/master.css" afterPath="$PROJECT_DIR$/EK_Static/css/master.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/PT/contacto.html" afterPath="$PROJECT_DIR$/EK_Templates/PT/contacto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/PT/doc-single.html" afterPath="$PROJECT_DIR$/EK_Templates/PT/doc-single.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/PT/empresa.html" afterPath="$PROJECT_DIR$/EK_Templates/PT/empresa.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/logout.html" afterPath="$PROJECT_DIR$/EK_Templates/logout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/master.html" afterPath="$PROJECT_DIR$/EK_Templates/master.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,31 +40,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="master.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EK_Templates/master.html">
+      <file leaf-file-name="contacto.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EK_Templates/PT/contacto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+            <state relative-caret-position="120">
+              <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doc-single.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EK_Templates/PT/doc-single.html">
+      <file leaf-file-name="master.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EK_Static/css/master.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hora.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EK_Templates/PT/hora.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="357">
+              <caret line="253" column="0" lean-forward="true" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,6 +89,9 @@
       <replace>carouselIndicators</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -94,7 +102,6 @@
         <option value="$PROJECT_DIR$/Site/mainviews.py" />
         <option value="$PROJECT_DIR$/Site/docviews.py" />
         <option value="$PROJECT_DIR$/EKSite/apps.py" />
-        <option value="$PROJECT_DIR$/EKSite/forms.py" />
         <option value="$PROJECT_DIR$/EK_Templates/Central/EN/mainEN.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Central/EN/mainPT.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Central/PT/indexPT.html" />
@@ -117,24 +124,27 @@
         <option value="$PROJECT_DIR$/EKSite/models.py" />
         <option value="$PROJECT_DIR$/EKSite/admin.py" />
         <option value="$PROJECT_DIR$/EK_Static/js/header.js" />
-        <option value="$PROJECT_DIR$/EK_Static/css/galeria.css" />
-        <option value="$PROJECT_DIR$/EK_Templates/PT/index.html" />
-        <option value="$PROJECT_DIR$/EK_Static/css/header.css" />
-        <option value="$PROJECT_DIR$/EK_Templates/PT/doc-single.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/docs.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/portfolio.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/searchResults.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/PT/contacto.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/PT/empresa.html" />
         <option value="$PROJECT_DIR$/EKSite/searchviews.py" />
-        <option value="$PROJECT_DIR$/EK_Static/css/master.css" />
         <option value="$PROJECT_DIR$/EK/urls.py" />
         <option value="$PROJECT_DIR$/EK_Static/css/clock.css" />
-        <option value="$PROJECT_DIR$/EKSite/mainviews.py" />
         <option value="$PROJECT_DIR$/EK_Static/js/clock.js" />
-        <option value="$PROJECT_DIR$/EK_Templates/master.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/hora.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/PT/empresa.html" />
+        <option value="$PROJECT_DIR$/EK_Static/css/navbar.css" />
+        <option value="$PROJECT_DIR$/EK_Templates/PT/index.html" />
+        <option value="$PROJECT_DIR$/EK_Static/css/galeria.css" />
+        <option value="$PROJECT_DIR$/EK_Static/css/header.css" />
+        <option value="$PROJECT_DIR$/EKSite/forms.py" />
+        <option value="$PROJECT_DIR$/EKSite/mainviews.py" />
+        <option value="$PROJECT_DIR$/EK_Templates/PT/doc-single.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/master.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/logout.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/PT/contacto.html" />
+        <option value="$PROJECT_DIR$/EK_Static/css/master.css" />
       </list>
     </option>
   </component>
@@ -151,11 +161,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="535" />
     <option name="width" value="1680" />
     <option name="height" value="511" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -183,7 +194,13 @@
             <path>
               <item name="EK" type="b2602c69:ProjectViewProjectNode" />
               <item name="EK" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EK" type="b2602c69:ProjectViewProjectNode" />
               <item name="EK" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EK" type="b2602c69:ProjectViewProjectNode" />
@@ -301,7 +318,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="535" width="1680" height="511" extended-state="1" />
+    <frame x="0" y="535" width="1680" height="511" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12332112" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -309,7 +326,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20913461" sideWeight="0.502442" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3966346" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28111273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20913461" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
@@ -351,13 +368,6 @@
         <state relative-caret-position="210">
           <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EKSite/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -410,14 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="28" column="86" lean-forward="true" selection-start-line="28" selection-start-column="86" selection-end-line="28" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Templates/403.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -441,21 +443,6 @@
           <folding>
             <element signature="e#590#1251#0#HTML" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/logout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/doc-author.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -533,14 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/css/galeria.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Templates/PT/docs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -579,38 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding>
-            <element signature="n#block#1;n#!!top" expanded="false" />
-            <element signature="n#block#2;n#!!top" expanded="false" />
-            <element signature="n#block#3;n#!!top" expanded="false" />
-            <element signature="n#block#4;n#!!top" expanded="false" />
-            <element signature="n#block#5;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/css/header.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="80" column="1" lean-forward="true" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/contacto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
-          <folding>
-            <element signature="n#block#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EKSite/searchviews.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -639,34 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EKSite/mainviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/empresa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="n#block#3;n#!!top" expanded="false" />
-            <element signature="n#block#4;n#!!top" expanded="false" />
-            <element signature="n#block#5;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="95" column="32" lean-forward="true" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Static/js/clock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -675,36 +594,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/css/master.css">
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/hora.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="290" column="12" lean-forward="false" selection-start-line="290" selection-start-column="12" selection-end-line="290" selection-end-column="12" />
+        <state relative-caret-position="480">
+          <caret line="32" column="40" lean-forward="false" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/doc-author.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/empresa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding>
-            <element signature="e#520#679#0" expanded="false" />
+            <element signature="n#block#3;n#!!top" expanded="false" />
+            <element signature="n#block#4;n#!!top" expanded="false" />
+            <element signature="n#block#5;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+          <folding>
+            <element signature="n#block#1;n#!!top" expanded="false" />
+            <element signature="n#block#2;n#!!top" expanded="false" />
+            <element signature="n#block#3;n#!!top" expanded="false" />
+            <element signature="n#block#4;n#!!top" expanded="false" />
+            <element signature="n#block#5;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/css/galeria.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/css/navbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="54" column="11" lean-forward="false" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="78" column="46" lean-forward="true" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EKSite/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/doc-single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="14" lean-forward="false" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/logout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-323">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EKSite/mainviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="153" column="13" lean-forward="false" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EK_Templates/master.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        <state relative-caret-position="262">
+          <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/contacto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/doc-single.html">
+    <entry file="file://$PROJECT_DIR$/EK_Static/css/master.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/hora.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="357">
+          <caret line="253" column="0" lean-forward="true" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
           <folding />
         </state>
       </provider>

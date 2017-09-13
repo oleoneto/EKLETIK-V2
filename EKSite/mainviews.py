@@ -1,5 +1,6 @@
 from ViewsLibraries import *
 from .models import *
+from .forms import ContactForm, DocForm
 
 
 
@@ -147,12 +148,12 @@ def singleProject(request, key):
 
 
 def contact(request):
+    formClass = ContactForm
     return render(request, 'PT/contacto.html', {
         'pageName': 'contacto',
+        'form': formClass,
         'choices': SOLICIT_CHOICES,
     })
-
-
 
 
 #----------- SEARCH ----------------

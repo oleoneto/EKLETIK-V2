@@ -1,0 +1,88 @@
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
+
+
+.navbar-brand { font-weight: bold;}
+.navbar-brand { color: #F0D71C !important; }
+.navbar-brand span { color: #0069ff; }
+.navbar-brand img { width: 25px; height: 25px; }
+.nav-item a { color: #0069FF !important; }
+.active { font-weight: bold !important; }
+.navbar-toggler { border: none; }
+.navbar-toggler span { color: #0069FF !important; }
+.navbar .form-control { max-height: 32px; font-size: 14px; font-weight: lighter; }
+.navbar .form-inline button { max-height: 40px; background: none; border: none; }
+.navbar input  { border-radius: 20px; }
+.navbar input:focus { border-color: #0069FF; color: #0069FF; }
+
+/* Debugging needed */
+.navbar .form-inline button { display: none; visibility: hidden; }
+.navbar button {
+  position: absolute;
+  -webkit-margin-start: 120px;
+  -moz-margin-start: 120px;
+}
+.navbar button > i { color: #d7d7d7 !important; }
+/* End debugging section */
+
+@media (max-width: 990px) {
+  .nav { height: 60px; }
+  .navbar button { position: relative; margin: 0px; }
+}
+/*#navigation{  z-index: 1; }*/
+/*#loggedIn { position: absolute;  z-index: 2;  }*/
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
+
+
+
+.nav-white-blue   { background: #FFFFFF; color: #0069FF; }
+.nav-white-blue a { color: #0069FF !important; }
+
+.nav-white-black   { background: #FFFFFF; color: #222 !important; }
+.nav-white-black a { color: #222222 !important; }
+
+.nav-red-white     { background: #EA1744; color: #F8F9FA; }
+.nav-red-white a   { color: #F8F9FA !important; }
+
+.nav-black-white   { background: #000000; color: #FFFFFF; }
+.nav-black-white a { color: #FFFFFF !important; }
+
+.nav-border        { border-bottom: 1px solid #eee; opacity: 0.98; }
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/

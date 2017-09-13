@@ -6,7 +6,7 @@
 {% block contact %}
 
         <!-- Parallax Hero -->
-      <div class="mini-parallax parallax-office-3"></div>
+      <div class="mini-parallax parallax-ek-1"></div>
 
 
 
@@ -18,6 +18,7 @@
 
       <div class="container p-bottom-60">
         <form id="contactForm">
+            {% csrf_token %}
 
           <div class="form-row">
             <div class="col">
@@ -30,7 +31,8 @@
 
           <div class="form-row">
               <div class="col-6">
-                <input type="text" class="form-control" placeholder="Pais">
+{#                  {{ form.contact_email }}#}
+                  <input type="text" class="form-control" placeholder="Pais">
               </div>
               <div class="col">
                 <input type="text" class="form-control" placeholder="Cidade">

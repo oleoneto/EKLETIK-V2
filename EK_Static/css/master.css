@@ -7,6 +7,10 @@ e: info@ekletik.com
 */
 
 
+
+
+
+
 /*======= Cross Document Styles */
 p span {  color: #d7d7d7; text-transform: uppercase; }
 p, h1, h2, h3, h4, h5, h6 { font-weight: lighter; }
@@ -32,6 +36,23 @@ code {
 	background-color: #f9f2f4;
 	border-radius: 4px;
 }
+
+
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
 
 
 
@@ -73,6 +94,23 @@ code {
 
 
 
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
+
+
+
+
 
 /*======= Padding and Margins */
 .m-minus-60 { margin-top: -150px; }
@@ -105,14 +143,21 @@ code {
 
 
 
-/*====== Color Styles */
-.light-w-border { background: #F8F9FA; border-bottom: 1px solid #eee; }
-.white-w-border { background: #FFFFFF; border-bottom: 1px solid #eee; opacity: 0.98; }
-.blue-ocean { background: #0069FF; }
-.light-grey { background: #F8F9FA; }
-@media (max-width: 990px) {
-  .white-w-border { opacity: 1; }
-}
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
+
+
 
 /**************** COLORS ******************/
 .transparent{opacity: 0.90 !important;}
@@ -156,7 +201,29 @@ code {
 .text-crimson { color: #EA1744 !important; }
 .text-blue { color: #0069FF !important; }
 
+.light-w-border { background: #F8F9FA; border-bottom: 1px solid #eee; }
+.white-w-border { background: #FFFFFF; border-bottom: 1px solid #eee; opacity: 0.98; }
+.blue-ocean { background: #0069FF; }
+.light-grey { background: #F8F9FA; }
+@media (max-width: 990px) { .white-w-border { opacity: 1; } }
 
+
+
+
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
 
 
 
@@ -176,14 +243,8 @@ code {
   background-position: center; background-size: cover;
   background-repeat: no-repeat; background-attachment: fixed;
 }
-.parallax-ek-2     { background-image: image('/static/img/icon.png'); }
-/*.parallax-ek       { background-image: url('https://ekletik.com/favicon.ico'); }*/
-.parallax-ek {
-    background-color: #0069FF;
-    /*background-image: url('https://source.unsplash.com/OP2EQ5g-Zkw/1600x900');*/
-    background-position: center;
-}
-
+.parallax-ek-1 { background-image: url("/static/img/ekcity.svg"); background-color: #FFFFFB;}
+.parallax-ek-2 { background-image: url('/static/img/icon.png'); }
 .parallax-team     { background-image: url('http://bit.ly/2xA8t2f'); }
 .parallax-office-1 { background-image: url('http://bit.ly/2wvKXGM'); }
 .parallax-office-2 { background-image: url('http://bit.ly/2xk2QG9'); }
@@ -194,36 +255,25 @@ code {
 
 
 
-/* ====== Navigation Bar */
-.navbar-brand { font-weight: bold;}
-.navbar-brand { color: #F0D71C !important; }
-.navbar-brand span { color: #0069ff; }
-.navbar-brand img { width: 25px; height: 25px; }
-.nav-item a { color: #0069FF !important; }
-.active { font-weight: bold !important; }
-.navbar-toggler { border: none; }
-.navbar-toggler span { color: #0069FF !important; }
-.navbar .form-control { max-height: 32px; font-size: 14px; font-weight: lighter; }
-.navbar .form-inline button { max-height: 40px; background: none; border: none; }
-.navbar input  { border-radius: 20px; }
-.navbar input:focus { border-color: #0069FF; color: #0069FF; }
 
-/* Debugging needed */
-.navbar .form-inline button { display: none; visibility: hidden; }
-.navbar button {
-  position: absolute;
-  -webkit-margin-start: 120px;
-  -moz-margin-start: 120px;
-}
-.navbar button > i { color: #d7d7d7 !important; }
-/* End debugging section */
+/* ====== Navigation Bar: check navbar.css */
 
-@media (max-width: 990px) {
-  .nav { height: 60px; }
-  .navbar button { position: relative; margin: 0px; }
-}
-/*#navigation{  z-index: 1; }*/
-/*#loggedIn { position: absolute;  z-index: 2;  }*/
+
+
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
 
 
 
@@ -248,6 +298,20 @@ code {
 }
 
 
+
+
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
 
 
 
@@ -283,6 +347,21 @@ code {
 
 
 
+/*
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+==========================================
+*/
+
+
+
 
 /*======= Footer */
 footer { height: 150px; }
@@ -306,12 +385,6 @@ footer span { text-transform: capitalize; }
 
 
 
-/*======= Gallery: check galeria.css */
-
-
-
-
-
 
 
 /*
@@ -324,16 +397,18 @@ footer span { text-transform: capitalize; }
 ==========================================
 ==========================================
 ==========================================
+==========================================
 */
+
 
 
 
 /*======= Extra Styles */
-/*#equipa img   { max-width: 300px; max-height: 300px; }*/
+/* Fixes spacing on the contact page */
+.form-row div { padding-bottom: 20px; padding-top: 10px; }
+
 #equipa span  { font-weight: 600; font-size: 16px; }
 #equipa h4 { padding-top: 20px;}
-.form-row div { padding-bottom: 20px; padding-top: 10px; }
-.team-member img:hover { border-top: 0.5px solid #0069FF; }
 
 
 
@@ -349,3 +424,9 @@ footer span { text-transform: capitalize; }
 ==========================================
 ==========================================
 */
+
+
+
+
+
+/*======= Gallery: check galeria.css */

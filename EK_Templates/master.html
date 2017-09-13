@@ -30,9 +30,12 @@ Reviewed by: {}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- Animate CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!-- HighlightJS CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
         <!-- Local CSS -->
 		<link rel="stylesheet" href="{% static 'css/master.css' %}">
 		<link rel="stylesheet" href="{% static 'css/galeria.css'%}">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
         <link rel="stylesheet" href="{% static 'css/header.css' %}">
 	</head>
 
@@ -41,13 +44,13 @@ Reviewed by: {}
         This section will display a div with information of the currently logged in user.
         {% endcomment %}
         {% if user.is_authenticated %}
-        <div class="blue fixed-top p-top-60" id="loggedIn"></div>
+        <div class="fixed-top p-top-60" id="loggedIn"></div>
         {% endif %}
 
         {% comment %}
             The main site navigation bar featured all the necessary menu links to be imported by other pages.
         {% endcomment %}
-        <div class="white-w-border fixed-top" id="navigation">
+        <div class="nav-white-blue nav-border fixed-top" id="navigation">
                 <!-- NAVIGATION BAR AND MENU -->
                 <nav class="container navbar navbar-expand-lg navbar-light">
                     <!-- <a class="navbar-brand" href="/">Ekletik <span>Studios</span></a> -->
@@ -98,17 +101,16 @@ Reviewed by: {}
         {% endcomment %}
         <footer class="bg-light">
             <div class="container">
-                {% if user.is_authenticated %}
-                <p class="footer-user" id="">Olá, {{ user.first_name }}!</p>
-                {% else %}
                 <p class="footer-copy">Ekletik Studios</p>
                 <p class="footer-menu">
+                    {% if user.is_authenticated %}
+                    <a href="/logout/">Logged in as: {{ user.first_name | capfirst}}</a>
+                     {% endif %}
                     <a href="/empresa/">Empresa</a>
                     <a href="/portfolio/">Portfolio</a>
                     <a href="/apis/">Apis</a>
                     <a href="/docs/">Docs</a>
                 </p>
-                {% endif %}
                 <p class="footer-social">
                     <a target="_blank" href="https://github.com/ekletik/"><i class="fa fa-github"></i></a>
                     <a target="_blank" href="https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA"><i class="fa fa-youtube-play"></i></a>
@@ -126,9 +128,21 @@ Reviewed by: {}
                 integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
                 integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         {% block js %}{% endblock %}
 
 	</body>
 </html>
 
-<!-- O Fim -->
+<!-- ===============
+
+This site is built with open-source technologies, namely:
+    Bootstrap 4
+    jQuery 3.2.1
+    Python 3.6
+    Django 1.11.4
+
+=================-->
+
+
+
