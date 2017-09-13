@@ -34,7 +34,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'EK.urls'
+ROOT_URLCONF = 'EKLETIK.urls'
 
 TEMPLATES = [
     {
@@ -53,7 +53,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'EK.wsgi.application'
+WSGI_APPLICATION = 'EKLETIK.wsgi.application'
 
 DATABASES = {
     'default': {
