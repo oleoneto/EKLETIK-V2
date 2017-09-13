@@ -11,13 +11,18 @@ def home(request):
         'docs': docs,
     })
 
+
 def singleDoc(request, key):
-    authordocs = Doc.objects.filter(author__name=key).filter(status='p').filter(language='pt')
-    relateddocs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
+    if 'gs' in key:
+        relateddocs = Doc.objects.filter(status='p').order_by('-publishedDate')
+    else:
+        relateddocs = Doc.objects.filter(status='p').order_by('-publishedDate').filter(language='pt')
+
     try:
         doc = Doc.objects.get(slug=key)
     except Doc.DoesNotExist:
-        raise Http404('Doc 404')
+        raise Http404('404 - Doc not found')
+
     return render(request, 'PT/doc-single.html', {
         'doc': doc,
         'title': doc.title,
@@ -30,25 +35,16 @@ def singleDoc(request, key):
         'language': doc.get_programmingLanguage_display(),
         'date': doc.publishedDate,
         'id': doc.id,
-        'authordocs': authordocs,
         'relateddocs': relateddocs,
     })
 
 
-
-
 def django(request):
-    key = "getting-started-django"
+    key = "gswd"
     authordocs = Doc.objects.filter(author__name=key).filter(status='p')
     relateddocs = Doc.objects.filter(status='p').order_by('-publishedDate')
     try:
         doc = Doc.objects.get(slug=key)
-        if not doc:
-            key = "getting-started-django"
-            doc = Doc.objects.get(slug=key)
-            if not doc:
-                key = "django"
-                doc = Doc.objects.get(slug=key)
     except Doc.DoesNotExist:
         raise Http404('Doc 404')
     return render(request, 'PT/doc-single.html', {

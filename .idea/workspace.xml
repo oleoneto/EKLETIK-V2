@@ -25,43 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../EKLETIK/EKLETIK/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="500.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../EKLETIK/EK_Templates/500.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../EKLETIK/EKLETIK/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="103" column="27" lean-forward="true" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-              <folding>
-                <element signature="e#669#710#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainviews.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/mainviews.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,8 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/EK_Templates/Main/PT/index.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/Main/PT/searchResults.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Main/PT/empresa.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Main/PT/portfolio.html" />
         <option value="$PROJECT_DIR$/EKSite/API.py" />
@@ -148,12 +114,14 @@
         <option value="$PROJECT_DIR$/../EKLETIK/EK_Templates/405.html" />
         <option value="$PROJECT_DIR$/../EKLETIK/EK_Templates/404.html" />
         <option value="$PROJECT_DIR$/../EKLETIK/EK_Templates/401.html" />
-        <option value="$PROJECT_DIR$/../EKLETIK/EKLETIK/settings.py" />
         <option value="$PROJECT_DIR$/../EKLETIK/EK_Templates/500.html" />
         <option value="$PROJECT_DIR$/../EKLETIK/EK_Templates/master.html" />
         <option value="$PROJECT_DIR$/../EKLETIK/EKSite/mainviews.py" />
         <option value="$PROJECT_DIR$/../EKLETIK/EKLETIK/urls.py" />
+        <option value="$PROJECT_DIR$/../EKLETIK/Choices.py" />
         <option value="$PROJECT_DIR$/../EKLETIK/EKSite/docviews.py" />
+        <option value="$PROJECT_DIR$/../EKLETIK/EKSite/searchviews.py" />
+        <option value="$PROJECT_DIR$/../EKLETIK/EKLETIK/settings.py" />
       </list>
     </option>
   </component>
@@ -171,9 +139,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="466" />
+    <option name="y" value="313" />
     <option name="width" value="1680" />
-    <option name="height" value="580" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -495,12 +463,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="466" width="1680" height="580" extended-state="0" />
+    <frame x="0" y="313" width="1680" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20913461" sideWeight="0.502442" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38762885" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29467085" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27884614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20913461" sideWeight="0.497558" order="3" side_tool="false" content_ui="tabs" />
@@ -629,14 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EKLETIK/Choices.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -698,16 +658,6 @@
         <state relative-caret-position="105">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/searchviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="33" column="79" lean-forward="true" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
-          <folding>
-            <element signature="e#870#1042#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -885,14 +835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKLETIK/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../EKLETIK/EK_Templates/PT/doc-single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1095">
@@ -909,6 +851,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/mainviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/searchviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding>
+            <element signature="e#992#1164#0" expanded="false" />
+            <element signature="e#1197#1616#0" expanded="false" />
+            <element signature="e#1687#2565#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/docviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EKLETIK/Choices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="19" lean-forward="true" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKLETIK/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="103" column="27" lean-forward="true" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+          <folding>
+            <element signature="e#669#710#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../EKLETIK/EK_Templates/500.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -917,29 +905,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/mainviews.py">
+    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKLETIK/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKSite/docviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="66" column="35" lean-forward="true" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../EKLETIK/EKLETIK/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="103" column="27" lean-forward="true" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-          <folding>
-            <element signature="e#669#710#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

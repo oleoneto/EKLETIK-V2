@@ -25,15 +25,17 @@ def SearchDocs(title):
     try:
         docs = Doc.objects.filter(title__icontains=title)
         if not docs:
-            docs = Doc.objects.filter(content__icontains=title)
+            docs = Doc.objects.filter(slug__icontains=title)
             if not docs:
-                docs = Doc.objects.filter(summary__icontains=title)
+                docs = Doc.objects.filter(content__icontains=title)
                 if not docs:
-                    docs = Doc.objects.filter(programmingLanguage__contains=title)
+                    docs = Doc.objects.filter(summary__icontains=title)
                     if not docs:
-                        docs = Doc.objects.filter(author__name__contains=title)
+                        docs = Doc.objects.filter(programmingLanguage__contains=title)
                         if not docs:
-                            docs = Doc.objects.filter(author__author_bio__icontains=title)
+                            docs = Doc.objects.filter(author__name__contains=title)
+                            if not docs:
+                                docs = Doc.objects.filter(author__author_bio__icontains=title)
     except Doc.DoesNotExist:
         erro = True
         raise Http404('Nothing found')

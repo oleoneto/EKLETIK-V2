@@ -49,7 +49,7 @@ TOPICS = (
 
     # Server-side
     ('node', 'NodeJS'),
-    ('django', 'Django'),
+    ('dj', 'Django'),
     ('rails', 'Ruby on Rails'),
 
     # Others
