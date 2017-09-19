@@ -1,7 +1,7 @@
 /*
 Ekletik Studios
 Author: Leo Neto
-Update: Sep 3, 2017
+Update: Sep 16, 2017
 w: https://ekletik.com
 e: info@ekletik.com
 */
@@ -12,6 +12,7 @@ e: info@ekletik.com
 
 
 /*======= Cross Document Styles */
+/**{ font-family: 'Rubik', sans-serif; }*/
 p span {  color: #d7d7d7; text-transform: uppercase; }
 p, h1, h2, h3, h4, h5, h6 { font-weight: lighter; }
 pre {
@@ -19,11 +20,10 @@ pre {
    padding: 9.5px;
    margin: 0 0 10px;
    font-size: 13px;
-   color: #333;
+   /*color: #333;*/
    word-break: break-all;
    word-wrap: break-word;
-   /*background-color: #F8F9FA;*/
-   background-color: #F8F9FA;
+   background-color: #F8F9FA !important;
    border: 1px solid #eee;
    border-radius: 4px;
 }
@@ -32,8 +32,8 @@ code {
     word-wrap: break-word;
 	padding: 2px 4px;
 	font-size: 90%;
-	color: #c7254e;
-	background-color: #f9f2f4;
+	/*color: #c7254e;*/
+	/*background-color: #f9f2f4;*/
 	border-radius: 4px;
 }
 
@@ -138,7 +138,6 @@ code {
 .p-tb-20 { padding-top: 20px; padding-bottom: 20px; }
 .p-tb-40 { padding-top: 40px; padding-bottom: 40px; }
 .p-tb-60 { padding-top: 60px; padding-bottom: 60px; }
-
 
 
 
@@ -287,7 +286,6 @@ code {
 .carousel-control-next { display: none; }
 .carousel-control-prev { display: none; }
 .carousel-caption h1 { font-size: 60px; }
-/*.carousel-caption h1::first-letter { font-weight: 100; }*/
 .main-carousel { margin-top: -4px; }
 @media (max-width: 990px){
     .carousel-caption h1 { font-size: 40px; }
@@ -296,7 +294,7 @@ code {
     .carousel-item { height: 400px; width: auto; }
     .carousel-item img { height: 400px; }
 }
-
+/*.carousel-caption h1::first-letter { font-weight: 100; }*/
 
 
 
@@ -406,11 +404,10 @@ footer span { text-transform: capitalize; }
 /*======= Extra Styles */
 /* Fixes spacing on the contact page */
 .form-row div { padding-bottom: 20px; padding-top: 10px; }
-
 #equipa span  { font-weight: 600; font-size: 16px; }
 #equipa h4 { padding-top: 20px;}
-
-
+.clock{  font-size: 12em !important;  }
+.clockGreeting { font-size: 5em !important; }
 
 /*
 ==========================================

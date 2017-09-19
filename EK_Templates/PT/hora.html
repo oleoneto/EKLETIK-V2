@@ -2,21 +2,17 @@
 {% load static from staticfiles %}
 {% block title %}:: Horas{% endblock %}
 
-{% block css %}
-    <link rel="stylesheet" href="{% static 'css/clock.css' %}">
-{% endblock %}
-
 
 {% block extras %}
 <div class="blue">
-      <div class="container p-top-100 p-bottom-200">
+      <div class="container p-top-200 p-bottom-200">
 
-        <div class="p-top-100 p-bottom-60 heading animated fadeInUp">
-          <h3 id="greeting"></h3>
-          <h1 id="clock"></h1>
+        <div class="p-top-100 p-bottom-60 heading text-center animated fadeInUp">
+          <h3 id="greeting" class="clockGreeting"></h3>
+          <h1 id="clock" class="clock"></h1>
         </div>
 
-
+{% comment %}
           <hr>
           <p class="heading p-top-10 p-bottom-40">
             <span>Docs Recentes</span>
@@ -36,6 +32,8 @@
               {% endif %}
           {% endfor %}
         </div>
+{% endcomment %}
+
 
       </div>
 </div>

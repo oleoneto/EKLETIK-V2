@@ -79,8 +79,13 @@ class Color(models.Model):
     projectName = models.ForeignKey(PortfolioProject)
     hexColor = models.CharField(max_length=7)
 
+    def projectTitle(self):
+        return self.projectName.title
+
     def __str__(self):
         return self.hexColor
+
+
 #end Color
 
 
@@ -141,10 +146,10 @@ class Doc(models.Model):
     class Meta:
         verbose_name_plural = 'Docs'
 
-    def get_author(self):
+    def writer(self):
         return self.author.name
 
-    def get_programmingLanguage(self):
+    def sintax(self):
         return self.programmingLanguage
 
     def __str__(self):

@@ -8,10 +8,6 @@
 
 
     <div class="p-top-100 p-bottom-300">
-        {% if erro %}
-            <h2><kbd>Erro: 404</kbd> algo não está correto.</h2>
-            <span>{{ erro }}</span>
-        {% else %}
 
         <h2>Pesquisa: <code>{{ search }}</code></h2>
 
@@ -27,8 +23,7 @@
                 <br>
             {% endfor %}
             </div>
-        {% endif %}
-
+            {% endif %}
         {#-----------------------#}
 
         {% if projects %}
@@ -39,8 +34,7 @@
                 <br>
             {% endfor %}
             </div>
-        {% endif %}
-
+            {% endif %}
         {#-----------------------#}
 
         {% if people %}
@@ -52,14 +46,22 @@
             </div>
         {% endif %}
 
-        {#-----------------------#}
+
+        {% if not total %}
+            <div class="col-md-12">
+            <h2>Nada corresponde à sua pesquisa.</h2>
+            </div>
+        {% endif %}
+
 
         </div>
-        {% endif %}
         </div>
+
 
         <hr>
         <p class="">Obrigado por utilizar este serviço. Clique para voltar à <a href="{% url 'home' %}"><code>página inicial</code></a>.</p>
         <hr>
     </div>
+
+
 {%endblock%}

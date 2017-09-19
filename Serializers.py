@@ -9,17 +9,28 @@ Using the django rest framework to query, serialize, and generate views for our 
 from rest_framework.serializers import ModelSerializer
 from EKSite.models import *
 
+
+class ColorSerializer(ModelSerializer):
+    class Meta:
+        model = Color
+        fields = ('projectTitle','hexColor',)
+
+
+class DocSerializer(ModelSerializer):
+    class Meta:
+        model = Doc
+        fields = ('id', 'title', 'slug', 'writer', 'language', 'sintax', 'summary','content')
+#end DocSerializer
+
+
+
 class PersonSerializer(ModelSerializer):
     class Meta:
         model = Person
         fields = ('id','name','bio', 'author_bio','photo')
 #end PersonSerializer
 
-class DocSerializer(ModelSerializer):
-    class Meta:
-        model = Doc
-        fields = ('id', 'title', 'slug', 'author', 'language', 'programmingLanguage', 'summary','content')
-#end DocSerializer
+
 
 class PortfolioProjectSerializer(ModelSerializer):
     class Meta:

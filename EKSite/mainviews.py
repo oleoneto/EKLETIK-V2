@@ -3,6 +3,14 @@ from .models import *
 from .forms import ContactForm, DocForm
 
 
+"""
+
+Written by Leo Neto
+Updated on Sept 16, 2017
+
+"""
+
+
 
 
 ################ ERRORS #####################
@@ -92,6 +100,7 @@ def login(request):
 #______________ MAIN SITE ________________
 
 def home(request):
+    # if request.LANGUAGE_CODE !=
     persons = Person.objects.filter(status='p').order_by('name')
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate').filter(featured=True)
     featured = FeaturedHeader.objects.order_by('id')
@@ -174,22 +183,22 @@ def searchResults(request):
 #--------- REDIRECTS --------------
 def azinca(request):
     return redirect('https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA')
+
 def meight(request):
     return redirect('https://github.com/Ngola')
+
 def leo(request):
     return redirect('https://github.com/oleoneto')
+
 def paulo(request):
     return redirect('https://github.com/pjaime88')
+
 def felipe(request):
     return redirect('https://github.com/fsilva24')
 
 
 
-#------ Outros Projectos -------
-def horas(request):
-    docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
-    return render(request, 'PT/hora.html',{
-        'docs': docs,
-    })
+#------ Other Projects -------
+# Check experimentalProjectViews.py
 
 
