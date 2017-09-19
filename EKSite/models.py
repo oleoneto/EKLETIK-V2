@@ -144,13 +144,16 @@ class Doc(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
 
     class Meta:
-        verbose_name_plural = 'Docs'
+        verbose_name_plural = 'Documentation & Blog'
 
     def writer(self):
         return self.author.name
 
+    def get_author(self):
+        return self.author.name
+
     def sintax(self):
-        return self.programmingLanguage
+        return self.get_programmingLanguage_display()
 
     def __str__(self):
         return self.title
@@ -167,7 +170,7 @@ class FeaturedHeader(models.Model):
 
     class Meta:
         verbose_name = 'Featured Header'
-        verbose_name_plural = 'Site Headers'
+        verbose_name_plural = 'Featured Headers'
 
     def __str__(self):
         return self.title

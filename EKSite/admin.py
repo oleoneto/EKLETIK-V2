@@ -83,7 +83,8 @@ class PortfolioProjectAdmin(admin.ModelAdmin):
 
 
 # Registering Project and Person admin classes...
+admin.site.site_header = "Ekletik Studios"
 admin.site.register(Doc, DocAdmin)
 admin.site.register(PortfolioProject, PortfolioProjectAdmin)
-admin.site.register(Person, PersonAdmin)
-admin.site.register(FeaturedHeader)
+# admin.site.register(Person, PersonAdmin)
+# admin.site.register(FeaturedHeader)
