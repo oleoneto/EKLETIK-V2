@@ -22,23 +22,27 @@ Date: September 13, 2017
 		<title>EK Studios {% block title %}{% endblock %}</title>
 		<!-- Normalize CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-		<!-- Google Fonts: Source Sans Pro and Open Sans -->
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,900,400,600|Encode+Sans" rel="stylesheet" type="text/css">
 		<!-- Bootstrap V4 -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
               integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-		<!-- Fontawesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<!-- Animate CSS -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-        <!-- HighlightJS CSS -->
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
         <!-- Local CSS -->
 		<link rel="stylesheet" href="{% static 'css/master.css' %}">
 		<link rel="stylesheet" href="{% static 'css/galeria.css'%}">
         <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
         <link rel="stylesheet" href="{% static 'css/header.css' %}">
+        <script>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:500015,hjsv:5};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
 	</head>
+
+
 
 	<body>
         {% comment %}
@@ -109,7 +113,6 @@ Date: September 13, 2017
                      {% endif %}
                     <a href="/empresa/">Empresa</a>
                     <a href="/portfolio/">Portfolio</a>
-{#                    <a href="/apis/">Apis</a>#}
                     <a href="/docs/">Docs</a>
                 </p>
                 <p class="footer-social">
@@ -123,6 +126,15 @@ Date: September 13, 2017
         {% comment %}
             jQuery 3.2.1, Popper, and Bootstrap JavaScript V4 are included here...
         {% endcomment %}
+        <!-- Fontawesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Animate CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!-- HighlightJS CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+        <!-- Google Fonts: Source Sans Pro and Open Sans -->
+{#		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,900,400,600|Encode+Sans" rel="stylesheet" type="text/css">#}
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
