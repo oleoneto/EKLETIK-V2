@@ -4,7 +4,7 @@ from ModelsLibraries import *
 
 
 
-###_______________________________________
+#_________________________________________
 # This is a generic site-wide person class
 # All FIELDS are REQUIRED
 # Names are limited to 45 characters
@@ -37,7 +37,7 @@ class Person(models.Model):
 
 
 
-#
+#_____________________________________
 # A class to manage portfolio projects
 # Variables are self-explanatory
 class PortfolioProject(models.Model):
@@ -59,6 +59,9 @@ class PortfolioProject(models.Model):
     def __str__(self):
         return self.title
 
+    def uri(self):
+        return reverse('project', args=[str(self.slug)])
+
     def get_author(self):
         return self.author.name
 
@@ -71,7 +74,7 @@ class PortfolioProject(models.Model):
 
 
 
-#
+#_________________________________________________
 # A single class that stores HEX color information
 # This class can be featured alongside Project
 # When alongside Project, multiple instances of Color can be created in the admin panel.
@@ -84,8 +87,6 @@ class Color(models.Model):
 
     def __str__(self):
         return self.hexColor
-
-
 #end Color
 
 
@@ -94,7 +95,7 @@ class Color(models.Model):
 
 
 
-#
+#__________________________________________
 # Similar to Color, Photo can be featured alongside Project.
 # Multiple instances of Photo can also be created in the admin panel.
 class Photo(models.Model):
@@ -119,7 +120,7 @@ class Photo(models.Model):
 
 
 
-###
+#__________________________________________
 # A class for the documentation on the site.
 # This can be used for blog posts as well
 # Author is a reference to an instance of Person
@@ -129,8 +130,6 @@ class Photo(models.Model):
 # Update date should also be auto generated, but no one should be able to change it.
 # get_author returns the name of the instance of Person who authored the doc.
 # __str__ returns the value of title inside an instance of Docs.
-###
-
 class Doc(models.Model):
     author = models.ForeignKey(Person)
     title = models.CharField(max_length=45, blank=False)
@@ -155,22 +154,15 @@ class Doc(models.Model):
     def sintax(self):
         return self.get_programmingLanguage_display()
 
-    def __str__(self):
-        return self.title
-
-
-
-class FeaturedHeader(models.Model):
-    title = models.CharField(max_length=35)
-    description = models.TextField(max_length=140, blank=True)
-    emoji = models.BooleanField(default=False)
-    link = models.URLField(default='https://ekletik.com')
-    photo_link = models.URLField(blank=False)
-    photo = models.ImageField(upload_to='uploads/featured/', max_length=45, blank=True)
-
-    class Meta:
-        verbose_name = 'Featured Header'
-        verbose_name_plural = 'Featured Headers'
+    def uri(self):
+        return reverse('doc', args=[str(self.slug)])
 
     def __str__(self):
         return self.title
+
+
+
+
+#________________________
+# Removed Featured Header
+#________________________

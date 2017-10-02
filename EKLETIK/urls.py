@@ -39,9 +39,11 @@ urlpatterns = [
     url(r'^dash.*', site.error_404),
     url(r'^wp.*', site.error_404),
     url(r'^login.*', site.error_404),
-    url(r'^door/', admin.site.urls),
-    url(r'^logout/$', logout, {'template_name': 'logout.html'}, name='logout'),
-    #url(r'^', include(router.urls)),
+    url(r'^i/sys/', admin.site.urls, name='sys'),
+
+    url(r'^i/logout/$', logout, {'template_name': 'logout.html'}, name='logout'),
+    url(r'^i/login/$', site.userlogin, name='userlogin'),
+    url(r'^i/auth/$', site.userauth, name='userauth'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
 
@@ -53,7 +55,7 @@ urlpatterns = [
     url(r'^contacto/', site.contact, name='contact'),
 
     # SEARCH
-    url(r'^pesquisa/', Search.SearchResults, name='searchResults'),
+    url(r'^p/', Search.SearchResults, name='searchResults'),
 
     #----------
 
@@ -117,6 +119,7 @@ urlpatterns = [
     url(r'^felipe', site.felipe),
     url(r'^paulo', site.paulo),
     url(r'^leo', site.leo),
+    #url(r'^', include(router.urls)),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -19,7 +19,7 @@ class ColorSerializer(ModelSerializer):
 class DocSerializer(ModelSerializer):
     class Meta:
         model = Doc
-        fields = ('id', 'title', 'slug', 'writer', 'language', 'sintax', 'summary','content')
+        fields = ('id', 'uri', 'title', 'slug', 'writer', 'language', 'sintax', 'summary','content')
 #end DocSerializer
 
 
@@ -35,6 +35,6 @@ class PersonSerializer(ModelSerializer):
 class PortfolioProjectSerializer(ModelSerializer):
     class Meta:
         model = PortfolioProject
-        fields = ('id', 'title', 'client', 'type', 'artwork' ,'description')
+        fields = ('id', 'uri', 'title', 'client', 'type', 'artwork', 'description')
 
 #end ProjectSerializer

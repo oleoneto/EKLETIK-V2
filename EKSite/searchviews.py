@@ -19,7 +19,7 @@ from .models import *
 
 
 # SEARCH in DOCS
-def SearchDocs(title):
+def SearchDocs(title, request):
     try:
         docs = Doc.objects.filter(title__icontains=title).filter(status='p')
         if not docs:
@@ -76,7 +76,7 @@ def SearchProjects(title):
 def SearchResults(request):
     if request.POST:
         requestKeyword = request.POST['keyword']
-        docs = SearchDocs(requestKeyword)
+        docs = SearchDocs(requestKeyword, request)
         people = SearchPeople(requestKeyword)
         projects = SearchProjects(requestKeyword)
         user = 'user'

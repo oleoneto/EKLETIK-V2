@@ -2,7 +2,6 @@ from ViewsLibraries import *
 from .models import *
 from .forms import ContactForm, DocForm
 
-
 """
 
 Written by Leo Neto
@@ -37,7 +36,6 @@ def error_403(request):
         'docs': docs,
     })
 
-
 def error_404(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
@@ -65,29 +63,21 @@ def error_500(request):
         'docs': docs,
     })
 
-# if session is secure, try logging in the user
-# if the session is not secure, raise a 401
-def login_authentication(request):
-    requestOrigin = request.get_full_path()
-    if request.is_secure():
-        if request.user.is_authenticated:
-            return redirect('/')
-    else:
-        error_401(request)
 
-def login(request):
-    requestOrigin = request.get_full_path()
+#_______________ LOGIN ___________________
+def userlogin(request):
     return render(request, 'loginPT.html')
 
-
-
-
-
-
-
-
-
-
+def userauth(request):
+    session_username = request.POST['username']
+    session_password = request.POST['password']
+    user = authenticate(request, username=session_username, password=session_password)
+    if user is not None:
+        login(request, user)
+        # print(reverse('admin:EKSite'))
+        return redirect('/i/sys/')
+    else:
+        return render(request, '500.html')
 
 
 
@@ -103,14 +93,11 @@ def home(request):
     # if request.LANGUAGE_CODE !=
     persons = Person.objects.filter(status='p').order_by('name')
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate').filter(featured=True)
-    featured = FeaturedHeader.objects.order_by('id')
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     return render(request, 'PT/index.html', {
         'pageName': 'home',
         'persons': persons,
         'projects': projects,
-        'featured': featured,
-        'featuredTotal': featured.__sizeof__(),
         'docs': docs,
     })
 
@@ -154,7 +141,6 @@ def singleProject(request, key):
         'colors': colors,
         'photos': photos,
     })
-
 
 def contact(request):
     formClass = ContactForm

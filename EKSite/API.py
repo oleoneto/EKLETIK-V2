@@ -5,7 +5,7 @@ from ViewsLibraries import *
 Written by Leo Neto
 Updated on Sept 16, 2017
 
-CRUD - Create Retrieve Update Delete
+CRUD - Create (Post), Retrieve (Get), Update (Put) and Delete (Delete)
 
 """
 
@@ -14,6 +14,7 @@ CRUD - Create Retrieve Update Delete
 
 
 #__________ COLOR API
+# GET all instances of Color
 class ColorListAPIView(ListAPIView):
     queryset = Color.objects.all().order_by('projectName')
     serializer_class = ColorSerializer
@@ -25,26 +26,29 @@ class ColorListAPIView(ListAPIView):
 
 #___________ DOC / BLOG API
 
+# GET all instances of Doc
 class DocListAPIView(ListAPIView):
     queryset = Doc.objects.filter(status='p')
     serializer_class = DocSerializer
 
+# GET a single instance of Doc by id
 class DocDetailAPIView(RetrieveAPIView):
     queryset = Doc.objects.filter(status='p')
     serializer_class = DocSerializer
 
-
+# GET a single instance of Doc by slug
 class DocDetailAPIViewSlug(RetrieveAPIView):
     queryset = Doc.objects.filter(status='p')
     serializer_class = DocSerializer
-    # lookup_url_kwarg = 'pk'
     lookup_field = ('slug')
 
+# PUT/UPDATE a single instance of Doc
 class DocUpdateAPIView(UpdateAPIView):
     queryset = Doc.objects.all()
     serializer_class = DocSerializer
     permission_classes = (IsAdminUser)
 
+# DELETE a single instance of Doc
 class DocDestroyAPIView(DestroyAPIView):
     queryset = Doc.objects.all()
     serializer_class = DocSerializer
@@ -57,10 +61,12 @@ class DocDestroyAPIView(DestroyAPIView):
 
 #_____________ PERSON API
 
+# GET all instances of Person
 class PersonListAPIView(ListAPIView):
     queryset = Person.objects.filter(status='p')
     serializer_class = PersonSerializer
 
+# GET a single instance of Person
 class PersonDetailAPIView(RetrieveAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
@@ -72,10 +78,12 @@ class PersonDetailAPIView(RetrieveAPIView):
 
 #_____________ PORTFOLIO API
 
+# GET all instances of Portfolio Project
 class PortfolioProjectListAPIView(ListAPIView):
     queryset = PortfolioProject.objects.filter(status='p')
     serializer_class = PortfolioProjectSerializer
 
+# GET a single instance of Portfolio Project
 class PortfolioProjectDetailAPIView(RetrieveAPIView):
     queryset = PortfolioProject.objects.all()
     serializer_class = PortfolioProjectSerializer

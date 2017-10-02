@@ -1,95 +1,33 @@
-<!DOCTYPE html>
-
-<!--==========================
-
-Author: Leo Neto
-Site URL: https://ekletik.com
-Date: August 18, 2017
-
-==========================-->
-
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Leo Neto @ Ekletik Studios">
-    <link rel="icon" href="img/favicon.ico">
-    <title>EK Studios</title>
-    <!-- Normalize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <!-- Google Fonts: Source Sans Pro and Open Sans -->
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,900,400,600|Encode+Sans" rel="stylesheet" type="text/css">
-    <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="css/master.css">
-  </head>
+{% extends 'master.html' %}
+{% load static from staticfiles %}
 
 
 
 
 
 
-  <body>
-
-        <!-- NAVIGATION -->
-        <div class="white-w-border fixed-top" id="navigation">
-            <!-- NAVIGATION BAR AND MENU -->
-            <nav class="container navbar navbar-expand-lg navbar-light">
-              <!-- <a class="navbar-brand" href="/">Ekletik <span>Studios</span></a> -->
-              <a href="" class="navbar-brand">
-                <img src="img/favicon.ico" alt="">
-              </a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
-                  <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html" data-toggle="modal" data-target="#contactModal">Contacto</a></li>
-                </ul>
-                <form class="form-inline" method="POST" action="/results/">
-                  <!-- {% csrf_token %} -->
-                  <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="Pesquisar..." aria-label="Search">
-                  <button class="btn btn-outline-light" type="submit">
-                    <i class="fa fa-search text-info"></i>
-                  </button>
-                </form>
-
-              </div>
-            </nav>
-        </div>
 
 
+{% block login %}
+<div class="white">
+<div class="container p-top-100 p-bottom-200 text-white">
 
-
-
-
-<div class="blue-ocean">
-<div class="container p-top-100 p-bottom-100 text-white">
-
-        <div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+        <div class="p-top-60 p-bottom-60 heading animated fadeInUp">
           <p><span>Portal de Entrada</span></p>
           <h1>Login</h1>
         </div>
 
-        <form action="/">
+        <form action="{% url 'userauth' %}" method="POST">
+            {% csrf_token %}
           <div class="form-group">
             <!-- <label for="exampleInputEmail1">Email address</label> -->
-            <input required autofocus autocomplete="username" type="username" class="form-control col-4" id="usernameInput" aria-describedby="usernameHelp" placeholder="Nome de usuário">
+            <input required autofocus autocomplete="username" type="username" class="form-control col-4" id="usernameInput"
+                   aria-describedby="usernameHelp" placeholder="Nome de usuário" name="username">
             <!-- <small id="usernameHelp" class="form-text text-white">Não há margens para erros.</small> -->
           </div>
           <div class="form-group">
             <!-- <label for="exampleInputPassword1">Password</label> -->
-            <input required type="password" class="form-control col-4" id="passwordInput" placeholder="Palavra-passe">
+            <input required type="password" class="form-control col-4" id="passwordInput" placeholder="Palavra-passe" name="password">
           </div>
           <div class="form-check">
             <button type="submit" class="btn btn-primary">Entrar</button>
@@ -103,75 +41,4 @@ Date: August 18, 2017
 
 </div>
 </div>
-
-
-
-
-<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="contactModalLabel">Contacte-nos</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <form method="" action="">
-          <div class="form-group">
-            <label for="recipient-name" class="form-control-label">O seu email:</label>
-            <input autofocus type="email" class="form-control" id="sender-name" required>
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="form-control-label">Mensagem:</label>
-            <textarea class="form-control" id="message-text" maxlength="300"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- FOOTER -->
-        <footer class="bg-light">
-          <div class="container">
-            <p class="footer-copy">Ekletik Studios</p>
-            <p class="footer-menu">
-              <a href="#">Empresa</a>
-              <a href="#">Portfolio</a>
-              <a href="#">Apis</a>
-              <a href="#">Docs</a>
-            </p>
-            <p class="footer-social">
-              <a target="_blank" href="https://github.com/ekletik/"><i class="fa fa-github"></i></a>
-              <a target="_blank" href="https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA"><i class="fa fa-youtube-play"></i></a>
-            </p>
-          </div>
-        </footer>
-
-
-
-  <!-- Bootstrap 4 and jQuery-->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  <!-- <script src="js/functions.js"></script> -->
-  </body>
-</html>
+{% endblock %}
