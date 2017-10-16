@@ -27,6 +27,7 @@ Date: September 27, 2017
               integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!-- Local CSS -->
 		<link rel="stylesheet" href="{% static 'css/master.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/video-overlay.css' %}">
 
         <script>
             (function(h,o,t,j,a,r){
@@ -96,6 +97,7 @@ Date: September 27, 2017
         {% block services %}{% endblock %}
         {% block team %}{% endblock %}
         {% block mission %}{% endblock %}
+        {% block message %}{% endblock %}
         {% block docs %}{% endblock %}
         {% block contact %}{% endblock %}
         {% block extras %}{% endblock %}
@@ -152,8 +154,9 @@ Date: September 27, 2017
 
 
 <!--
-Scheme: {{ request.scheme | upper }}
+Request Scheme: {{ request.scheme | upper }}
 IP Address: {{ request.META.HTTP_HOST }}
-User agent: {{ request.META.HTTP_USER_AGENT }}
-Current uri: {{ request.build_absolute_uri }}
+User Agent: {{ request.META.HTTP_USER_AGENT }}
+Current URI: {{ request.build_absolute_uri }}
+Current Time: {% now 'h:i' %}
 --->

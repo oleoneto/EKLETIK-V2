@@ -1,0 +1,27 @@
+{% load static from staticfiles %}
+
+<!-- navigation -->
+<div class="nav-white-black nav-border fixed-top {% if user.is_authenticated %}grey-border-bottom{% endif %}" id="navigation">
+    <nav class="container navbar navbar-expand-lg navbar-light">
+         <a class="navbar-brand" href="/">EK<span>Labs</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item {% block active-company%}{% endblock %}"><a class="nav-link" href="/empresa/">Empresa</a></li>
+                <li class="nav-item {% block active-portfolio%}{% endblock %}"><a class="nav-link" href="/portfolio/">Portfolio</a></li>
+                <li class="nav-item {% block active-docs%}{% endblock %}"><a class="nav-link" href="/docs/">Docs</a></li>
+                <li class="nav-item {% block active-contact%}{% endblock %}"><a class="nav-link" href="mailto:info@ekletik.com">Contacto</a></li>
+            </ul>
+            <form class="form-inline" method="POST" action="{% url 'searchResults' %}">
+                {% csrf_token %}
+                <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="Pesquisar..." aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">
+                    <i class="fa fa-search text-info"></i>
+                </button>
+            </form>
+        </div>
+    </nav>
+</div>

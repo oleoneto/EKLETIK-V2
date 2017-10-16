@@ -1,0 +1,198 @@
+{% extends 'Experiments/experimentos.html' %}
+{% load static from staticfiles %}
+
+{% block extras %}
+<div class="container p-top-100 p-bottom-40 heading">
+    <h1 id="artistHeader" class="mainTitle">Artist's Name</h1>
+    <h3 id="albumHeader" class="subTitle">Album Title</h3>
+</div>
+
+<div class="container p-bottom-100">
+<div class="row">
+    <!-- Album artwork -->
+    <div class="col-md-3">
+      <img class="img-fluid" id="artwork" src="" alt="">
+    </div>
+
+    <!-- Songs -->
+    <div id="mainTable" class="col-md-9">
+      <table class="sortable table table-sm table-hover">
+      <thead class="tableHead">
+        <tr>
+          <th data-sort="name">Título</th>
+          <th data-sort="name">Artista</th>
+          <th data-sort="duration">Álbum</th>
+          <th class="hidden">Tempo</th>
+          <th>Áudio</th>
+        </tr>
+      </thead>
+
+      <tbody class="tableBody" id="songList">
+        <tr id="1" class="song" onclick="ClickedSong(this)">
+          <td>Make Me Believe</td>
+          <td>Joseph Solomon</td>
+          <td class="hidden">Make Me Believe - Single</td>
+          <td>3:25</td>
+          <td>
+            <button id="1" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-1" class="audio" src="http://s11.myradiostream.com:14574/;stream.mp3"
+                       onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="2" class="song" onclick="ClickedSong(this)">
+          <td>Oh the Sweetness</td>
+          <td>Melissa Otto</td>
+          <td class="hidden">Blue Sky</td>
+          <td>3:12</td>
+          <td>
+            <button id="2" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-2" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="3" class="song" onclick="ClickedSong(this)">
+          <td>A Stone Without Hands</td>
+          <td>The Lesser Light Collective</td>
+          <td class="hidden">The King Dreams</td>
+          <td>2:20</td>
+          <td>
+            <button id="3" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-3" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="4" class="song" onclick="ClickedSong(this)">
+          <td>Canção de Quem Fica</td>
+          <td>Felipe Valente</td>
+          <td class="hidden">Reversos</td>
+          <td>4:25</td>
+          <td>
+            <button id="4" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-4" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="5" class="song" onclick="ClickedSong(this)">
+          <td>Jeremias</td>
+          <td>Gabriel Iglesias</td>
+          <td class="hidden">Pedra em Carne</td>
+          <td>6:18</td>
+          <td>
+            <button id="5" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-5" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="6" class="song" onclick="ClickedSong(this)">
+          <td>Everlasting</td>
+          <td>Eric &amp; Monique</td>
+          <td class="hidden">Everlasting</td>
+          <td>4:48</td>
+          <td>
+            <button id="6" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-6" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="7" class="song" onclick="ClickedSong(this)">
+          <td>Stars</td>
+          <td>Alison Brook</td>
+          <td class="hidden">The Heart of the Matter</td>
+          <td>4:49</td>
+          <td>
+            <button id="7" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-7" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="8" class="song" onclick="ClickedSong(this)">
+          <td>Away In a Manger</td>
+          <td>Scripture Says</td>
+          <td class="hidden">More Than Conqueror</td>
+          <td>4:12</td>
+          <td>
+            <button id="8" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-8" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="9" class="song" onclick="ClickedSong(this)">
+          <td>Seu Nome</td>
+          <td>Alexandre Magnani</td>
+          <td class="hidden">Seu Nome - Single</td>
+          <td>3:12</td>
+          <td>
+            <button id="9" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-9" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="10" class="song" onclick="ClickedSong(this)">
+          <td>Inevitável</td>
+          <td>Vocal Livre</td>
+          <td class="hidden">Bela História</td>
+          <td>5:18</td>
+          <td>
+            <button id="10" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-10" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="11" class="song" onclick="ClickedSong(this)">
+          <td>Mais</td>
+          <td>Os Arrais</td>
+          <td class="hidden">Mais</td>
+          <td>5:20</td>
+          <td>
+            <button id="11" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-11" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="12" class="song" onclick="ClickedSong(this)">
+          <td>Not Too Late</td>
+          <td>Andy Gullahorn</td>
+          <td class="hidden">Fault Lines</td>
+          <td>3:58</td>
+          <td>
+            <button id="12" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-12" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="13" class="song" onclick="ClickedSong(this)">
+          <td>Me Basta Con Tu Gracia</td>
+          <td>Conexión Cielo</td>
+          <td class="hidden">Corazón Descalzo</td>
+          <td>4:10</td>
+          <td>
+            <button id="13" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-13" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+        <tr id="14" class="song" onclick="ClickedSong(this)">
+          <td>Praise The King</td>
+          <td>Corey Voss</td>
+          <td class="hidden">How Great</td>
+          <td>4:52</td>
+          <td>
+            <button id="14" class="fa fa-play" type="button" onclick="togglePlay(this.id)">
+                <audio id="faixa-14" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/player.js' %}"></script>
+<script src="{% static 'js/playMe.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'Experiments/experimentos.html' %}
+{% load static from staticfiles %}
+
+{% block extras %}
+<div class="blue p-top-200 p-bottom-200">
+<div class="container p-top-100 p-bottom-40 heading">
+    <h3>A Tocar</h3>
+    <h1 id="artistHeader" class="mainTitle">Rádio Luzeiros</h1>
+    <button type="button" class="btn btn-default white" id="radioButton" onclick="togglePlay(this)">
+    Ouvir em directo
+    <audio src="http://s11.myradiostream.com:14574/;stream" id="radioAudio"></audio>
+    </button>
+</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/radio.js' %}"></script>
+{% endblock %}

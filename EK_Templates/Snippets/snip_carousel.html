@@ -1,0 +1,44 @@
+{% load static from staticfiles %}
+
+<!-- CAROUSEL AND SLIDER -->
+<div class="main-carousel p-top-60">
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+
+    {% if featuredTotal > 1 %}
+        <ol class="carousel-indicators">
+        {% for i in featured %}
+            <li data-target="#carouselIndicators" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %}active{% endif %}"></li>
+        {% endfor %}
+        </ol>
+    {% endif %}
+
+    <div class="carousel-inner sub-heading" id="main-carousel">
+
+        {% for i in featured %}
+        <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{i}}">
+            <a href="{{ i.link }}">
+                <img class="bkg-cover d-block w-100" src="{% if i.photo %}{{ i.photo.url }}{% else %}{{ i.photo_link }}{% endif %}" alt="{{ i.title }}">
+            </a>
+            <div class="carousel-caption d-md-block m-top-bottom">
+                <h1>{{ i.title }}</h1>
+                <div class="{% if i.emoji %}emojis{% endif %}">
+                    {{ i.description | linebreaks }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- end carousel -->
