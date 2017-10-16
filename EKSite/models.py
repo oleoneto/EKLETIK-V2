@@ -6,7 +6,7 @@ from ModelsLibraries import *
 
 #_________________________________________
 # This is a generic site-wide person class
-# All FIELDS are REQUIRED
+# All FIELDS are REQUIRED except the author_bio
 # Names are limited to 45 characters
 # Using Uploads/profiles/ for profile pictures
 # bio should be a short description of the person
@@ -166,3 +166,12 @@ class Doc(models.Model):
 #________________________
 # Removed Featured Header
 #________________________
+
+
+class Message(models.Model):
+    sender  = models.EmailField()
+    subject = models.CharField(max_length=50)
+    content = models.TextField()
+    date = models.DateTimeField(auto_now=True)
+    origin = models.CharField(max_length=200)
+

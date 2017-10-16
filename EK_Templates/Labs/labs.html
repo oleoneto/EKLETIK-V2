@@ -2,8 +2,16 @@
 {% load static from staticfiles %}
 
 {% block navbar %}
-{% include 'Snippets/snip_navexperimentos.html' %}
+{% include 'Snippets/snip_navbar-labs.html' %}
+{% endblock %}
+
+{% block bodyclass %}
+darkblue
 {% endblock %}
 {% block extras %}
-{% include 'Snippets/snip_experimentos.html' %}
+{% include 'Snippets/snip_labs.html' %}
+{% endblock %}
+
+{% block footer %}
+{% include 'Snippets/snip_footer-labs.html' %}
 {% endblock %}

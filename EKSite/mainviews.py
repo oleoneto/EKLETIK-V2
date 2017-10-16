@@ -1,6 +1,6 @@
 from ViewsLibraries import *
 from .models import *
-from .forms import ContactForm, DocForm
+from .forms import *
 
 """
 
@@ -21,7 +21,7 @@ def error_report(errorMessage):
 def error_401(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, '401.html', {
+    return render(request, 'Masters/401.html', {
         'origin': requestOrigin,
         'pageName': '401',
         'docs': docs,
@@ -30,7 +30,7 @@ def error_401(request):
 def error_403(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, '403.html', {
+    return render(request, 'Masters/403.html', {
         'origin': requestOrigin,
         'pageName': '403',
         'docs': docs,
@@ -39,7 +39,7 @@ def error_403(request):
 def error_404(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, '404.html', {
+    return render(request, 'Masters/404.html', {
         'origin': requestOrigin,
         'pageName': '404',
         'docs': docs,
@@ -48,7 +48,7 @@ def error_404(request):
 def error_405(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, '405.html', {
+    return render(request, 'Masters/405.html', {
         'origin': requestOrigin,
         'pageName': '405',
         'docs': docs,
@@ -57,7 +57,7 @@ def error_405(request):
 def error_500(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, '500.html', {
+    return render(request, 'Masters/500.html', {
         'origin': requestOrigin,
         'pageName': '500',
         'docs': docs,
@@ -66,7 +66,7 @@ def error_500(request):
 
 #_______________ LOGIN ___________________
 def userlogin(request):
-    return render(request, 'loginPT.html')
+    return render(request, 'Masters/loginPT.html')
 
 def userauth(request):
     session_username = request.POST['username']
@@ -77,7 +77,7 @@ def userauth(request):
         # print(reverse('admin:EKSite'))
         return redirect('/i/sys/')
     else:
-        return render(request, '500.html')
+        return render(request, 'Masters/500.html')
 
 
 
@@ -92,13 +92,15 @@ def userauth(request):
 def home(request):
     # if request.LANGUAGE_CODE !=
     persons = Person.objects.filter(status='p').order_by('name')
-    projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate').filter(featured=True)
+    projects = PortfolioProject.objects.filter(status='p').filter(featured=True)
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     return render(request, 'PT/index.html', {
         'pageName': 'home',
         'persons': persons,
         'projects': projects,
         'docs': docs,
+        'project_max': 3,
+        'doc_max': 4,
     })
 
 def company(request):
@@ -110,9 +112,13 @@ def company(request):
 
 def portfolio(request):
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate')
+    featured = PortfolioProject.objects.filter(status='p').filter(featured=True)
     return render(request, 'PT/portfolio.html', {
         'pageName': 'portfolio',
         'projects': projects,
+        'featured': featured,
+        'featuredTotal': featured.count(),
+        'project_max': 1000,
     })
 
 def singleProject(request, key):
@@ -150,6 +156,13 @@ def contact(request):
         'choices': SOLICIT_CHOICES,
     })
 
+def message(request):
+    formClass = MessageForm
+    return render(request, 'PT/mensagem.html', {
+        'pageName': 'mensagem',
+        'form': formClass,
+        'choices': SOLICIT_CHOICES,
+    })
 
 #----------- SEARCH ----------------
 

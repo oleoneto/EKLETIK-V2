@@ -1,39 +1,22 @@
 from ViewsLibraries import *
 from .models import *
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # SEARCH in DOCS
-def SearchDocs(title, request):
+def SearchDocs(kewyword, request):
     try:
-        docs = Doc.objects.filter(title__icontains=title).filter(status='p')
+        docs = Doc.objects.filter(title__icontains=kewyword).filter(status='p')
         if not docs:
-            docs = Doc.objects.filter(slug__icontains=title).filter(status='p')
+            docs = Doc.objects.filter(slug__icontains=kewyword).filter(status='p')
             if not docs:
-                docs = Doc.objects.filter(content__icontains=title).filter(status='p')
+                docs = Doc.objects.filter(content__icontains=kewyword).filter(status='p')
                 if not docs:
-                    docs = Doc.objects.filter(summary__icontains=title).filter(status='p')
+                    docs = Doc.objects.filter(summary__icontains=kewyword).filter(status='p')
                     if not docs:
-                        docs = Doc.objects.filter(programmingLanguage__contains=title).filter(status='p')
+                        docs = Doc.objects.filter(programmingLanguage__icontains=kewyword).filter(status='p')
                         if not docs:
-                            docs = Doc.objects.filter(author__name__contains=title).filter(status='p')
+                            docs = Doc.objects.filter(author__name__icontains=kewyword).filter(status='p')
                             if not docs:
-                                docs = Doc.objects.filter(author__author_bio__icontains=title).filter(status='p')
+                                docs = Doc.objects.filter(author__author_bio__icontains=kewyword).filter(status='p')
     except Doc.DoesNotExist:
         erro = True
         raise Http404('Nothing found')
@@ -45,22 +28,22 @@ def SearchDocs(title, request):
 
 
 # SEARCH in PEOPLE
-def SearchPeople(name):
+def SearchPeople(keyword):
     try:
-        people = Person.objects.filter(name__contains=name)
+        people = Person.objects.filter(name__icontains=keyword)
     except Person.DoesNotExist:
         erro = True
         raise Http404('No person...')
     return people
 
 
-def SearchProjects(title):
+def SearchProjects(keyword):
     try:
-        projects = PortfolioProject.objects.filter(title__icontains=title).filter(status='p')
+        projects = PortfolioProject.objects.filter(title__icontains=keyword).filter(status='p')
         if not projects:
-            projects = PortfolioProject.objects.filter(description__icontains=title).filter(status='p')
+            projects = PortfolioProject.objects.filter(description__icontains=keyword).filter(status='p')
             if not projects:
-                projects = PortfolioProject.objects.filter(author__name__icontains=title).filter(status='p')
+                projects = PortfolioProject.objects.filter(author__name__icontains=keyword).filter(status='p')
     except Person.DoesNotExist:
         erro = True
         raise Http404('No project...')

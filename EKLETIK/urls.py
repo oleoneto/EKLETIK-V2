@@ -41,7 +41,7 @@ urlpatterns = [
     url(r'^login.*', site.error_404),
     url(r'^i/sys/', admin.site.urls, name='sys'),
 
-    url(r'^i/logout/$', logout, {'template_name': 'logout.html'}, name='logout'),
+    url(r'^i/logout/$', logout, {'template_name': 'Masters/logout.html'}, name='logout'),
     url(r'^i/login/$', site.userlogin, name='userlogin'),
     url(r'^i/auth/$', site.userauth, name='userauth'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
@@ -53,9 +53,12 @@ urlpatterns = [
     url(r'^portfolio/', site.portfolio, name='portfolio'),
     url(r'^empresa/', site.company, name='company'),
     url(r'^contacto/', site.contact, name='contact'),
+    url(r'^message/', site.message, name='message'),
+
 
     # SEARCH
     url(r'^p/', Search.SearchResults, name='searchResults'),
+
 
     #----------
 
@@ -87,14 +90,16 @@ urlpatterns = [
     #----------
 
 
-    # PROJECT Views
-    url(r'^hora', ep.horas),
-    url(r'^horas', ep.horas),
-    url(r'^oiseau', ep.horas),
-    url(r'^haricot', ep.horas),
-    url(r'^morcovi', ep.morcovi),
-    url(r'^cartofi', ep.horas),
-    url(r'^bot', ep.horas),
+    # EXPERIMENT and LAB Views
+    url(r'^labs/relogio', ep.horas, name="relogio"),
+    url(r'^labs/sonzito', ep.sonzito, name="sonzito"),
+    url(r'^labs/radio', ep.radio, name="radio"),
+    url(r'^labs/haricots', ep.horas, name="haricots"),
+    url(r'^labs/morcovi', ep.morcovii, name="morcovi"),
+    url(r'^labs/cartofi', ep.horas, name="cartofi"),
+    url(r'^labs/bot', ep.horas, name="bot"),
+    url(r'^labs/news', ep.news, name='news'),
+    url(r'^labs/', ep.experimentos, name="labs"),
 
 
     #----------

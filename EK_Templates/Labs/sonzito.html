@@ -1,7 +1,18 @@
-{% extends 'Experiments/experimentos.html' %}
+{% extends 'Labs/labs.html' %}
 {% load static from staticfiles %}
 
 {% block extras %}
+
+<style>
+th {
+ border-color: #6B2737 !important;
+}
+td {
+ border-color: #6B2737 !important;
+}
+</style>
+
+
 <div class="container p-top-100 p-bottom-40 heading">
     <h1 id="artistHeader" class="mainTitle">Artist's Name</h1>
     <h3 id="albumHeader" class="subTitle">Album Title</h3>
