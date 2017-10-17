@@ -52,7 +52,7 @@
 }
 @media (min-width: 760px) {
     .promo-sub {
-        width: 45vw;
+        width: 40vw;
     }
 }
 .promo-lead::before{
