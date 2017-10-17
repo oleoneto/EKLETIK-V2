@@ -1,0 +1,44 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+
+
+
+
+
+
+
+{% block login %}
+<div class="white">
+<div class="container p-top-100 p-bottom-200 text-white">
+
+        <div class="p-top-60 p-bottom-60 heading animated fadeInUp">
+          <p><span>Portal de Entrada</span></p>
+          <h1>Login</h1>
+        </div>
+
+        <form action="{% url 'userauth' %}" method="POST">
+            {% csrf_token %}
+          <div class="form-group">
+            <!-- <label for="exampleInputEmail1">Email address</label> -->
+            <input required autofocus autocomplete="username" type="username" class="form-control col-4" id="usernameInput"
+                   aria-describedby="usernameHelp" placeholder="Nome de usuário" name="username">
+            <!-- <small id="usernameHelp" class="form-text text-white">Não há margens para erros.</small> -->
+          </div>
+          <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Password</label> -->
+            <input required type="password" class="form-control col-4" id="passwordInput" placeholder="Palavra-passe" name="password">
+          </div>
+          <div class="form-check">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input m-auto">
+              Manter-se activo
+            </label>
+          </div>
+          <!-- <button type="submit" class="btn btn-primary">Entrar</button> -->
+        </form>
+
+</div>
+</div>
+{% endblock %}

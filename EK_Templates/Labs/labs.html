@@ -1,0 +1,17 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+{% block navbar %}
+{% include 'Snippets/snip_navbar-labs.html' %}
+{% endblock %}
+
+{% block bodyclass %}
+darkblue
+{% endblock %}
+{% block extras %}
+{% include 'Snippets/snip_labs.html' %}
+{% endblock %}
+
+{% block footer %}
+{% include 'Snippets/snip_footer-labs.html' %}
+{% endblock %}

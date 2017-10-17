@@ -16,3 +16,8 @@ class ContactForm(forms.Form):
         required=True,
         widget=forms.Textarea
     )
+
+class MessageForm(forms.Form):
+    class Meta:
+        model = Message
+        fields = ('sender', 'message', 'origin', 'subject')

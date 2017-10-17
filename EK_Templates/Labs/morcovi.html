@@ -1,0 +1,46 @@
+{% extends 'Labs/labs.html' %}
+{% load static from staticfiles %}
+
+{% block extras %}
+<div class="container" id="experiment">
+
+<div class="row p-top-100 p-img-around">
+    {% for i in '01234567' %}
+    <div class="col-md-3">
+        <img src="https://source.unsplash.com/user/oleoneto/likes/1600x1600" alt="Photo {{ i }}" class="img-fluid">
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+<!-- End -->
+<div class="container p-bottom-10">
+  <hr>
+  <div class="minimal text-black">
+    <select class="custom-select">
+      <option selected>Language</option>
+      <option value="1">English</option>
+      <option value="2">Português</option>
+      <option value="3">Español</option>
+      <option value="4">Français</option>
+    </select>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block js %}
+{% endblock %}

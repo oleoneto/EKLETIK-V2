@@ -1,0 +1,41 @@
+{% extends 'Masters/master.html' %}
+
+
+
+
+
+{% block error %}
+<div class="crimson">
+      <div class="container p-top-100 p-bottom-200">
+
+        <div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+          <p><span>Acesso Negado</span></p>
+          <h1>403</h1>
+
+          <h3>O recurso que solicitou não está disponível para a sua visualização. <br></h3>
+        </div>
+
+
+          <hr>
+          <p class="heading p-top-10 p-bottom-40">
+            <span>Docs Recentes</span>
+          </p>
+
+        <div class="row">
+          {% for i in docs %}
+              {% if forloop.counter <= 3 %}
+              <div class="col-md-4 animated fadeInUp">
+                  <a href="{% url 'doc' i.slug %}" class=""><h4>{{ i.title }}</h4></a>
+                  {% if i.summary %}
+                    <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}" class="underlined">Continue a ler.</a></p>
+                  {% else %}
+                    <p>{{ i.content | slice:'100' }}... <a href="{% url 'doc' i.slug %}" class="underlined">Continue a ler.</a></p>
+                  {% endif %}
+              </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+
+      </div>
+</div>
+{% endblock %}

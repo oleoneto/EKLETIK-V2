@@ -1,220 +1,85 @@
-{% extends 'master.html' %}
+{% extends 'Masters/master.html' %}
 {% load static from staticfiles %}
-
-
 
 {% comment %}
 Escola de programação para falantes de português.
 'Bora programar!
 {% endcomment %}
 
-
-
-
 {% block hero %}
-    <section id="wrapper" class="skewed">
-
-        <div class="layer bottom blue transparent-98">
-            <div class="content-wrap">
-                <div class="content-body heading">
-                    <h3 class="headerAlt">Studios</h3>
-                    <h2>Em português.</h2>
-                    <p>Nós falamos muitas línguas, e se a sua fôr o Português, melhor ainda!
-                        E mesmo que não fôr, deixa connosco que nós falamos muitas outras cenas.
-                    </p>
-                </div>
-                <img class="" src="{% static 'img/EK2.svg' %}" alt="Logotipo Ekletik Studios Branco">
-            </div>
-        </div>
-
-        <div class="layer top white-blue">
-            <div class="content-wrap">
-                <div class="content-body heading">
-                    <h3 class="headerAlt">Ekletik</h3>
-                    <h2>Novas ideias.</h2>
-                    <p>Tem uma ideia e gostaria de tê-la visível na internet? Está na
-                        hora de começarmos num relacionamento seríssimo, <i>ora essa!</i>
-                    </p>
-                </div>
-                <img class="transparent-0" src="{% static 'img/EK1.svg' %}" alt="Logotipo Ekletik Studios Azul">
-            </div>
-        </div>
-
-        <div class="handle"></div>
-
-    </section>
-{% endblock %}
-
-
-{% block carousel-old %}
-				<!-- CAROUSEL AND SLIDER -->
-				<div class="main-carousel p-top-60">
-					<div id="carouselIndicators" class="carousel slide" data-ride="carousel">
-
-                    {% if featuredTotal > 1 %}
-						<ol class="carousel-indicators">
-                        {% for i in featured %}
-                            <li data-target="#carouselIndicators" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %}active{% endif %}"></li>
-                        {% endfor %}
-						</ol>
-                    {% endif %}
-
-
-						<div class="carousel-inner sub-heading" id="main-carousel">
-
-                            {% for i in featured %}
-							<div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{i}}">
-								<a href="{{ i.link }}">
-                                    <img class="bkg-cover d-block w-100" src="{% if i.photo %}{{ i.photo.url }}{% else %}{{ i.photo_link }}{% endif %}" alt="{{ i.title }}">
-                                </a>
-								<div class="carousel-caption d-md-block m-top-bottom">
-									<h1>{{ i.title }}</h1>
-									<div class="{% if i.emoji %}emojis{% endif %}">
-                                        {{ i.description | linebreaks }}
-                                    </div>
-								</div>
-							</div>
-                            {% endfor %}
-
-
-						</div>
-					</div>
-
-					<!-- Controls -->
-					<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
-				</div>
-				<!-- end carousel -->
+{% include "Snippets/snip_herophoto.html" %}
 {% endblock %}
 
 
 {% block gallery %}
-
-				<!-- Gallery -->
-				<div class="gallery bg-white p-top-60 p-bottom-60">
-				<div class="container">
-
-					<div class="heading p-top-60">
-						<p><span>Anda ver a oficina</span></p>
-						<h1>Projectos</h1>
-					</div>
-
-					<div id="buttons" class="p-top-10 p-bottom-40"></div>
-
-					<div class="row p-bottom-10" id="gallery">
-
-                        {% for i in projects %}
-                        {% if forloop.counter <= 3 %}
-                        <!-- Project {{ forloop.counter }} -->
-                        <a href="{% url 'project' i.slug %}" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
-							<div>
-								<img class="img-fluid" src="{{ i.artwork.url }}" data-tags="{{ i.type }}" alt="{{ i.title }}">
-							</div>
-						</a>
-
-                        {% endif %}
-                        {% endfor %}
-
-					</div>
-
-				</div>
-				</div>
-
+{% include "Snippets/snip_gallery.html" %}
 {% endblock %}
 
 
 {% block services %}
-				<!-- Docs and Blog -->
-				<div class="bg-light">
-				<div class="container p-top-100 p-bottom-100 heading text-center">
+<!-- Docs and Blog -->
+<div class="bg-light">
+<div class="container p-top-100 p-bottom-100 heading text-center">
 
-					<div class="p-bottom-60 col-md-8 m-auto">
-						<p><span>Experiência à grosso</span></p>
-						<h1>Ekletikamente</h1>
-						<p>É missão da Ekletik ajudar empresas e empreendedores a criar
-							e manter uma presença sólida e próspera na internet.
-							Rabiscar, desenvolver e levar à net. Simples como 3, 2, 1...</p>
-					</div>
+    <div class="p-bottom-60 col-md-8 m-auto">
+        <p><span>Experiência à grosso</span></p>
+        <h1>Ekletikamente</h1>
+        <p>É missão da Ekletik ajudar empresas e empreendedores a criar
+            e manter uma presença sólida e próspera na internet.
+            Rabiscar, desenvolver e levar à net. Simples como 3, 2, 1...</p>
+    </div>
 
-					<div class="row">
+    <div class="row">
 
-						<div class="col-md-4 animated fadeInUp">
-							<img class="circle-service-image p-bottom-20" src="{%  static 'img/design.svg' %}" alt="">
-							<h3>Design</h3>
-							<p>Desde os rabiscos em papel aos protótipos digitais,
-								ajudámo-lo a dar forma às suas ideias e a materializar a sua visão.
-								<a href="/portfolio">Ver portfolio</a>.</p>
-						</div>
-						<div class="col-md-4 animated fadeInUp">
-							<img class="circle-service-image p-bottom-20" src="{%  static 'img/desenvolvimento.svg' %}" alt="">
-							<h3>Desenvolvimento</h3>
-							<p>Sejam projectos em idiomas humanos ou em linguagens de programação, iremos guiá-lo seguramente à consolidação do seu projecto.</p>
-						</div>
-						<div class="col-md-4 animated fadeInUp">
-							<img class="circle-service-image p-bottom-20" src="{%  static 'img/alojamento.svg' %}" alt="">
-							<h3>Alojamento</h3>
-							<p class="smiley-symbol">Tiramos a massada à gestão do seu negócio online. Mantenha o foco no que sabe fazer melhor e nós o ajudamos com o resto</p>
-						</div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/design.svg' %}" alt="">
+            <h3>Design</h3>
+            <p>Desde os rabiscos em papel aos protótipos digitais,
+                ajudámo-lo a dar forma às suas ideias e a materializar a sua visão.
+                <a href="/portfolio">Ver portfolio</a>.</p>
+        </div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/desenvolvimento.svg' %}" alt="">
+            <h3>Desenvolvimento</h3>
+            <p>Sejam projectos em idiomas humanos ou em linguagens de programação, iremos guiá-lo seguramente à consolidação do seu projecto.</p>
+        </div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/alojamento.svg' %}" alt="">
+            <h3>Alojamento</h3>
+            <p class="smiley-symbol">Tiramos a massada à gestão do seu negócio online. Mantenha o foco no que sabe fazer melhor e nós o ajudamos com o resto</p>
+        </div>
 
-					</div>
+    </div>
 
-					<div class="col-md-4 m-auto p-top-20 animated fadeInUp">
-						<hr>
-						<p class="center">
-                            <a class="text-primary chevron-link" href="/empresa">Conheça-nos melhor</a>
-						</p>
-					</div>
+    <div class="col-md-4 m-auto p-top-20 animated fadeInUp">
+        <hr>
+        <p class="center">
+            <a class="text-primary chevron-link" href="/empresa">Conheça-nos melhor</a>
+        </p>
+    </div>
 
-				</div>
-			</div>
+</div>
+</div>
 {% endblock %}
 
 
 {% block docs %}
-
-			<div class="container p-top-40 p-bottom-100">
-
-				<div class="blog-section p-top-60 p-bottom-40">
-					<p><span>Docs &amp; Nerdices</span></p>
-					<h1>Docs.</h1>
-				</div>
-
-				<div class="row blog-section">
-
-					{% for i in docs %}
-                        {% if forloop.counter <= 4 %}
-                      <div class="col-md-3">
-                        <a href="{% url 'doc' i.slug %}">
-                          <h4>{{ i.title }}</h4>
-                        </a>
-                      {% if i.summary %}
-                        <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}">Ler mais</a></p>
-                      {% else %}
-                        <p>{{ i.content | slice:'75' }}... <a href="{% url 'doc' i.slug %}">Ler mais</a></p>
-                      {% endif %}
-                      </div>
-                        {% endif %}
-                    {% endfor %}
-
-				</div>
-			</div>
-
-
+{% include "Snippets/snip_docs.html" %}
 {% endblock %}
 
 
 {% block js %}
-    <script src="{% static 'js/header.js' %}"></script>
-    <script src="{% static 'js/galeria.min.js' %}"></script>
-	<script type="text/javascript">
-		$('.carousel').carousel({
-				interval: 10000
-		});
-	</script>
+<script src="{% static 'js/galeria.min.js' %}"></script>
+
+{% comment %}
+    Add videoheader.js to control multiple video formats on the page.
+    Some modifications to the html of the video snippet may be necessary for
+    the script to work as intended.
+    <script src="{% static 'js/videoheader.js' %}"></script>
+{% endcomment %}
+<script type="text/javascript">
+    $('.carousel').carousel({
+            interval: 10000
+    });
+</script>
 {% endblock %}

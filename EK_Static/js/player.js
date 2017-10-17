@@ -1,14 +1,11 @@
 /*
-
 Language: JavaScript (JQuery)
-
 A snipped of code for displaying a table of songs.
 Clicking on a row displays the artwork of the album along with the name of the singer. Sorting works on all present fields.
 
 Source: JavaScript Book
 Edited by Leo Neto
 Thursday July 20, 2017
-
 */
 
 // Debugging...
@@ -33,9 +30,40 @@ var album_list = [
 'http://is1.mzstatic.com/image/thumb/Music4/v4/2f/40/48/2f4048c5-3633-938e-dcbb-7ea3cbb38fb0/source/600x600bb.jpg',
 
 'http://is4.mzstatic.com/image/thumb/Music2/v4/86/42/4a/86424aca-2248-1693-6a3e-9dde096b4eb9/source/600x600bb.jpg',
-'http://is4.mzstatic.com/image/thumb/Music118/v4/2d/d4/3d/2dd43d3e-d6e2-ec63-e013-15bc258ef831/source/600x600bb.jpg'
+'http://is3.mzstatic.com/image/thumb/Music69/v4/97/04/f0/9704f03a-ccc6-3938-2d28-71246f2e8941/source/600x600bb.jpg',
+'http://is2.mzstatic.com/image/thumb/Music30/v4/db/e5/e8/dbe5e8b3-4fb9-1cdb-a10c-b6159a423503/source/600x600bb.jpg',
+'http://is1.mzstatic.com/image/thumb/Music22/v4/a9/bd/3c/a9bd3c90-5024-9302-1526-b6a63c6cf3b0/source/600x600bb.jpg'
 ];
 
+var song_list = [
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/',
+    'https://.com/'
+];
+
+var RADIOLUZEIROS = 'http://s11.myradiostream.com:14574/;stream';
 
 // Getting all the songs on the page...
 var $songs = $(".song");
@@ -66,9 +94,6 @@ function ClickedSong(ref) {
   // The main header of the page, above the artwork
   var $page = $('#artistHeader')[0];
 
-  //
-  // var $copyright = $('#copyright').text();
-
   // Replacing the header text...
   $page.textContent = $song_artist.innerText;
 
@@ -78,19 +103,29 @@ function ClickedSong(ref) {
 
   // Replacing the title of the HTML page...
   var $html_title = $('title').text();
-  // $('title').html($song_title.innerText + " by " + $song_artist.innerText);
 
   // Replacing the albumHeader....
   $('#albumHeader').html($song_album.innerText);
 
   // Debugging...
   // console.log($song_id);
+  // console.log($artwork);
 
 };//end of ClickedSong
 
 
+function AppendSource(){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len; i++){
+        audios[i].src = RADIOLUZEIROS;
+        // Debugging...
+        // console.log(audios[i].src);
+    }
+}//end AppendSource
 
+
+// Change audio sources
+AppendSource();
 
 // Click on the first element of the table when the page loads...
 ClickedSong($songs[0]);
-// ClickedSong($songs[Math.random()]);

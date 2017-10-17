@@ -1,0 +1,27 @@
+{% load static from staticfiles %}
+
+<!-- Gallery -->
+<div class="gallery bg-white p-top-60 p-bottom-60">
+<div class="container">
+    <div class="heading p-top-60">
+        <p><span>Anda ver a oficina</span></p>
+        <h1>Projectos</h1>
+    </div>
+
+    {% if pageName == 'portfolio' %}
+    <div id="buttons" class="p-top-10 p-bottom-40"></div>
+    {% endif %}
+
+    <div class="row {% if pageName != 'portfolio' %}p-top-20{% endif %} p-bottom-10" id="gallery">
+        {% for i in projects %}
+        {% if forloop.counter <= project_max %}
+        <!-- Project {{ forloop.counter }} -->
+        <a href="{% url 'project' i.slug %}" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
+            <div><img class="img-fluid" src="{{ i.artwork.url }}" data-tags="{{ i.type }}" alt="{{ i.title }}"></div>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</div>
+<!-- end Gallery -->

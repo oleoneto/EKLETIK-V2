@@ -9,6 +9,7 @@ def home(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     return render(request, 'PT/docs.html', {
         'docs': docs,
+        'doc_max': 100,
     })
 
 

@@ -1,4 +1,4 @@
-{% extends 'master.html' %}
+{% extends 'Masters/master.html' %}
 {% load static from staticfiles %}
 
 {% block title %}:: Portfolio :: {{ title }}{% endblock %}
@@ -7,63 +7,36 @@
 
 
 {% block hero %}
-        <!-- Hero -->
-    <div class="portfolio-item">
-        <div class="parallax p-top-40" style="background-image: url('{{ artwork }}');">
-        </div>
+<!-- Hero -->
+<div class="portfolio-item">
+    <div class="parallax p-top-100 p-bottom-100" style="background-image: url('{{ artwork }}');">
     </div>
+</div>
 {% endblock %}
 
 {% block gallery %}
-        <!-- Gallery -->
-        <div class="gallery bg-white p-top-100 p-bottom-60">
-        <div class="container">
+<!-- Gallery -->
+<div class="gallery bg-white p-top-100 p-bottom-60">
+<div class="container">
 
-          <div class="row p-top-20" id="ek-project">
-
-              <div class="col-md-12 p-bottom-20">
-               <p><span>{{ client }}</span></p>
-               <h1>{{ title }}</h1>
-               <article class="markdown">{{ description | safe }}</article>
-              </div>
-
-              <div class="col-md-12 colors animated fadeInUp">
-                {% for color in colors %}
-                <div class="color-item" style="background: {{ color }}; border-color: {{ color }};"> <code>{{ color }}</code></div>
-                {% endfor %}
-              </div>
-          </div>
-
-            <hr>
-
-        </div>
-        </div>
-
-
-
-      <div class="container p-bottom-60 d-none">
-        <div class="heading animated fadeInUp">
-
-          <h3>Intensão e Idealização</h3>
-          {{ description | safe | linebreaks }}
-          <h3>Processo</h3>
-          <p>....</p>
-        </div>
+  <div class="row p-top-20" id="ek-project">
+      <div class="col-md-12 p-bottom-20">
+       <p><span>{{ client }}</span></p>
+       <h1>{{ title }}</h1>
+       <article class="markdown">{{ description | safe }}</article>
       </div>
 
-      <!-- <div class="parallax"></div> -->
+      <div class="col-md-12 colors animated fadeInUp">
+        {% for color in colors %}
+        <div class="color-item" style="background: {{ color }}; border-color: {{ color }};"> <code>{{ color }}</code></div>
+        {% endfor %}
+      </div>
+  </div>
+    <hr>
+</div>
+</div>
 {% endblock %}
 
 {% block js %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
-<!-- Markdown Generator -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        $(".markdown").each(function () {
-            var raw_content = $(this).text()
-            var marked_content = marked(raw_content)
-            $(this).html(marked_content)
-        })
-    })
-</script>
+{% include 'Snippets/snip_highlightjs.html' %}
 {% endblock %}

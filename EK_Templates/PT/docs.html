@@ -1,39 +1,9 @@
-{% extends 'master.html' %}
+{% extends 'Masters/master.html' %}
 {% load static from staticfiles %}
-
 
 {% block title %}:: Docs{% endblock %}
 {% block active-docs %}active{% endblock %}
 
 {% block docs %}
-
-
-      <!-- Docs and Blog -->
-      <div class="container p-top-60 p-bottom-100">
-
-        <div class="blog-section p-top-100 p-bottom-100">
-          <p><span>Docs &amp; Nerdices</span></p>
-          <h1>Docs.</h1>
-        </div>
-
-        <div class="row blog-section p-bottom-100">
-
-          <!-- docs / blog posts -->
-            {% for i in docs %}
-          <div class="col-md-3">
-            {# <p class="date">{{ i.publishedDate | date:"j F 'y"}}</p>#}
-            <a href="{% url 'doc' i.slug %}">
-              <h4>{{ i.title }}</h4>
-            </a>
-          {% if i.summary %}
-            <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}">Continue a ler.</a></p>
-          {% else %}
-            <p>{{ i.content | slice:'100' }}... <a href="{% url 'doc' i.slug %}">Continue a ler.</a></p>
-          {% endif %}
-          </div>
-            {% endfor %}
-
-        </div>
-      </div>
-
+{% include "Snippets/snip_docs.html" %}
 {% endblock %}
