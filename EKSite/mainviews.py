@@ -112,13 +112,14 @@ def company(request):
 
 def portfolio(request):
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate')
-    featured = PortfolioProject.objects.filter(status='p').filter(featured=True)
+    featured = PortfolioProject.objects.filter(status='p').filter(featured=True).order_by('title').exclude(client='EK')
     return render(request, 'PT/portfolio.html', {
         'pageName': 'portfolio',
         'projects': projects,
         'featured': featured,
         'featuredTotal': featured.count(),
         'project_max': 1000,
+        'featured_max': 3,
     })
 
 def singleProject(request, key):

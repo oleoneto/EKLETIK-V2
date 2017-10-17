@@ -7,14 +7,18 @@
     {% if featuredTotal > 1 %}
         <ol class="carousel-indicators">
         {% for i in featured %}
+            {% if forloop.counter <= featured_max %}
             <li data-target="#carouselIndicators" data-slide-to="{{ forloop.counter0 }}"
                 class="{% if forloop.counter0 == 0 %}active{% endif %}"></li>
+            {% endif %}
         {% endfor %}
         </ol>
     {% endif %}
 
+
     <div class="carousel-inner sub-heading" id="main-carousel">
         {% for i in featured %}
+            {% if forloop.counter <= featured_max %}
         <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{i}}">
             <a href="{% url 'project' i.slug %}">
                 <img class="bkg-cover d-block w-100" src="{% if i.artwork %}{{ i.artwork.url }}{% endif %}" alt="{{ i.title }}">
@@ -23,6 +27,7 @@
                 <h1>{{ i.title }}</h1>
             </div>
         </div>
+            {% endif %}
         {% endfor %}
     </div>
     </div>

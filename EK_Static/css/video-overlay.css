@@ -52,12 +52,12 @@
 }
 @media (min-width: 760px) {
     .promo-sub {
-        width: 40vw;
+        width: 35vw;
     }
-}
-.promo-lead::before{
-    /*content: "#";*/
 }
 .promo-lead{
     text-transform: lowercase;
+}
+.no-border-radius{
+    border-radius: 0 !important;
 }
