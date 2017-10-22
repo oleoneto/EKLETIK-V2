@@ -105,14 +105,34 @@ def home(request):
 
 def company(request):
     people = Person.objects.filter(board_member=True).order_by('name')
+    total = people.count()
+
+    if total%3 == 0:
+        grid = 'col-lg-4 col-md-4 col-sm-12'
+    elif total%2 == 0:
+        grid = 'col-lg-3 col-md-3 col-sm-12'
+    else:
+        grid = 'col-lg-4 col-md-4 col-sm-12'
+
     return render(request, 'PT/empresa.html', {
         'pageName': 'empresa',
         'people': people,
+        'totalPeople': total,
+        'grid': grid,
     })
 
 def portfolio(request):
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate')
     featured = PortfolioProject.objects.filter(status='p').filter(featured=True).order_by('title').exclude(client='EK')
+    total = projects.count()
+
+    if total%3 == 0:
+        grid = 'col-lg-4 col-md-4 col-sm-12'
+    elif total%2 == 0:
+        grid = 'col-lg-3 col-md-3 col-sm-12'
+    else:
+        grid = 'col-lg-4 col-md-4 col-sm-12'
+
     return render(request, 'PT/portfolio.html', {
         'pageName': 'portfolio',
         'projects': projects,
@@ -120,6 +140,7 @@ def portfolio(request):
         'featuredTotal': featured.count(),
         'project_max': 1000,
         'featured_max': 3,
+        'grid': grid,
     })
 
 def singleProject(request, key):
@@ -136,6 +157,10 @@ def singleProject(request, key):
         photos = Photo.objects.filter(projectName=project.id)
     except Photo.DoesNotExist:
         raise Http404('No Photos')
+    try:
+        audios = Audio.objects.filter(project=project.id).order_by('number')
+    except Audio.DoesNotExist:
+        raise Http404('No Audio')
 
     return render(request, 'PT/portfolio-single.html', {
         'pageName': 'portfolio',
@@ -147,6 +172,7 @@ def singleProject(request, key):
         'description': project.description,
         'colors': colors,
         'photos': photos,
+        'audios': audios,
     })
 
 def contact(request):

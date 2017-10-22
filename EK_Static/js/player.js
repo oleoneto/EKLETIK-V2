@@ -69,6 +69,51 @@ var RADIOLUZEIROS = 'http://s11.myradiostream.com:14574/;stream';
 var $songs = $(".song");
 
 
+function HoverSong(ref) {
+  // The song element that was clicked...
+  var $song = ref;
+
+  // Adding highlight to the track
+  $($song).addClass('song-clicked').siblings().removeClass('song-clicked');
+
+  // The id of the song element...
+  var $song_id = ref.id;
+
+  // The title of the song that was clicked
+  var $song_title = ref.children[0];
+
+  // The artist of the song that was clicked...
+  var $song_artist = ref.children[1];
+
+  // The album of the song that was clicked...
+  var $song_album = ref.children[2];
+
+  // Artwork displayed on the screen...
+  var $artwork = $('#artwork');
+
+  // The main header of the page, above the artwork
+  var $page = $('#artistHeader')[0];
+
+  // Replacing the header text...
+  $page.textContent = $song_artist.innerText;
+
+  // Replacing the artwork with images from iTunes Api...
+  var url = album_list[$song_id-1];
+  $('#artwork').attr('src', url);
+
+  // Replacing the title of the HTML page...
+  var $html_title = $('title').text();
+
+  // Replacing the albumHeader....
+  $('#albumHeader').html($song_album.innerText);
+
+  // Debugging...
+  // console.log($song_id);
+  // console.log($artwork);
+
+};//end of HoverSong
+
+
 function ClickedSong(ref) {
   // The song element that was clicked...
   var $song = ref;
@@ -112,7 +157,6 @@ function ClickedSong(ref) {
   // console.log($artwork);
 
 };//end of ClickedSong
-
 
 function AppendSource(){
     var audios = document.getElementsByTagName('audio');

@@ -26,6 +26,7 @@ from EKSite import experimentalProjectViews as ep
 from rest_framework import routers, serializers, viewsets
 from rest_framework.urlpatterns import format_suffix_patterns
 
+# admin.autodiscover()
 
 
 urlpatterns = [

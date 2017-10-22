@@ -1,19 +1,11 @@
-#video-header{
-    margin: 0;
-    color: #FFFFFF;
-    overflow-x: hidden;
-}
+
 .v-header{
     height: 100vh;
     display: flex;
     align-items: center;
     color: #FFFFFF;
 }
-.v-container{
-    max-width: 960px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+
 .fullscreen-video-wrap{
     position: absolute;
     top:0;
