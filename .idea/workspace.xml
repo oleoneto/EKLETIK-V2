@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f930efd9-5c68-4b4c-bff5-1d6fef516712" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/mainviews.py" afterPath="$PROJECT_DIR$/EKSite/mainviews.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/models.py" afterPath="$PROJECT_DIR$/EKSite/models.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +33,8 @@
           <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                <state relative-caret-position="345">
+                  <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -54,23 +54,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EKSite/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="119" column="55" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#4194#5202#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="696">
+                  <caret line="153" column="24" lean-forward="true" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mainviews.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="mainviews.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/EKSite/mainviews.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="158">
-                  <caret line="103" column="9" lean-forward="false" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+                <state relative-caret-position="53">
+                  <caret line="96" column="28" lean-forward="false" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                     <element signature="e#216#220#0" expanded="false" />
@@ -185,7 +183,6 @@
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_gallery.html" />
         <option value="$PROJECT_DIR$/EKLETIK/urls.py" />
         <option value="$PROJECT_DIR$/EKSite/admin.py" />
-        <option value="$PROJECT_DIR$/EKSite/models.py" />
         <option value="$PROJECT_DIR$/EK_Static/js/player.js" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html" />
@@ -194,6 +191,7 @@
         <option value="$PROJECT_DIR$/EKSite/mainviews.py" />
         <option value="$PROJECT_DIR$/EKSite/mainviews.py" />
         <option value="$PROJECT_DIR$/EKLETIK/settings.py" />
+        <option value="$PROJECT_DIR$/EKSite/models.py" />
       </list>
     </option>
   </component>
@@ -237,17 +235,6 @@
             <path>
               <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
               <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
-              <item name="EK_Templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
-              <item name="EK_Templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Snippets" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -546,9 +533,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="535" width="1680" height="510" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13858365" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13858365" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20846395" sideWeight="0.504884" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -883,16 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EKSite/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="119" column="55" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
-          <folding>
-            <element signature="e#4194#5202#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EKSite/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -968,10 +944,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_gallery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EKSite/mainviews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="103" column="9" lean-forward="false" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+        <state relative-caret-position="53">
+          <caret line="96" column="28" lean-forward="false" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="e#216#220#0" expanded="false" />
@@ -991,18 +975,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_gallery.html">
+    <entry file="file://$PROJECT_DIR$/EKSite/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        <state relative-caret-position="696">
+          <caret line="153" column="24" lean-forward="true" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
         </state>
       </provider>

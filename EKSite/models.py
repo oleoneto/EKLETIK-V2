@@ -14,7 +14,7 @@ from ModelsLibraries import *
 # __str__ returns the value of name in a given instance of Person
 class Person(models.Model):
     name = models.CharField(max_length=45, blank=False)
-    photo = models.ImageField(upload_to="Uploads/profiles/", max_length=45, blank=False)
+    photo = models.ImageField(upload_to="uploads/profiles/", max_length=45, blank=False)
     position = models.CharField(max_length=45, blank=True)
     board_member = models.BooleanField(default=False)
     bio = models.TextField(max_length=100, blank=False)
@@ -47,7 +47,7 @@ class PortfolioProject(models.Model):
     client = models.CharField(max_length=15, blank=False)
     description = models.TextField()
     details = models.CharField(max_length=30, blank=True)
-    artwork = models.ImageField(upload_to='Uploads/projects/', max_length=45, blank=False)
+    artwork = models.ImageField(upload_to='uploads/projects/', max_length=45, blank=False)
     featured = models.BooleanField(default=False)
     publishedDate = models.DateTimeField(auto_now=False)
     slug = models.SlugField(max_length=50, unique=True, blank=False)
