@@ -2,34 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f930efd9-5c68-4b4c-bff5-1d6fef516712" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectcolors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectdetails.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectimages.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/Uploads/projects/Vibrance3x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/Uploads/projects/Vibrance_Artwork_9003x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/Uploads/projects/sonzito-new-01_w_g2SgwgT.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/Uploads/projects/sonzito-new-01_wudhhli.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/Uploads/projects/vibrance.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/01_Atlantico.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/02_O_Ultimo_Inimigo.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/02_Pour_Lespagnol.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/03_Cossecante_feat._Jose_Francisc_BtgeVFG.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/03_Cossecante_feat._Jose_Francisco.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/03_Manhas_Laranjas.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/08_Everything.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/A_Voz.m4a" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/Manhas_Laranjas.aif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/audios/Towering_Tears.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/profiles/Character_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Azinca_-_Logo_W65AnHd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Azinca_Bare3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Azinca_Bare_2_ftoTnxa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Azinca_Color_gyxR3QE.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Dicionario_-_Cartoes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Dicionario_-_Menu.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Dicionario_-_Pesquisar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/PNG_ChatOS_Contactos.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/PNG_ChatOS_Explorar.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/PNG_ChatOS_Login.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Sonzito_A1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Sonzito_A1a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Sonzito_A2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Sonzito_A3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Tradutor_Cover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Vibrance3x.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Vibrance_I1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Vibrance_I2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Media/Uploads/projects/Vibrance_I3.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKLETIK/settings.py" afterPath="$PROJECT_DIR$/EKLETIK/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKLETIK/urls.py" afterPath="$PROJECT_DIR$/EKLETIK/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/admin.py" afterPath="$PROJECT_DIR$/EKSite/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/mainviews.py" afterPath="$PROJECT_DIR$/EKSite/mainviews.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/models.py" afterPath="$PROJECT_DIR$/EKSite/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/css/master.css" afterPath="$PROJECT_DIR$/EK_Static/css/master.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/css/video-overlay.css" afterPath="$PROJECT_DIR$/EK_Static/css/video-overlay.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/js/playMe.js" afterPath="$PROJECT_DIR$/EK_Static/js/playMe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/js/player.js" afterPath="$PROJECT_DIR$/EK_Static/js/player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Labs/hora.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/hora.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Labs/sonzito.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/sonzito.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Masters/master.html" afterPath="$PROJECT_DIR$/EK_Templates/Masters/master.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/PT/empresa.html" afterPath="$PROJECT_DIR$/EK_Templates/PT/empresa.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html" afterPath="$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/PT/portfolio.html" afterPath="$PROJECT_DIR$/EK_Templates/PT/portfolio.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_gallery.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_gallery.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,11 +60,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.546421">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+                <state relative-caret-position="15">
+                  <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -70,31 +74,9 @@
             <entry file="file://$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="275">
-                  <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+                  <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
                   <folding>
                     <element signature="e#272#319#0#HTML" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="snip_projectmusic.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="60" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="playMe.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/EK_Static/js/playMe.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -118,7 +100,7 @@
             <entry file="file://$PROJECT_DIR$/EKSite/models.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="119" column="55" lean-forward="true" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
+                  <caret line="119" column="55" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
                   <folding>
                     <element signature="e#4194#5202#0" expanded="false" />
                   </folding>
@@ -233,7 +215,6 @@
         <option value="$PROJECT_DIR$/EK_Templates/Labs/news.html" />
         <option value="$PROJECT_DIR$/EK_Static/js/newsapi.js" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/morcovi.html" />
-        <option value="$PROJECT_DIR$/EKLETIK/settings.py" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectcolors.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectimages.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html" />
@@ -255,6 +236,7 @@
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html" />
         <option value="$PROJECT_DIR$/EK_Static/js/playMe.js" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/sonzito.html" />
+        <option value="$PROJECT_DIR$/EKLETIK/settings.py" />
       </list>
     </option>
   </component>
@@ -298,6 +280,24 @@
             <path>
               <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
               <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Media" type="462c0819:PsiDirectoryNode" />
+              <item name="Uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Media" type="462c0819:PsiDirectoryNode" />
+              <item name="Uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -596,9 +596,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="535" width="1680" height="510" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13858365" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13858365" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20846395" sideWeight="0.504884" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -948,7 +947,7 @@
     <entry file="file://$PROJECT_DIR$/EKSite/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="119" column="55" lean-forward="true" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
+          <caret line="119" column="55" lean-forward="false" selection-start-line="119" selection-start-column="55" selection-end-line="119" selection-end-column="55" />
           <folding>
             <element signature="e#4194#5202#0" expanded="false" />
           </folding>
@@ -973,14 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Static/js/player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -990,34 +981,6 @@
             <element signature="e#2026#2553#0" expanded="false" />
             <element signature="n#!!block;n#HoverSong#0" expanded="false" />
             <element signature="n#!!block;n#ClickedSong#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="e#272#319#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/js/playMe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1059,6 +1022,42 @@
             <element signature="e#5196#5370#0" expanded="false" />
             <element signature="e#5442#5529#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/js/playMe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="55" selection-end-line="21" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding>
+            <element signature="e#272#319#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="36" lean-forward="false" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
