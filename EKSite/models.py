@@ -41,7 +41,7 @@ class Person(models.Model):
 # A class to manage portfolio projects
 # Variables are self-explanatory
 class PortfolioProject(models.Model):
-    title = models.CharField(max_length=15, blank=False)
+    title = models.CharField(max_length=30, blank=False)
     type = models.CharField(max_length=15, blank=False)
     author = models.ForeignKey(Person)
     client = models.CharField(max_length=15, blank=False)
@@ -85,8 +85,12 @@ class Color(models.Model):
     def projectTitle(self):
         return self.projectName.title
 
+    def hex(self):
+        return self.hexColor
+
     def __str__(self):
         return self.hexColor
+
 #end Color
 
 
@@ -102,6 +106,23 @@ class Photo(models.Model):
     projectName = models.ForeignKey(PortfolioProject)
     photo = models.ImageField(upload_to='uploads/projects/', max_length=45)
 #end Photo
+
+
+
+#___________________________________________
+class Audio(models.Model):
+    project = models.ForeignKey(PortfolioProject)
+    audio = models.FileField(upload_to='uploads/audios/', max_length=60)
+    number = models.IntegerField(blank=True)
+    title = models.CharField(max_length=50, blank=False)
+    artist = models.CharField(max_length=50, blank=False)
+    composer = models.CharField(max_length=50, blank=True)
+    genre = models.CharField(max_length=15, blank=True)
+
+    def __str__(self):
+        return self.title
+
+#end Audio
 
 
 

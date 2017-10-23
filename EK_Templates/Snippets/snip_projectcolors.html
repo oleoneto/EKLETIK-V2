@@ -1,0 +1,11 @@
+<!-- color palette -->
+<div class="container p-bottom-100 heading">
+<div class="col-md-12 colors animated fadeInUp">
+{% for color in colors %}
+<div class="color-item" style="background: {{ color }}; border-color: {{ color }};">
+    <code>{{ color }}</code>
+</div>
+{% endfor %}
+</div>
+</div>
+<!-- end color palette -->

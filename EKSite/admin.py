@@ -1,13 +1,10 @@
 from django.contrib import admin
-from .models import *
+from EKSite.models import *
 
 
-
-
-
-
-
+#_____________________________________________________
 # Admin panel actions: Publish, Draft, Feature, Unfeature
+
 def make_published(modeladmin, request, queryset):
     queryset.update(status='p')
 make_published.short_description = "Mark elements as published"
@@ -27,21 +24,6 @@ make_unfeatured.short_description = "Unmark as featured content"
 #____________________________________________________
 
 
-
-
-
-
-
-
-# The admin class for the Doc model
-# fields are self-explanatory
-class DocAdmin(admin.ModelAdmin):
-    ordering = ['-publishedDate']
-    list_display = ['title', 'author', 'slug', 'language', 'programmingLanguage','updatedDate','status']
-    prepopulated_fields = {"slug": ("title",)}
-    actions = [make_draft, make_published]
-
-
 # Color admin class to be featured alongside the Project model
 class ColorInLine(admin.TabularInline):
     model = Color
@@ -50,6 +32,25 @@ class ColorInLine(admin.TabularInline):
 class PhotoInLine(admin.TabularInline):
     model = Photo
 
+# Audio admin class to be featured alongside the Project model
+class AudioInLine(admin.TabularInline):
+    model = Audio
+    fields = ('title', 'audio', 'number', 'artist')
+
+
+
+
+# The admin class for the Doc model
+# fields are self-explanatory
+class DocAdmin(admin.ModelAdmin):
+    ordering = ['-publishedDate']
+    list_display = ['title', 'author', 'slug',
+                    'language', 'programmingLanguage',
+                    'updatedDate','status']
+    prepopulated_fields = {"slug": ("title",)}
+    actions = [make_draft, make_published]
+
+
 # Person admin class featuring model actions
 class PersonAdmin(admin.ModelAdmin):
     ordering = ['name']
@@ -57,13 +58,19 @@ class PersonAdmin(admin.ModelAdmin):
     actions = [make_published, make_draft]
     short_description = 'name'
 
+
 # Project admin class featuring the Color model and model actions
 class PortfolioProjectAdmin(admin.ModelAdmin):
     ordering = ['-publishedDate']
-    list_display = ['title', 'author', 'client', 'type', 'publishedDate', 'status', 'featured']
+    list_display = ['title', 'author', 'client', 'type',
+                    'publishedDate', 'status', 'featured']
     actions = [make_featured, make_draft, make_published, make_unfeatured]
-    inlines = [ ColorInLine, PhotoInLine ]
+    inlines = [ColorInLine, PhotoInLine, AudioInLine]
     prepopulated_fields = {"slug": ("title",)}
+
+
+class AudioAdmin(admin.ModelAdmin):
+    ordering = ['title']
 ###___________________________________________
 
 
@@ -75,16 +82,9 @@ class PortfolioProjectAdmin(admin.ModelAdmin):
 
 
 
-
-
-
-
-
-
-
 # Registering Project and Person admin classes...
+# If models are not beeing displayed in the admin dashboard,
+# try logging in as a superuser
 admin.site.site_header = "Ekletik Studios"
 admin.site.register(Doc, DocAdmin)
 admin.site.register(PortfolioProject, PortfolioProjectAdmin)
-# admin.site.register(Person, PersonAdmin)
-# admin.site.register(FeaturedHeader)

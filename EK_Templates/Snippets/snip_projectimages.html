@@ -1,0 +1,12 @@
+{% load static from staticfiles %}
+<!-- Project featured images -->
+<div class="container p-bottom-100">
+    <div class="row">
+    {% for photo in photos %}
+        <div class="col-lg-4 col-md-4 col-sm-4 animated fadeInUp">
+            <img class="img-fluid" src="{{ photo.photo.url }}" alt="Image {{ forloop.counter }} in {{ photo.projectName }}">
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- end project featured images -->

@@ -15,9 +15,11 @@
     <div class="row {% if pageName != 'portfolio' %}p-top-20{% endif %} p-bottom-10" id="gallery">
         {% for i in projects %}
         {% if forloop.counter <= project_max %}
-        <!-- Project {{ forloop.counter }} -->
-        <a href="{% url 'project' i.slug %}" class="animated fadeInUp level-1 gallery-item col-md-4 col-sm-6 col-xs-12">
-            <div><img class="img-fluid" src="{{ i.artwork.url }}" data-tags="{{ i.type }}" alt="{{ i.title }}"></div>
+        <!-- project {{ forloop.counter }} -->
+        <a href="{% url 'project' i.slug %}" class="animated fadeInUp level-1 gallery-item {{ grid }}">
+            <div>
+            <img class="img-fluid" src="{{ i.artwork.url }}" data-tags="{{ i.type }}" alt="{{ i.title }}">
+            </div>
         </a>
         {% endif %}
         {% endfor %}

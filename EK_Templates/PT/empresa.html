@@ -64,14 +64,13 @@
     <h1>Eklétikos</h1>
   </div>
   <div class="row" id="equipa">
-     {% for i in people %}
-        <div class="team-member animated fadeInUp level-1 col-md-4 col-sm-12 col-xs-12">
-            <img class="img-fluid" src="{{ i.photo.url }}" alt="{{ i.name }}" style="border-radius: 7px">
-            <h4>{{ i.name }}, <span>{{ i.position }}</span></h4>
-            <p>{{ i.bio | safe }}</p>
-        </div>
-      {% endfor %}
-
+ {% for i in people %}
+    <div class="team-member animated fadeInUp level-1 {{ grid }}">
+        <img class="img-fluid" src="{{ i.photo.url }}" alt="{{ i.name }}" style="border-radius: 7px">
+        <h4>{{ i.name }}, <span>{{ i.position }}</span></h4>
+        <p>{{ i.bio | safe }}</p>
+    </div>
+  {% endfor %}
   </div>
 </div>
 </div>
@@ -125,7 +124,7 @@
 
 
 {% comment %}
-  <p>The 1<sup>st</sup> person to reply is never the one you really want to get an answer from.</p>
-  <p>An all-round object-oriented language nerd <i>straight out d'jango</i>.</p>
-  <p>P for performance, proactiveness, productivity, and procrastination.</p>
+<p>The 1<sup>st</sup> person to reply is never the one you really want to get an answer from.</p>
+<p>An all-round object-oriented language nerd <i>straight out d'jango</i>.</p>
+<p>P for performance, proactiveness, productivity, and procrastination.</p>
 {% endcomment %}
