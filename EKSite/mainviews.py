@@ -94,6 +94,9 @@ def home(request):
     persons = Person.objects.filter(status='p').order_by('name')
     projects = PortfolioProject.objects.filter(status='p').filter(featured=True)
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
+    total = projects.count()
+    grid = 'col-lg-4 col-md-4 col-sm-12'
+
     return render(request, 'PT/index.html', {
         'pageName': 'home',
         'persons': persons,
@@ -101,6 +104,7 @@ def home(request):
         'docs': docs,
         'project_max': 3,
         'doc_max': 4,
+        'grid': grid,
     })
 
 def company(request):
