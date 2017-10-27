@@ -83,10 +83,13 @@ urlpatterns = [
     url(r'^api/people', API.PersonListAPIView.as_view()),
 
     url(r'^api/portfolio/(?P<pk>\d+)', API.PortfolioProjectDetailAPIView.as_view()),
+    url(r'^api/portfolio/(?P<slug>\D+)', API.PortfolioProjectDetailAPIViewSlug.as_view()),
     url(r'^api/portfolio', API.PortfolioProjectListAPIView.as_view()),
 
     url(r'^api/cores/', API.ColorListAPIView.as_view()),
     url(r'^api/colors/', API.ColorListAPIView.as_view()),
+
+    url(r'^api/audios/', API.AudioListAPIView.as_view()),
 
     #----------
 

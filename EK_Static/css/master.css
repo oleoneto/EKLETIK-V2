@@ -841,6 +841,16 @@ code {
   background-origin: border-box;
   background-attachment: fixed;
 }
+@media (max-width: 600px) {
+  .portfolio-cover{
+    top: -400rem;
+    padding-top: -400rem;
+    /*height: 40px;*/
+    background-attachment: scroll;
+    background-position: bottom;
+    background-size: cover;
+  }
+}
 
 
 .carousel-item img {
@@ -1154,6 +1164,9 @@ footer span {
   font-size : 5em;
 }
 
+.audio-item{
+
+}
 
 
 

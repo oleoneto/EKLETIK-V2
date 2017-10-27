@@ -57,7 +57,7 @@ function StopTracks(originId){
                 audios[i].parentElement.className = "btn black fa fa-play";
             }
             // Debugging...
-            console.log(audios[i].parentElement);
+            // console.log(audios[i].parentElement);
         }
     }
 }//end StopTracks
@@ -67,4 +67,11 @@ function StopTracks(originId){
 function StopAudio(originId) {
     var button = document.getElementById(originId);
     playButton.className = "btn pale fa fa-check";
+}
+
+
+function GetCurrentTime(e) {
+    var el = e;
+    console.log(el.currentTime);
+    var time = setInterval(GetCurrentTime(el), 3000);
 }

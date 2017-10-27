@@ -105,6 +105,9 @@ class Color(models.Model):
 class Photo(models.Model):
     projectName = models.ForeignKey(PortfolioProject)
     photo = models.ImageField(upload_to='uploads/projects/', max_length=45)
+
+    def projectTitle(self):
+        return self.projectName.title
 #end Photo
 
 
@@ -112,16 +115,18 @@ class Photo(models.Model):
 #___________________________________________
 class Audio(models.Model):
     project = models.ForeignKey(PortfolioProject)
-    audio = models.FileField(upload_to='uploads/audios/', max_length=60)
+    source = models.FileField(upload_to='uploads/audios/', max_length=60)
     number = models.IntegerField(blank=True)
     title = models.CharField(max_length=50, blank=False)
     artist = models.CharField(max_length=50, blank=False)
     composer = models.CharField(max_length=50, blank=True)
     genre = models.CharField(max_length=15, blank=True)
 
+    def projectTitle(self):
+        return self.project.title
+
     def __str__(self):
         return self.title
-
 #end Audio
 
 
@@ -196,3 +201,8 @@ class Message(models.Model):
     date = models.DateTimeField(auto_now=True)
     origin = models.CharField(max_length=200)
 
+    def summary(self):
+        return "Message about {} from {}".format(self.subject, self.sender)
+
+    def __str__(self):
+        return self.subject

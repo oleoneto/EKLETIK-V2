@@ -129,12 +129,11 @@ def portfolio(request):
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate')
     featured = PortfolioProject.objects.filter(status='p').filter(featured=True).order_by('title').exclude(client='EK')
     total = projects.count()
+    grid = 'col-lg-4 col-md-4 col-sm-12'
 
+    # This condition is not relevant yet
+    # will check for something else later
     if total%3 == 0:
-        grid = 'col-lg-4 col-md-4 col-sm-12'
-    elif total%2 == 0:
-        grid = 'col-lg-3 col-md-3 col-sm-12'
-    else:
         grid = 'col-lg-4 col-md-4 col-sm-12'
 
     return render(request, 'PT/portfolio.html', {
@@ -154,7 +153,7 @@ def singleProject(request, key):
         raise Http404('No Project')
 
     try:
-        colors = Color.objects.filter(projectName=project.id)
+        colors = Color.objects.filter(projectName=project.id).order_by('hexColor')
     except Color.DoesNotExist:
         raise Http404('No Colors')
     try:

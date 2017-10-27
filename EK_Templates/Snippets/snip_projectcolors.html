@@ -3,7 +3,7 @@
 <div class="col-md-12 colors animated fadeInUp">
 {% for color in colors %}
 <div class="color-item" style="background: {{ color }}; border-color: {{ color }};">
-    <code>{{ color }}</code>
+    <code>{{ color | upper }}</code>
 </div>
 {% endfor %}
 </div>

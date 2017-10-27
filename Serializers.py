@@ -14,12 +14,31 @@ class ColorSerializer(ModelSerializer):
     class Meta:
         model = Color
         fields = ('projectTitle','hexColor',)
+#end ColorSerializer
+
+
+
+class AudioSerializer(ModelSerializer):
+    class Meta:
+        model = Audio
+        fields = ('projectTitle','source',)
+#end AudioSerializer
+
+
+
+# class SonzitoSerializer(ModelSerializer):
+#     class Meta:
+#         model = Sonzito
+#         fields = ('title','source',)
+#end SonzitoSerializer
+
 
 
 class DocSerializer(ModelSerializer):
     class Meta:
         model = Doc
-        fields = ('id', 'uri', 'title', 'slug', 'writer', 'language', 'sintax', 'summary','content')
+        fields = ('id', 'uri', 'title', 'slug', 'writer',
+                  'language', 'sintax', 'summary','content')
 #end DocSerializer
 
 
@@ -27,7 +46,7 @@ class DocSerializer(ModelSerializer):
 class PersonSerializer(ModelSerializer):
     class Meta:
         model = Person
-        fields = ('id','name','bio', 'author_bio','photo')
+        fields = ('id', 'name', 'bio', 'author_bio', 'photo')
 #end PersonSerializer
 
 
@@ -35,6 +54,7 @@ class PersonSerializer(ModelSerializer):
 class PortfolioProjectSerializer(ModelSerializer):
     class Meta:
         model = PortfolioProject
-        fields = ('id', 'uri', 'title', 'client', 'type', 'artwork', 'description')
+        fields = ('uri', 'title', 'client', 'featured',
+                  'type', 'artwork', 'description')
 
 #end ProjectSerializer

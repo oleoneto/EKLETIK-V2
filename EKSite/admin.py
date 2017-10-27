@@ -35,7 +35,7 @@ class PhotoInLine(admin.TabularInline):
 # Audio admin class to be featured alongside the Project model
 class AudioInLine(admin.TabularInline):
     model = Audio
-    fields = ('title', 'audio', 'number', 'artist')
+    fields = ('title', 'source', 'number', 'artist')
 
 
 
