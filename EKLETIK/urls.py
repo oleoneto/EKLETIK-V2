@@ -64,8 +64,11 @@ urlpatterns = [
     #----------
 
     # DOCS / ARTICLES / BLOG Views
+    url(r'^docs/autor/(?P<key>\D+)', docs.authorDoc, name='docAuthor'),
     url(r'^docs/(?P<key>\D+)', docs.singleDoc, name='doc'),
     url(r'^docs/', docs.home, name='docs'),
+
+    url(r'^blog/author/(?P<key>\D+)', docs.authorDoc, name='postAuthor'),
     url(r'^blog/(?P<key>\D+)', docs.singleDoc, name='post'),
     url(r'^blog/', docs.home, name='posts'),
 

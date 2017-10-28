@@ -127,7 +127,7 @@ def company(request):
 
 def portfolio(request):
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate')
-    featured = PortfolioProject.objects.filter(status='p').filter(featured=True).order_by('title').exclude(client='EK')
+    featured = PortfolioProject.objects.filter(status='p').filter(featured=True)
     total = projects.count()
     grid = 'col-lg-4 col-md-4 col-sm-12'
 
@@ -137,7 +137,7 @@ def portfolio(request):
         grid = 'col-lg-4 col-md-4 col-sm-12'
 
     return render(request, 'PT/portfolio.html', {
-        'pageName': 'portfolio',
+        'page': 'portfolio-home',
         'projects': projects,
         'featured': featured,
         'featuredTotal': featured.count(),
@@ -165,8 +165,8 @@ def singleProject(request, key):
     except Audio.DoesNotExist:
         raise Http404('No Audio')
 
-    return render(request, 'PT/portfolio-single.html', {
-        'pageName': 'portfolio',
+    return render(request, 'PT/portfolio.html', {
+        'page': 'portfolio-single',
         'project': project,
         'client': project.client,
         'title': project.title,

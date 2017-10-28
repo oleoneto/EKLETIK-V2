@@ -21,9 +21,15 @@ class Person(models.Model):
     author_bio = models.TextField(max_length=550, blank=True)
     github_username = models.CharField(max_length=30, blank=False)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
+    slug = models.CharField(max_length=50, blank=True)
 
     class Meta:
         verbose_name_plural = "Team Members"
+
+    def get_slug(self):
+        name = self.name.lower()
+        name = name.replace(" ", "-")
+        return name
 
     def __str__(self):
         return self.name

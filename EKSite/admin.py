@@ -55,6 +55,7 @@ class DocAdmin(admin.ModelAdmin):
 class PersonAdmin(admin.ModelAdmin):
     ordering = ['name']
     list_display = ['name', 'position', 'github_username']
+    prepopulated_fields = {"slug": ("name",)}
     actions = [make_published, make_draft]
     short_description = 'name'
 
@@ -88,3 +89,4 @@ class AudioAdmin(admin.ModelAdmin):
 admin.site.site_header = "Ekletik Studios"
 admin.site.register(Doc, DocAdmin)
 admin.site.register(PortfolioProject, PortfolioProjectAdmin)
+# admin.site.register(Person,PersonAdmin)
