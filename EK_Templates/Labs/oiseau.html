@@ -45,7 +45,7 @@ td {
           <td class="hidden">Make Me Believe - Single</td>
           <td>3:25</td>
           <td>
-            <button id="1" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="1" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-1" class="audio" src="http://s11.myradiostream.com:14574/;stream.mp3"
                        onended="StopAudio(this.parentElement.id)"></audio>
             </button>
@@ -57,7 +57,7 @@ td {
           <td class="hidden">Blue Sky</td>
           <td>3:12</td>
           <td>
-            <button id="2" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="2" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-2" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -68,7 +68,7 @@ td {
           <td class="hidden">The King Dreams</td>
           <td>2:20</td>
           <td>
-            <button id="3" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="3" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-3" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -79,7 +79,7 @@ td {
           <td class="hidden">Reversos</td>
           <td>4:25</td>
           <td>
-            <button id="4" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="4" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-4" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -90,7 +90,7 @@ td {
           <td class="hidden">Pedra em Carne</td>
           <td>6:18</td>
           <td>
-            <button id="5" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="5" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-5" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -101,7 +101,7 @@ td {
           <td class="hidden">Everlasting</td>
           <td>4:48</td>
           <td>
-            <button id="6" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="6" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-6" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -112,7 +112,7 @@ td {
           <td class="hidden">The Heart of the Matter</td>
           <td>4:49</td>
           <td>
-            <button id="7" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="7" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-7" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -123,7 +123,7 @@ td {
           <td class="hidden">More Than Conqueror</td>
           <td>4:12</td>
           <td>
-            <button id="8" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="8" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-8" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -134,7 +134,7 @@ td {
           <td class="hidden">Seu Nome - Single</td>
           <td>3:12</td>
           <td>
-            <button id="9" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="9" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-9" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -145,7 +145,7 @@ td {
           <td class="hidden">Bela História</td>
           <td>5:18</td>
           <td>
-            <button id="10" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="10" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-10" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -156,7 +156,7 @@ td {
           <td class="hidden">Mais</td>
           <td>5:20</td>
           <td>
-            <button id="11" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="11" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-11" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -167,7 +167,7 @@ td {
           <td class="hidden">Fault Lines</td>
           <td>3:58</td>
           <td>
-            <button id="12" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="12" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-12" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -178,7 +178,7 @@ td {
           <td class="hidden">Corazón Descalzo</td>
           <td>4:10</td>
           <td>
-            <button id="13" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="13" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-13" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
@@ -189,7 +189,7 @@ td {
           <td class="hidden">How Great</td>
           <td>4:52</td>
           <td>
-            <button id="14" class="btn black fa fa-play" type="button" onclick="PlayRadio(this.id)">
+            <button id="14" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
                 <audio id="faixa-14" class="audio" src="" onended="StopAudio(this.parentElement.id)"></audio>
             </button>
           </td>
