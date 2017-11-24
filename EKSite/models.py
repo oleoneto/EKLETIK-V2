@@ -21,9 +21,15 @@ class Person(models.Model):
     author_bio = models.TextField(max_length=550, blank=True)
     github_username = models.CharField(max_length=30, blank=False)
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
+    slug = models.CharField(max_length=50, blank=True)
 
     class Meta:
         verbose_name_plural = "Team Members"
+
+    def get_slug(self):
+        name = self.name.lower()
+        name = name.replace(" ", "-")
+        return name
 
     def __str__(self):
         return self.name
@@ -105,6 +111,9 @@ class Color(models.Model):
 class Photo(models.Model):
     projectName = models.ForeignKey(PortfolioProject)
     photo = models.ImageField(upload_to='uploads/projects/', max_length=45)
+
+    def projectTitle(self):
+        return self.projectName.title
 #end Photo
 
 
@@ -112,16 +121,29 @@ class Photo(models.Model):
 #___________________________________________
 class Audio(models.Model):
     project = models.ForeignKey(PortfolioProject)
-    audio = models.FileField(upload_to='uploads/audios/', max_length=60)
+    source = models.FileField(upload_to='uploads/audios/', max_length=60)
     number = models.IntegerField(blank=True)
     title = models.CharField(max_length=50, blank=False)
     artist = models.CharField(max_length=50, blank=False)
     composer = models.CharField(max_length=50, blank=True)
     genre = models.CharField(max_length=15, blank=True)
+    slug = models.SlugField(max_length=50, blank=True)
+
+    def related_project(self):
+        return self.project.title
+
+    def set_slug(self):
+        slug = self.title.lower().replace(" ", "-")
+
+    def get_slug(self):
+        slug = self.title.lower().replace(" ", "-")
+        return slug
+
+    #def uri(self):
+    #    return self.source
 
     def __str__(self):
         return self.title
-
 #end Audio
 
 
@@ -196,3 +218,8 @@ class Message(models.Model):
     date = models.DateTimeField(auto_now=True)
     origin = models.CharField(max_length=200)
 
+    def summary(self):
+        return "Message about {} from {}".format(self.subject, self.sender)
+
+    def __str__(self):
+        return self.subject

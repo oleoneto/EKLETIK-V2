@@ -22,6 +22,20 @@ class ColorListAPIView(ListAPIView):
 
 
 
+#__________ AUDIO API
+# GET all instances of Color
+class AudioListAPIView(ListAPIView):
+    queryset = Audio.objects.all().order_by('project')
+    serializer_class = AudioSerializer
+
+class AudioDetailAPIView(RetrieveAPIView):
+    queryset = Audio.objects.all().order_by('project')
+    serializer_class = AudioSerializer
+
+class AudioDetailAPIViewSlug(RetrieveAPIView):
+    queryset = Audio.objects.all().order_by('project')
+    serializer_class = AudioSerializer
+    lookup_field = ('slug')
 
 
 #___________ DOC / BLOG API
@@ -71,7 +85,10 @@ class PersonDetailAPIView(RetrieveAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
 
-
+class PersonDetailAPIViewSlug(RetrieveAPIView):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+    lookup_field = ('slug')
 
 
 
@@ -87,3 +104,8 @@ class PortfolioProjectListAPIView(ListAPIView):
 class PortfolioProjectDetailAPIView(RetrieveAPIView):
     queryset = PortfolioProject.objects.all()
     serializer_class = PortfolioProjectSerializer
+
+class PortfolioProjectDetailAPIViewSlug(RetrieveAPIView):
+    queryset = PortfolioProject.objects.all()#.filter(status='p')
+    serializer_class = PortfolioProjectSerializer
+    lookup_field = ('slug')

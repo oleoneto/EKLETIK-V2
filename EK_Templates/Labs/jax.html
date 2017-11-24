@@ -1,0 +1,36 @@
+{% extends 'Labs/labs.html' %}
+{% load static from staticfiles %}
+
+{% block extras %}
+
+    <div class="container heading p-top-200 p-bottom-20">
+      <h1>Portfolio.</h1>
+      <p>
+        Ontem era dolor sit amet, consectetur adipisicing elit. Voluptates quia nesciunt similique, autem facere dolorum.
+        Onde ex mollitia molestiae reprehenderit officia, amet atque voluptatum voluptate velit doloribus deserunt.
+        Vero totam consequuntur placeat quos, dicta nobis, suscipit aliquid tenetur est esse! Camarada ipsum dolor sit amet, consectetur adipisicing elit.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="gallery">
+        <div class="row" id="gallery">
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container text-muted">
+        <p class="float-right">
+          Designs por Leo Neto
+        </p>
+    </div>
+
+{% endblock %}
+
+
+
+{% block js %}
+<script src="{% static 'js/ajax-portfolio-lab.js' %}"></script>
+{% endblock %}

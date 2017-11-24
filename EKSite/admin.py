@@ -35,7 +35,8 @@ class PhotoInLine(admin.TabularInline):
 # Audio admin class to be featured alongside the Project model
 class AudioInLine(admin.TabularInline):
     model = Audio
-    fields = ('title', 'audio', 'number', 'artist')
+    fields = ('title', 'source', 'number', 'artist', 'slug')
+    prepopulated_fields = {"slug": ("title",)}
 
 
 
@@ -55,6 +56,7 @@ class DocAdmin(admin.ModelAdmin):
 class PersonAdmin(admin.ModelAdmin):
     ordering = ['name']
     list_display = ['name', 'position', 'github_username']
+    prepopulated_fields = {"slug": ("name",)}
     actions = [make_published, make_draft]
     short_description = 'name'
 
@@ -88,3 +90,4 @@ class AudioAdmin(admin.ModelAdmin):
 admin.site.site_header = "Ekletik Studios"
 admin.site.register(Doc, DocAdmin)
 admin.site.register(PortfolioProject, PortfolioProjectAdmin)
+# admin.site.register(Person,PersonAdmin)

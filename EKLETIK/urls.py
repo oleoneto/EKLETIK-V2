@@ -20,7 +20,7 @@ from EKSite import mainviews as site
 from EKSite import docviews as docs
 from EKSite import API as API
 from EKSite import searchviews as Search
-from EKSite import experimentalProjectViews as ep
+from EKSite import labviews as labs
 
 # Importing REST API
 from rest_framework import routers, serializers, viewsets
@@ -56,16 +56,21 @@ urlpatterns = [
     url(r'^contacto/', site.contact, name='contact'),
     url(r'^message/', site.message, name='message'),
 
-
     # SEARCH
     url(r'^p/', Search.SearchResults, name='searchResults'),
+
+    # MAIN Views English
+    url(r'^en/$', site.homeEN, name='homeEN'),
 
 
     #----------
 
     # DOCS / ARTICLES / BLOG Views
+    url(r'^docs/autor/(?P<key>\D+)', docs.authorDoc, name='docAuthor'),
     url(r'^docs/(?P<key>\D+)', docs.singleDoc, name='doc'),
     url(r'^docs/', docs.home, name='docs'),
+
+    url(r'^blog/author/(?P<key>\D+)', docs.authorDoc, name='postAuthor'),
     url(r'^blog/(?P<key>\D+)', docs.singleDoc, name='post'),
     url(r'^blog/', docs.home, name='posts'),
 
@@ -78,35 +83,44 @@ urlpatterns = [
 
 
     url(r'^api/pessoas/(?P<pk>\d+)', API.PersonDetailAPIView.as_view()),
+    url(r'^api/pessoas/(?P<slug>\D+)', API.PersonDetailAPIViewSlug.as_view()),
     url(r'^api/pessoas', API.PersonListAPIView.as_view()),
     url(r'^api/people/(?P<pk>\d+)', API.PersonDetailAPIView.as_view()),
+    url(r'^api/people/(?P<slug>\D+)', API.PersonDetailAPIViewSlug.as_view()),
     url(r'^api/people', API.PersonListAPIView.as_view()),
 
     url(r'^api/portfolio/(?P<pk>\d+)', API.PortfolioProjectDetailAPIView.as_view()),
+    url(r'^api/portfolio/(?P<slug>\D+)', API.PortfolioProjectDetailAPIViewSlug.as_view()),
     url(r'^api/portfolio', API.PortfolioProjectListAPIView.as_view()),
 
     url(r'^api/cores/', API.ColorListAPIView.as_view()),
     url(r'^api/colors/', API.ColorListAPIView.as_view()),
 
+    url(r'^api/audios/(?P<slug>\D+)', API.AudioDetailAPIViewSlug.as_view()),
+    url(r'^api/audios/(?P<pk>\d+)', API.AudioDetailAPIView.as_view()),
+    url(r'^api/audios/', API.AudioListAPIView.as_view()),
+
     #----------
 
 
     # EXPERIMENT and LAB Views
-    url(r'^labs/relogio', ep.horas, name="relogio"),
-    url(r'^labs/sonzito', ep.sonzito, name="sonzito"),
-    url(r'^labs/radio', ep.radio, name="radio"),
-    url(r'^labs/haricots', ep.horas, name="haricots"),
-    url(r'^labs/morcovi', ep.morcovii, name="morcovi"),
-    url(r'^labs/cartofi', ep.horas, name="cartofi"),
-    url(r'^labs/bot', ep.horas, name="bot"),
-    url(r'^labs/news', ep.news, name='news'),
-    url(r'^labs/', ep.experimentos, name="labs"),
+    url(r'^labs/relogio', labs.horas, name="relogio"),
+    url(r'^labs/oiseau', labs.musicplayer, name="musicplayer"),
+    url(r'^labs/radio', labs.radio, name="radio"),
+    url(r'^labs/haricots', labs.horas, name="haricots"),
+    url(r'^labs/morcovi', labs.morcovii, name="morcovi"),
+    url(r'^labs/cartofi', labs.horas, name="cartofi"),
+    url(r'^labs/bot', labs.horas, name="bot"),
+    url(r'^labs/news', labs.news, name='news'),
+    url(r'^labs/jax-audio', labs.jax_audio, name='jax-audio'),
+    url(r'^labs/jax', labs.jax, name='jax'),
+    url(r'^labs/', labs.experimentos, name="labs"),
 
 
     #----------
 
-    # these api endpoints are here for compatibility
-    # reasons use main endpoints whenever possible...
+    # These api endpoints are here for compatibility reasons.
+    # Use main endpoints whenever possible...
     url(r'^api/blog/(?P<pk>\d+)', API.DocDetailAPIView.as_view()),
     url(r'^api/blog', API.DocListAPIView.as_view()),
     url(r'^api/articles/(?P<pk>\d+)', API.DocDetailAPIView.as_view()),

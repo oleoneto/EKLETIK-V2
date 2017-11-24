@@ -1,0 +1,39 @@
+{% load static from staticfiles %}
+<!-- project audio -->
+<div id="" class="p-top-40 p-bottom-200">
+<div class="container">
+<div class="row" id="album">
+<div class="col-md-12">
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Título</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="tableBody">
+    {% for audio in audios %}
+        <tr class="audio-item">
+            <th scope="row">{{ audio.number }}</th>
+            <th>{{audio}}</th>
+            <th class="text-center">
+            {% if audio.source %}
+            <button id="{{ audio.number }}" class="btn black fa fa-play"
+                    type="button" onclick="PlayRadio(this.id)">
+                <audio id="faixa-{{ audio.number }}" class="audio" src="{{ audio.source.url }}"
+                       onended="StopAudio(this.parentElement.id)" onplaying="GetCurrentTime(this)"></audio>
+            </button>
+            {% else %}
+            <button id="NoSong" class="btn pale fa fa-chain-broken"></button>
+            {% endif %}
+            </th>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- end project audio -->

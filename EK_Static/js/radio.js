@@ -3,25 +3,26 @@
 
 
 var RADIOLUZEIROS = "http://s11.myradiostream.com:14574/;stream";
-var song = document.getElementById('radioAudio');
+var radio = document.getElementById('radioAudio');
+var radiobutton = radio.parentElement;
+
+var playingClass = "btn btn-danger";
+var playingText = "Está a ouvir em directo";
+var stoppedClass = "btn btn-success";
+var stoppedText = "Ouvir em directo";
 
 
-
-function togglePlay(element){
-  console.log(element);
-  var i = element.children;
-  var audio = i[0];
-  console.log(audio);
-   if(element.className == 'btn btn-default white'){
-       audio.play();
-       element.className = 'btn btn-warning';
-       element.textContent = 'Está a ouvir em directo';
-   } else {
-       audio.stop();
-       element.className = 'btn btn-default white';
-       element.textContent = 'Ouvir em directo';
-   }
-}//end togglePlay
+function PlayRadio(){
+  if(radiobutton.className == stoppedClass){
+       radio.play();
+       radiobutton.className = playingClass;
+       radiobutton.textContent = playingText;
+  } else {
+       radio.pause();
+       radiobutton.className = stoppedClass;
+       radiobutton.textContent = stoppedText;
+  }
+}//end PlayRadio
 
 
 
@@ -31,7 +32,7 @@ function togglePlay(element){
 
 
 function AppendSource(){
-    var audios = document.getElementsByTagName('audio');
+    var audios = document.getElementsByTagName('radio');
     for(var i = 0, len = audios.length; i < len; i++){
         audios[i].src = RADIOLUZEIROS;
         // Debugging...

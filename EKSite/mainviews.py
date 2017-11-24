@@ -5,7 +5,7 @@ from .forms import *
 """
 
 Written by Leo Neto
-Updated on Sept 16, 2017
+Updated on November 18, 2017
 
 """
 
@@ -96,8 +96,24 @@ def home(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     total = projects.count()
     grid = 'col-lg-4 col-md-4 col-sm-12'
-
     return render(request, 'PT/index.html', {
+        'pageName': 'home',
+        'persons': persons,
+        'projects': projects,
+        'docs': docs,
+        'project_max': 3,
+        'doc_max': 4,
+        'grid': grid,
+    })
+
+def homeEN(request):
+    # if request.LANGUAGE_CODE !=
+    persons = Person.objects.filter(status='p').order_by('name')
+    projects = PortfolioProject.objects.filter(status='p').filter(featured=True)
+    docs = Doc.objects.filter(status='p').filter(language='en').order_by('-publishedDate')
+    total = projects.count()
+    grid = 'col-lg-4 col-md-4 col-sm-12'
+    return render(request, 'EN/index.html', {
         'pageName': 'home',
         'persons': persons,
         'projects': projects,
@@ -110,14 +126,12 @@ def home(request):
 def company(request):
     people = Person.objects.filter(board_member=True).order_by('name')
     total = people.count()
-
     if total%3 == 0:
         grid = 'col-lg-4 col-md-4 col-sm-12'
     elif total%2 == 0:
         grid = 'col-lg-3 col-md-3 col-sm-12'
     else:
         grid = 'col-lg-4 col-md-4 col-sm-12'
-
     return render(request, 'PT/empresa.html', {
         'pageName': 'empresa',
         'people': people,
@@ -127,18 +141,15 @@ def company(request):
 
 def portfolio(request):
     projects = PortfolioProject.objects.filter(status='p').order_by('-publishedDate')
-    featured = PortfolioProject.objects.filter(status='p').filter(featured=True).order_by('title').exclude(client='EK')
+    featured = PortfolioProject.objects.filter(status='p').filter(featured=True)
     total = projects.count()
-
+    grid = 'col-lg-4 col-md-4 col-sm-12'
+    # This condition is not relevant yet
+    # will check for something else later
     if total%3 == 0:
         grid = 'col-lg-4 col-md-4 col-sm-12'
-    elif total%2 == 0:
-        grid = 'col-lg-3 col-md-3 col-sm-12'
-    else:
-        grid = 'col-lg-4 col-md-4 col-sm-12'
-
     return render(request, 'PT/portfolio.html', {
-        'pageName': 'portfolio',
+        'page': 'portfolio-home',
         'projects': projects,
         'featured': featured,
         'featuredTotal': featured.count(),
@@ -152,9 +163,8 @@ def singleProject(request, key):
         project = PortfolioProject.objects.get(slug=key)
     except PortfolioProject.DoesNotExist:
         raise Http404('No Project')
-
     try:
-        colors = Color.objects.filter(projectName=project.id)
+        colors = Color.objects.filter(projectName=project.id).order_by('hexColor')
     except Color.DoesNotExist:
         raise Http404('No Colors')
     try:
@@ -165,9 +175,8 @@ def singleProject(request, key):
         audios = Audio.objects.filter(project=project.id).order_by('number')
     except Audio.DoesNotExist:
         raise Http404('No Audio')
-
-    return render(request, 'PT/portfolio-single.html', {
-        'pageName': 'portfolio',
+    return render(request, 'PT/portfolio.html', {
+        'page': 'portfolio-single',
         'project': project,
         'client': project.client,
         'title': project.title,
@@ -204,12 +213,6 @@ def searchResults(request):
 
 
 
-
-
-
-
-
-
 #--------- REDIRECTS --------------
 def azinca(request):
     return redirect('https://www.youtube.com/channel/UCxAIq85nPCo1whr8KYwVJkA')
@@ -228,7 +231,9 @@ def felipe(request):
 
 
 
+
+
 #------ Other Projects -------
-# Check experimentalProjectViews.py
+# Check labviews.py
 
 
