@@ -20,7 +20,7 @@
             <th class="text-center">
             {% if audio.source %}
             <button id="{{ audio.number }}" class="btn black fa fa-play"
-                    type="button" onclick="togglePlay(this.id)">
+                    type="button" onclick="PlayRadio(this.id)">
                 <audio id="faixa-{{ audio.number }}" class="audio" src="{{ audio.source.url }}"
                        onended="StopAudio(this.parentElement.id)" onplaying="GetCurrentTime(this)"></audio>
             </button>

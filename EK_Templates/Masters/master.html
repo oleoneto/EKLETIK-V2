@@ -67,9 +67,9 @@ Date: October 16, 2017
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {% block active-company%}{% endblock %}"><a class="nav-link" href="/empresa/">Empresa</a></li>
-                    <li class="nav-item {% block active-portfolio%}{% endblock %}"><a class="nav-link" href="/portfolio/">Portfolio</a></li>
-                    <li class="nav-item {% block active-docs%}{% endblock %}"><a class="nav-link" href="/docs/">Docs</a></li>
+                    <li class="nav-item {% block active-company%}{% endblock %}"><a class="nav-link" href="{% url 'company' %}">Empresa</a></li>
+                    <li class="nav-item {% block active-portfolio%}{% endblock %}"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
+                    <li class="nav-item {% block active-docs%}{% endblock %}"><a class="nav-link" href="{% url 'docs' %}">Docs</a></li>
                     <li class="nav-item {% block active-contact%}{% endblock %}"><a class="nav-link" href="mailto:info@ekletik.com">Contacto</a></li>
                 </ul>
                 <form class="form-inline" method="POST" action="{% url 'searchResults' %}">

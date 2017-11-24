@@ -23,6 +23,7 @@ TOPICS = (
     ('code', 'Coding'),
     ('news', 'Notícias'),
     ('exp', 'Experimentos'),
+    ('aulas', 'Aulas'),
 
     # Scripting...
     ('rb', 'Ruby'),

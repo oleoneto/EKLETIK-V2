@@ -3,6 +3,12 @@
  */
 
 
+$(document).ready(function () {
+    NewsApi();
+});
+
+
+// Preparing the HTML
 function NewsApi() {
 
     // Variables
@@ -10,17 +16,10 @@ function NewsApi() {
     var req = new XMLHttpRequest();
 
     var news = document.getElementById('news');
-    var featuredTitle = document.getElementById('main-title');
-    var featuredDesc = document.getElementById('main-desc');
-    var featuredLink = document.getElementById('main-link');
-    var author = document.getElementById('author');
-    var source = document.getElementById('source');
     var index = 0;
 
 
-    req.open('GET', 'https://newsapi.org/v1/articles?source=bbc-news&apiKey=' + apikey);
-    // req.open('GET', 'https://newsapi.org/v1/articles?source=the-guardian-uk&sortBy=top&apiKey=' + apikey);
-
+    req.open('GET', 'https://newsapi.org/v2/top-headlines?sources=bbc-news,associated-press,abc-news,cbc-news,engadget,the-economist,the-guardian-au&apiKey=' + apikey);
     // What happens when the request loads...
     req.onload = function () {
         // console.log(JSON.parse(req.responseText));
@@ -29,7 +28,7 @@ function NewsApi() {
         var length = parsedResponse.articles.length;
         var main_source = parsedResponse.source;
 
-        // console.log("Number of articles: " + length);
+        console.log("Number of articles: " + length);
         var article = "";
         var featuredContent = "";
         var featuredAuthor = "";
@@ -46,31 +45,26 @@ function NewsApi() {
         }
 
         for (index; index < length; index++) {
-            article += '<tr>';
-            article += '<td>' + (index + 1) + '</td>'; // Row index
-            article += '<td><a href="'+articles[index].url+'">' + articles[index].title + '</a><td>'; // Headline...
-            article += '<td>' + articles[index].author + '<td>'; // Source...
-            article += '</tr>';
-
-            featuredContent = articles[random].description;
-            featuredAuthor = articles[random].title;
-            featuredSource = main_source;
-            link = articles[random].url;
-
+            article += '<div class="p-top-60 p-bottom-40">';
+                 article += '<div class="blog-content">';
+                    article += '<div class="col-md-9 mr-auto">';
+                        article += '<p><span>'+ articles[index].source.id +'</span></p>';
+                        article += '<a href="'+ articles[index].url +'" target="_blank">';
+                            article += '<h1 class="p-bottom-10">'+ articles[index].title +'</h1>';
+                        article += '</a>';
+                        article += '<img class="img-fluid" src="'+ articles[index].urlToImage +'">';
+                        article += '<div class="p-top-10">'+ articles[index].description +'</div>';
+                    article += '</div>';
+                 article += '</div>';
+            article += '</div>';
         }
 
-        news.insertAdjacentHTML('beforeend', article);
-        featuredTitle.innerText = featuredAuthor;
-        featuredDesc.innerText = featuredContent;
-        featuredLink.attr.href = link;
-        console.log(featuredLink);
-
-        //author.innerText = featuredAuthor;
-        //source.innerText = featuredSource;
+        news.innerHTML = article ;
     };
     req.send();
 
-    var requestAPI = setInterval(NewsApi, 60000);
+    var requestAPI = setInterval(NewsApi, 120000);
 }
 
-NewsApi();
+
+

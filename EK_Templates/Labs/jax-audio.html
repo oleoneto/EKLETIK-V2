@@ -1,0 +1,26 @@
+{% extends 'Labs/labs.html' %}
+{% load static from staticfiles %}
+
+{% block extras %}
+<div class="container heading p-top-200 p-bottom-60">
+<h1 class="p-bottom-60">Portfolio Audio AJAX.</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Título</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="tableBody" id="sonzito">
+
+    </tbody>
+</table>
+</div>
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/ajax-audios-lab.js' %}"></script>
+<script src="{% static 'js/playMe.js' %}"></script>
+{% endblock %}

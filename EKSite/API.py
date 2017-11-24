@@ -28,6 +28,14 @@ class AudioListAPIView(ListAPIView):
     queryset = Audio.objects.all().order_by('project')
     serializer_class = AudioSerializer
 
+class AudioDetailAPIView(RetrieveAPIView):
+    queryset = Audio.objects.all().order_by('project')
+    serializer_class = AudioSerializer
+
+class AudioDetailAPIViewSlug(RetrieveAPIView):
+    queryset = Audio.objects.all().order_by('project')
+    serializer_class = AudioSerializer
+    lookup_field = ('slug')
 
 
 #___________ DOC / BLOG API
@@ -77,7 +85,10 @@ class PersonDetailAPIView(RetrieveAPIView):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
 
-
+class PersonDetailAPIViewSlug(RetrieveAPIView):
+    queryset = Person.objects.all()
+    serializer_class = PersonSerializer
+    lookup_field = ('slug')
 
 
 

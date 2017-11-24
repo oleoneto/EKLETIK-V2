@@ -21,16 +21,8 @@ class ColorSerializer(ModelSerializer):
 class AudioSerializer(ModelSerializer):
     class Meta:
         model = Audio
-        fields = ('projectTitle','source',)
+        fields = ('id', 'title', 'related_project', 'source', 'slug')
 #end AudioSerializer
-
-
-
-# class SonzitoSerializer(ModelSerializer):
-#     class Meta:
-#         model = Sonzito
-#         fields = ('title','source',)
-#end SonzitoSerializer
 
 
 
@@ -46,7 +38,7 @@ class DocSerializer(ModelSerializer):
 class PersonSerializer(ModelSerializer):
     class Meta:
         model = Person
-        fields = ('id', 'name', 'bio', 'author_bio', 'photo')
+        fields = ('name', 'bio', 'author_bio', 'photo')
 #end PersonSerializer
 
 

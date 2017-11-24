@@ -1,0 +1,85 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+{% comment %}
+Escola de programação para falantes de português.
+'Bora programar!
+{% endcomment %}
+
+{% block hero %}
+{% include "Snippets/snip_herophoto.html" %}
+{% endblock %}
+
+
+{% block gallery %}
+{% include "Snippets/snip_gallery.html" %}
+{% endblock %}
+
+
+{% block services %}
+<!-- Docs and Blog -->
+<div class="bg-light">
+<div class="container p-top-100 p-bottom-100 heading text-center">
+
+    <div class="p-bottom-60 col-md-8 m-auto">
+        <p><span>Experiência à grosso</span></p>
+        <h1>Ekletikamente</h1>
+        <p>É missão da Ekletik ajudar empresas e empreendedores a criar
+            e manter uma presença sólida e próspera na internet.
+            Rabiscar, desenvolver e levar à net. Simples como 3, 2, 1...</p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/design.svg' %}" alt="">
+            <h3>Design</h3>
+            <p>Desde os rabiscos em papel aos protótipos digitais,
+                ajudámo-lo a dar forma às suas ideias e a materializar a sua visão.
+                <a href="/portfolio">Ver portfolio</a>.</p>
+        </div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/desenvolvimento.svg' %}" alt="">
+            <h3>Desenvolvimento</h3>
+            <p>Sejam projectos em idiomas humanos ou em linguagens de programação, iremos guiá-lo seguramente à consolidação do seu projecto.</p>
+        </div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/alojamento.svg' %}" alt="">
+            <h3>Alojamento</h3>
+            <p class="smiley-symbol">Tiramos a massada à gestão do seu negócio online. Mantenha o foco no que sabe fazer melhor e nós o ajudamos com o resto</p>
+        </div>
+
+    </div>
+
+    <div class="col-md-4 m-auto p-top-20 animated fadeInUp">
+        <hr>
+        <p class="center">
+            <a class="text-primary chevron-link" href="/empresa">Conheça-nos melhor</a>
+        </p>
+    </div>
+
+</div>
+</div>
+{% endblock %}
+
+
+{% block docs %}
+{% include "Snippets/snip_docs.html" %}
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/galeria.min.js' %}"></script>
+
+{% comment %}
+    Add videoheader.js to control multiple video formats on the page.
+    Some modifications to the html of the video snippet may be necessary for
+    the script to work as intended.
+    <script src="{% static 'js/videoheader.js' %}"></script>
+{% endcomment %}
+<script type="text/javascript">
+    $('.carousel').carousel({
+            interval: 10000
+    });
+</script>
+{% endblock %}

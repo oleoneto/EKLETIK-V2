@@ -36,7 +36,7 @@ function togglePlay(originId){
     song.play();
     //StopAudio(originId);
   }
-}//end togglePlay
+}//end PlayRadio
 
 
 /*

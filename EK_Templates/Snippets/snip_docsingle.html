@@ -20,7 +20,11 @@
 
 <div class="row blog-content">
   <div class="col-md-9 col-sm-12 col-xs-12">
+    {% if language == "Aulas" %}
+    <div id="aula">{{ content }}</div>
+    {% else %}
     <div class="markdown">{{ content }}</div>
+    {% endif %}
   </div>
 <!--end single doc -->
 

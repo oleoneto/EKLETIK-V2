@@ -73,6 +73,10 @@ code {
   padding-top : 0;
 }
 
+#aula pre{   color: #333333 !important;  }
+#aula code{  color: #333333 !important;  }
+
+
 .heading h1 {
   font-size   : 60px;
   font-weight : 300;
@@ -516,6 +520,45 @@ code {
 .wine p {
   color : #F8F9FA!important;
 }
+
+.light-gray a,
+.light-gray h1,
+.light-gray h2,
+.light-gray h3,
+.light-gray p {
+  color: #333333;
+}
+.light-gray {
+  background: #cfdbd5 !important;
+}
+
+
+.raisin-black a,
+.raisin-black h1,
+.raisin-black h2,
+.raisin-black h3,
+.raisin-black p {
+  color: #FFFFFF;
+}
+.raisin-black {
+  background: #242423 !important;
+}
+
+
+.jet a,
+.jet h1,
+.jet h2,
+.jet h3,
+.jet p {
+  color: #FFFFFF;
+}
+.jet {
+  background: #333533 !important;
+}
+
+
+
+
 
 .gray {
   color      : #333;

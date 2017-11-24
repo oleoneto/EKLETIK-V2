@@ -2,7 +2,7 @@
 Django settings for EKLETIK project.
 Using Django 1.11
 Project by Leo Neto
-Updated on September 13, 2017
+Updated on November 15, 2017
 """
 
 import os
@@ -11,7 +11,12 @@ SECRET_KEY = 'gh76p)=@^*8+3(n3mu1empzhc3nr8#g%jzuu_e=f!r7j0^t#os'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', '.ekletik.com', '.localtunnel.me']
+
+if DEBUG:
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost' ,'.localtunnel.me',]
+else:
+    ALLOWED_HOSTS = ['.ekletik.com',]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -87,11 +92,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'EK_Static'),]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'ek_static')
-STATIC_ROOT = '/var/www/ekletik.com/ek_static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'EK_Media')
-# MEDIA_ROOT = '/var/www/ekletik.com/ek_media/'
+if DEBUG:
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'EK_Media')
+else:
+    STATIC_ROOT = '/var/www/ekletik.com/ek_static/'
+    MEDIA_ROOT = '/var/www/ekletik.com/ek_media/'
+
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'

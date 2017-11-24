@@ -1,14 +1,36 @@
 <!-- Markdon and HighlightJS Generator -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+
 <script type="text/javascript">
-    $(document).ready(function () {
-        $(".markdown").each(function () {
+    $(document).ready(function(){
+        $(".markdown").each(function(){
             var raw_content = $(this).text()
             var marked_content = marked(raw_content)
             $(this).html(marked_content)
-        })
-        $('pre').each(function(i, block) {
+        });
+        $('.markdown pre').each(function(i, block) {
             hljs.highlightBlock(block);
-        })
+        });
+        $("#aula").each(function(){
+            var raw_content = $(this).text()
+            var marked_content = marked(raw_content)
+            $(this).html(marked_content)
+        });
     })
 </script>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML,Safe"></script>
+

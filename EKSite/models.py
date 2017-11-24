@@ -127,9 +127,20 @@ class Audio(models.Model):
     artist = models.CharField(max_length=50, blank=False)
     composer = models.CharField(max_length=50, blank=True)
     genre = models.CharField(max_length=15, blank=True)
+    slug = models.SlugField(max_length=50, blank=True)
 
-    def projectTitle(self):
+    def related_project(self):
         return self.project.title
+
+    def set_slug(self):
+        slug = self.title.lower().replace(" ", "-")
+
+    def get_slug(self):
+        slug = self.title.lower().replace(" ", "-")
+        return slug
+
+    #def uri(self):
+    #    return self.source
 
     def __str__(self):
         return self.title

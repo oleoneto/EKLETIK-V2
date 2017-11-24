@@ -158,12 +158,13 @@ function ClickedSong(ref) {
 
 };//end of ClickedSong
 
+
 function AppendSource(){
     var audios = document.getElementsByTagName('audio');
     for(var i = 0, len = audios.length; i < len; i++){
         audios[i].src = RADIOLUZEIROS;
         // Debugging...
-        // console.log(audios[i].src);
+        console.log(audios[i].src);
     }
 }//end AppendSource
 
