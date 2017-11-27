@@ -1,16 +1,13 @@
 from ViewsLibraries import *
-
-
+from .eventmate import *
+from .newsapi import *
 
 """
 
 Written by Leo Neto
-Updated on Sept 16, 2017
+Updated on November 25, 2017
 
 """
-
-
-
 
 
 def horas(request):
@@ -32,10 +29,28 @@ def radio(request):
     return render(request, 'Labs/radio.html')
 
 def news(request):
-    return render(request, 'Labs/news.html')
+    articles = NewsObjects()
+    return render(request, 'Labs/news.html',{
+        'page': 'news',
+        'articles': articles,
+        'total': len(articles),
+    })
 
 def jax(request):
     return render(request, 'Labs/jax.html')
 
 def jax_audio(request):
     return render(request, 'Labs/jax-audio.html')
+
+def eventmate(request):
+    objs = BuildObjects()
+    events = objs[0]
+    titles = objs[1]
+    city = objs[2]
+
+    return render(request, 'Labs/eventmate.html', {
+        'page': "eventmate",
+        'events': events,
+        'total': len(titles),
+        'city': city,
+    })
