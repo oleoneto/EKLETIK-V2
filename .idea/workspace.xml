@@ -2,16 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f930efd9-5c68-4b4c-bff5-1d6fef516712" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EKSite/eventmate.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EKSite/newsapi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Static/js/eventmate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Labs/eventmate.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Static/js/ajax-audios-lab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Static/js/ajax-portfolio-lab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Labs/jax-audio.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/EK_Templates/Labs/jax.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/uploads/projects/Calculate_Artwork.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/uploads/projects/Calculator_Screen_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/uploads/projects/Calculator_Screen_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/EK_Media/uploads/projects/Calculator_Screen_3.png" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/EKSite/experimentalProjectViews.py" afterPath="$PROJECT_DIR$/EKSite/labviews.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/EK_Templates/EN/mainEN.html" afterPath="$PROJECT_DIR$/EK_Templates/EN/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/EK_Templates/Labs/sonzito.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/oiseau.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Choices.py" afterPath="$PROJECT_DIR$/Choices.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKLETIK/settings.py" afterPath="$PROJECT_DIR$/EKLETIK/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKLETIK/urls.py" afterPath="$PROJECT_DIR$/EKLETIK/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/labviews.py" afterPath="$PROJECT_DIR$/EKSite/labviews.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/API.py" afterPath="$PROJECT_DIR$/EKSite/API.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/admin.py" afterPath="$PROJECT_DIR$/EKSite/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/mainviews.py" afterPath="$PROJECT_DIR$/EKSite/mainviews.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EKSite/models.py" afterPath="$PROJECT_DIR$/EKSite/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/css/master.css" afterPath="$PROJECT_DIR$/EK_Static/css/master.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/js/newsapi.js" afterPath="$PROJECT_DIR$/EK_Static/js/newsapi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/js/playMe.js" afterPath="$PROJECT_DIR$/EK_Static/js/playMe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/js/player.js" afterPath="$PROJECT_DIR$/EK_Static/js/player.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Static/js/radio.js" afterPath="$PROJECT_DIR$/EK_Static/js/radio.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Labs/labs.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/labs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Labs/morcovi.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/morcovi.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Labs/news.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/news.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Labs/radio.html" afterPath="$PROJECT_DIR$/EK_Templates/Labs/radio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Masters/master.html" afterPath="$PROJECT_DIR$/EK_Templates/Masters/master.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_docsingle.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_docsingle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_herophoto.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_herophoto.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_highlightjs.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_highlightjs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_navbar-labs.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_navbar-labs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectaudio.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectaudio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EK_Templates/Snippets/snip_requestlog.html" afterPath="$PROJECT_DIR$/EK_Templates/Snippets/snip_requestlog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Serializers.py" afterPath="$PROJECT_DIR$/Serializers.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,19 +63,71 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="labs.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/labs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding>
+                <element signature="e#2526#3201#0#HTML" expanded="false" />
+                <element signature="e#3046#3079#0#HTML" expanded="true" />
+                <element signature="e#3207#3876#0#HTML" expanded="false" />
+                <element signature="e#3719#3753#0#HTML" expanded="true" />
+                <element signature="e#4406#4439#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax-audios-lab.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EK_Static/js/ajax-audios-lab.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3">
+              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snip_labs.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>padding</find>
+      <find>gallery</find>
+      <find>pre</find>
+      <find>filter</find>
+      <find>blur</find>
+      <find>fixed</find>
       <find>transparent</find>
       <find>equipa</find>
       <find>white</find>
@@ -72,12 +152,6 @@
       <find>element</find>
       <find>portfolio</find>
       <find>galeria</find>
-      <find>PlayRadio</find>
-      <find>eventBriteSearch</find>
-      <find>BuildObjects</find>
-      <find>article</find>
-      <find>;</find>
-      <find>FBI</find>
     </findStrings>
     <replaceStrings>
       <replace>carouselIndicators</replace>
@@ -89,10 +163,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_video.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/PT/index.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_carousel.html" />
+        <option value="$PROJECT_DIR$/EK_Static/css/video-overlay.css" />
+        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectdetails.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/PT/empresa.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectcolors.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectmusic.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectimages.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/portfolio-single.html" />
         <option value="$PROJECT_DIR$/EK_Static/js/playMe.js" />
+        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectaudio.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_footer.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/doc-single.html" />
         <option value="$PROJECT_DIR$/EK_Templates/PT/doc-author.html" />
@@ -114,31 +196,23 @@
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_gallery.html" />
         <option value="$PROJECT_DIR$/EK_Static/css/master.css" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/jax.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_navbar-labs.html" />
         <option value="$PROJECT_DIR$/EK_Static/js/radio.js" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/radio.html" />
+        <option value="$PROJECT_DIR$/EK_Templates/Labs/news.html" />
         <option value="$PROJECT_DIR$/EK_Static/js/ajax-portfolio-lab.js" />
         <option value="$PROJECT_DIR$/EK_Static/js/newsapi.js" />
         <option value="$PROJECT_DIR$/EKSite/admin.py" />
         <option value="$PROJECT_DIR$/EKSite/models.py" />
         <option value="$PROJECT_DIR$/EKSite/API.py" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/morcovi.html" />
+        <option value="$PROJECT_DIR$/EKSite/labviews.py" />
         <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html" />
+        <option value="$PROJECT_DIR$/EKLETIK/urls.py" />
         <option value="$PROJECT_DIR$/Serializers.py" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/jax-audio.html" />
-        <option value="$PROJECT_DIR$/EK_Static/js/ajax-audios-lab.js" />
-        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_projectaudio.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/Labs/oiseau.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/Labs/doodle.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/Labs/eventbrite.html" />
-        <option value="$PROJECT_DIR$/EK_Static/js/eventmate.js" />
-        <option value="$PROJECT_DIR$/EK_Templates/Labs/eventmate.html" />
-        <option value="$PROJECT_DIR$/EK_Templates/Labs/news.html" />
-        <option value="$PROJECT_DIR$/EKSite/newsapi.py" />
-        <option value="$PROJECT_DIR$/EKSite/labviews.py" />
-        <option value="$PROJECT_DIR$/EKSite/eventmate.py" />
-        <option value="$PROJECT_DIR$/EK_Templates/Snippets/snip_navbar-labs.html" />
         <option value="$PROJECT_DIR$/EK_Templates/Labs/labs.html" />
-        <option value="$PROJECT_DIR$/EKLETIK/urls.py" />
+        <option value="$PROJECT_DIR$/EK_Static/js/ajax-audios-lab.js" />
         <option value="$PROJECT_DIR$/EKLETIK/settings.py" />
       </list>
     </option>
@@ -187,14 +261,20 @@
             <path>
               <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
               <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
-              <item name="EK_Templates" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EKLETIK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EKLETIK" type="462c0819:PsiDirectoryNode" />
+              <item name="EK_Static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,6 +567,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="535" width="1680" height="510" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796487" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20846395" sideWeight="0.504884" order="0" side_tool="true" content_ui="tabs" />
@@ -494,9 +575,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27644232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35903615" sideWeight="0.495116" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0970696" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11233211" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180723" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31971154" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -543,6 +624,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_video.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/css/video-overlay.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_projectdetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Templates/PT/empresa.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -629,6 +738,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/js/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="162" column="4" lean-forward="true" selection-start-line="162" selection-start-column="4" selection-end-line="162" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_requestlog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -654,6 +770,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="237" column="0" lean-forward="true" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,6 +780,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,10 +806,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/oiseau.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#190#372#0#HTML" expanded="false" />
+            <element signature="e#374#8255#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EK_Static/css/master.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="131" column="12" lean-forward="false" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -697,6 +829,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_navbar-labs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="53" lean-forward="false" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -715,10 +855,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/js/newsapi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!block;n#NewsApi#0" expanded="false" />
+            <element signature="e#1173#1422#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/jax.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EKSite/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#925#938#0" expanded="false" />
+            <element signature="e#1047#1060#0" expanded="false" />
+            <element signature="e#1753#1951#0" expanded="false" />
+            <element signature="e#2071#2392#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -726,6 +900,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding>
+            <element signature="e#2621#2887#0" expanded="false" />
+            <element signature="e#3111#3304#0" expanded="false" />
+            <element signature="e#4776#5784#0" expanded="false" />
+            <element signature="e#5897#6250#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Static/js/ajax-portfolio-lab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!block;n#prepararHTML#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -733,6 +923,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EKLETIK/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="104" column="0" lean-forward="true" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_projectaudio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -740,6 +947,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EKSite/labviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="40" column="47" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -755,6 +971,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="845">
           <caret line="102" column="36" lean-forward="true" selection-start-line="102" selection-start-column="36" selection-end-line="102" selection-end-column="36" />
+          <folding>
+            <element signature="e#444#533#0" expanded="false" />
+            <element signature="e#582#671#0" expanded="false" />
+            <element signature="e#724#841#0" expanded="false" />
+            <element signature="e#939#1017#0" expanded="false" />
+            <element signature="e#1101#1179#0" expanded="false" />
+            <element signature="e#1269#1375#0" expanded="false" />
+            <element signature="e#1458#1562#0" expanded="false" />
+            <element signature="e#1643#1708#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -762,159 +988,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="40" column="55" lean-forward="true" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
+          <folding>
+            <element signature="e#286#366#0" expanded="false" />
+            <element signature="e#604#755#0" expanded="false" />
+            <element signature="e#993#1169#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_projectaudio.html">
+    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/labs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/js/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="162" column="4" lean-forward="true" selection-start-line="162" selection-start-column="4" selection-end-line="162" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/js/ajax-audios-lab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="367">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#2526#3201#0#HTML" expanded="false" />
+            <element signature="e#3046#3079#0#HTML" expanded="true" />
+            <element signature="e#3207#3876#0#HTML" expanded="false" />
+            <element signature="e#3719#3753#0#HTML" expanded="true" />
+            <element signature="e#4406#4439#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_labs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/oiseau.html">
+    <entry file="file://$PROJECT_DIR$/EK_Static/js/ajax-audios-lab.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="189" column="23" lean-forward="true" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/js/eventmate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/js/ajax-portfolio-lab.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/jax.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Static/js/newsapi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EKSite/eventmate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="10" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Snippets/snip_navbar-labs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/labs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="n#block#0;n#!!top" expanded="false" />
-            <element signature="n#block#1;n#!!top" expanded="false" />
-            <element signature="e#357#1039#0#HTML" expanded="false" />
-            <element signature="e#1045#1757#0#HTML" expanded="false" />
-            <element signature="e#1763#2448#0#HTML" expanded="false" />
-            <element signature="e#2526#3198#0#HTML" expanded="false" />
-            <element signature="e#3041#3075#0#HTML" expanded="true" />
-            <element signature="e#3204#3873#0#HTML" expanded="false" />
-            <element signature="e#3879#4562#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EK_Templates/Labs/eventmate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EKSite/labviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#163#325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EKLETIK/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="61" column="56" lean-forward="false" selection-start-line="61" selection-start-column="56" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EKSite/newsapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="44" column="29" lean-forward="true" selection-start-line="44" selection-start-column="29" selection-end-line="44" selection-end-column="29" />
+        <state relative-caret-position="3">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EKLETIK/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="275">
+          <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
           <folding />
         </state>
       </provider>
