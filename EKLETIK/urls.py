@@ -55,6 +55,8 @@ urlpatterns = [
     url(r'^empresa/', site.company, name='company'),
     url(r'^contacto/', site.contact, name='contact'),
     url(r'^message/', site.message, name='message'),
+    url(r'^eventmate/', labs.eventmate),
+    url(r'^news/', labs.news),
 
     # SEARCH
     url(r'^p/', Search.SearchResults, name='searchResults'),

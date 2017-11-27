@@ -1,6 +1,5 @@
 from ViewsLibraries import *
-
-
+from EKSite.ExternalAPIs import *
 
 """
 
@@ -32,7 +31,26 @@ def radio(request):
     return render(request, 'Labs/radio.html')
 
 def news(request):
-    return render(request, 'Labs/news.html')
+    articles = NewsObjects()
+    return render(request, 'Labs/news.html', {
+        'page': 'news',
+        'articles': articles,
+        'total': len(articles),
+    })
+
+def eventmate(request):
+    objs = BuildObjects()
+    events = objs[0]
+    titles = objs[1]
+    city = objs[2]
+
+    return render(request, 'Labs/eventmate.html', {
+        'page': "eventmate",
+        'events': events,
+        'total': len(titles),
+        'city': city,
+    })
+
 
 def jax(request):
     return render(request, 'Labs/jax.html')
