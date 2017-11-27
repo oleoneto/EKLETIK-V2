@@ -55,6 +55,8 @@ urlpatterns = [
     url(r'^empresa/', site.company, name='company'),
     url(r'^contacto/', site.contact, name='contact'),
     url(r'^message/', site.message, name='message'),
+    url(r'^eventmate/', labs.eventmate),
+    url(r'^news/', labs.news),
 
     # SEARCH
     url(r'^p/', Search.SearchResults, name='searchResults'),
@@ -114,6 +116,7 @@ urlpatterns = [
     url(r'^labs/news', labs.news, name='news'),
     url(r'^labs/jax-audio', labs.jax_audio, name='jax-audio'),
     url(r'^labs/jax', labs.jax, name='jax'),
+    url(r'^labs/eventmate', labs.eventmate, name='eventmate'),
     url(r'^labs/', labs.experimentos, name="labs"),
 
 

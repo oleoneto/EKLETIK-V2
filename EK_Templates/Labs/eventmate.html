@@ -1,0 +1,27 @@
+{% extends 'Labs/labs.html' %}
+{% load static from staticfiles %}
+
+
+
+{% block extras %}
+
+<div class="p-top-100"></div>
+
+<div class="container heading">
+<h1 class="p-bottom-40">Events in {{ city }}.</h1>
+    <div class="row">
+    {% for event in events %}
+    {% if event.logo.url %}
+        <div class="col-md-4 p-bottom-20">
+            <img class="img-fluid p-bottom-10" src="{{ event.logo.url }}" alt="{{ event.name.text }}">
+            <a href="{{ event.url }}" target="_blank">
+              <h3>{{ event.name.text | lower | capfirst }}</h3>
+            </a>
+        </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
