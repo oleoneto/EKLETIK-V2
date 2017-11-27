@@ -1,5 +1,5 @@
 from ViewsLibraries import *
-from EKSite.ExternalAPIs import *
+from EKSite.ExternalAPIs import NewsObjects, BuildObjects
 
 """
 

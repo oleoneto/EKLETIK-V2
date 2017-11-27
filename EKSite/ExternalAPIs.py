@@ -33,9 +33,7 @@ def NewsObjects():
     # API Endpoint: Querying News
     api = 'https://newsapi.org/v2/top-headlines?sources=bbc-news,associated-press,abc-news,cbc-news,engadget,the-economist,the-guardian-au&apiKey=' + key
     data = requests.get(
-        api,
-        verify = True,
-    ).json()
+        api,).json()
 
     size = len(data['articles'])
 
@@ -66,7 +64,8 @@ def BuildObjects():
     data = requests.get(
         API,
         headers = { "Authorization": "Bearer " + key,},
-        verify = True,).json()
+        verify = True,
+    ).json()
 
     size = len(data['events'])
 
@@ -86,7 +85,7 @@ def BuildObjects():
 # ------------------------------- #
 
 def main():
-    news = NewsObjects()
+    print(NewsObjects())
 
 # ------------------------------- #
 
