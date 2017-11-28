@@ -46,7 +46,7 @@ def NewsObjects():
 # --------- EVENTMATE ---------- #
 
 
-def BuildObjects(keyword=0):
+def BuildObjects(keyword):
 
     EVENTS = []
 
@@ -57,12 +57,18 @@ def BuildObjects(keyword=0):
 
     # API Endpoint: Querying events in a random city
     api = "https://www.eventbriteapi.com/v3/events/search/?location.address="
-    if len(keyword) <= 0:
+    if type(keyword) is int:
+        rand = random.randint(0, length)
+        city = CITIES[rand]
+        API = api + city
+
+    if len(keyword) <= 2:
         rand = random.randint(0, length)
         city = CITIES[rand]
         API = api + city
     else:
         API = api + keyword
+        city = keyword
 
     data = requests.get(
         API,

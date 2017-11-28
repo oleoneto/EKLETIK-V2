@@ -55,7 +55,9 @@ urlpatterns = [
     url(r'^empresa/', site.company, name='company'),
     url(r'^contacto/', site.contact, name='contact'),
     url(r'^message/', site.message, name='message'),
-    url(r'^eventmate/', labs.eventmate),
+    url(r'^eventmate/(?P<keyword>\D+)', labs.eventmate),
+    url(r'^eventmate/(?P<keyword>\d+)', labs.eventmate),
+    url(r'^eventmate', labs.eventmate),
     url(r'^spotify/', labs.musicplayer),
     url(r'^news/', labs.news),
 
