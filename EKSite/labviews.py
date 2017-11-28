@@ -1,5 +1,6 @@
 from ViewsLibraries import *
 from EKSite.ExternalAPIs import NewsObjects, BuildObjects
+from EKSite.SpotifyAPI import BuildTracks
 
 """
 
@@ -25,21 +26,30 @@ def experimentos(request):
     return render(request, 'Labs/labs.html')
 
 def musicplayer(request):
-    return render(request, 'Labs/oiseau.html')
+    audios = BuildTracks()
+    total = len(audios)
+    return render(request, 'Labs/oiseau.html', {
+        'page': 'oiseau',
+        'audios': audios.__reversed__(),
+        'total': total,
+    })
 
 def radio(request):
     return render(request, 'Labs/radio.html')
 
 def news(request):
     articles = NewsObjects()
+    articles = articles.sort()
+    articles = sorted(articles)
+
     return render(request, 'Labs/news.html', {
         'page': 'news',
         'articles': articles,
         'total': len(articles),
     })
 
-def eventmate(request):
-    objs = BuildObjects()
+def eventmate(request, keyword):
+    objs = BuildObjects(keyword)
     events = objs[0]
     titles = objs[1]
     city = objs[2]
@@ -50,7 +60,6 @@ def eventmate(request):
         'total': len(titles),
         'city': city,
     })
-
 
 def jax(request):
     return render(request, 'Labs/jax.html')

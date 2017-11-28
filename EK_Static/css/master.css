@@ -895,6 +895,13 @@ code {
   }
 }
 
+.small-artwork{
+  left: 10px;
+  bottom: 10px;
+  position: fixed;
+  height: 200px;
+  width: 200px;
+}
 
 .carousel-item img {
   opacity             : .5;
