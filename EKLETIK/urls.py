@@ -56,6 +56,7 @@ urlpatterns = [
     url(r'^contacto/', site.contact, name='contact'),
     url(r'^message/', site.message, name='message'),
     url(r'^eventmate/', labs.eventmate),
+    url(r'^spotify/', labs.musicplayer),
     url(r'^news/', labs.news),
 
     # SEARCH
@@ -106,16 +107,16 @@ urlpatterns = [
 
 
     # EXPERIMENT and LAB Views
-    url(r'^labs/relogio', labs.horas, name="relogio"),
-    url(r'^labs/oiseau', labs.musicplayer, name="musicplayer"),
-    url(r'^labs/radio', labs.radio, name="radio"),
-    url(r'^labs/haricots', labs.horas, name="haricots"),
-    url(r'^labs/morcovi', labs.morcovii, name="morcovi"),
-    url(r'^labs/cartofi', labs.horas, name="cartofi"),
-    url(r'^labs/bot', labs.horas, name="bot"),
-    url(r'^labs/news', labs.news, name='news'),
-    url(r'^labs/jax-audio', labs.jax_audio, name='jax-audio'),
-    url(r'^labs/jax', labs.jax, name='jax'),
+    url(r'^labs/relogio/', labs.horas, name="relogio"),
+    url(r'^labs/oiseau/', labs.musicplayer, name="musicplayer"),
+    url(r'^labs/radio/', labs.radio, name="radio"),
+    url(r'^labs/haricots/', labs.horas, name="haricots"),
+    url(r'^labs/morcovi/', labs.morcovii, name="morcovi"),
+    url(r'^labs/cartofi/', labs.horas, name="cartofi"),
+    url(r'^labs/bot/', labs.horas, name="bot"),
+    url(r'^labs/news/', labs.news, name='news'),
+    url(r'^labs/jax-audio/', labs.jax_audio, name='jax-audio'),
+    url(r'^labs/jax/', labs.jax, name='jax'),
     url(r'^labs/', labs.experimentos, name="labs"),
 
 

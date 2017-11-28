@@ -170,7 +170,7 @@ function AppendSource(){
 
 
 // Change audio sources
-AppendSource();
+// AppendSource();
 
 // Click on the first element of the table when the page loads...
 ClickedSong($songs[0]);

@@ -14,10 +14,6 @@ import random, json, urllib.parse, requests
 
 # ------- Global Variables ----- #
 
-NEWS = []
-ARTICLES = []
-
-EVENTS = []
 TITLES = []
 CITIES = ['Dijon', 'Indianapolis', 'Chicago', 'Phoenix', 'Philadelphia',
           'Boulder', 'CapeTown', 'Luanda', 'Paris', 'Lisbon',
@@ -28,6 +24,9 @@ CITIES = ['Dijon', 'Indianapolis', 'Chicago', 'Phoenix', 'Philadelphia',
 
 
 def NewsObjects():
+    NEWS = []
+    ARTICLES = []
+
     # Developer API key
     key = "f355c018b1474aef93c183aebcb3b845"
     # API Endpoint: Querying News
@@ -47,7 +46,9 @@ def NewsObjects():
 # --------- EVENTMATE ---------- #
 
 
-def BuildObjects():
+def BuildObjects(keyword=0):
+
+    EVENTS = []
 
     # Developer API key
     key = "PU66GQF3VVQ5HODZNZFH"
@@ -56,10 +57,12 @@ def BuildObjects():
 
     # API Endpoint: Querying events in a random city
     api = "https://www.eventbriteapi.com/v3/events/search/?location.address="
-
-    rand = random.randint(0, length)
-    city = CITIES[rand]
-    API = api + city
+    if len(keyword) <= 0:
+        rand = random.randint(0, length)
+        city = CITIES[rand]
+        API = api + city
+    else:
+        API = api + keyword
 
     data = requests.get(
         API,

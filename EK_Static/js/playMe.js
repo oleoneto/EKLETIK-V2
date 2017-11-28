@@ -14,6 +14,7 @@ var paused = true;
 var song;
 
 
+
 /*
 2. Second...
     originId is the id of the audio we just clicked
@@ -21,7 +22,9 @@ var song;
     if the audio is playing, pause it and change the icon from pause to play
     else, play it. Then, change the button icon from play to pause
 */
+
 function togglePlay(originId){
+    console.log(originId)
   song = document.getElementById("faixa-"+originId);
   playButton = song.parentElement;
 
