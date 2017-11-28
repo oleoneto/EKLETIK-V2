@@ -39,8 +39,6 @@ def radio(request):
 
 def news(request):
     articles = NewsObjects()
-    articles = articles.sort()
-    articles = sorted(articles)
 
     return render(request, 'Labs/news.html', {
         'page': 'news',
@@ -48,7 +46,7 @@ def news(request):
         'total': len(articles),
     })
 
-def eventmate(request, keyword):
+def eventmate(request, keyword="Indianapolis"):
     objs = BuildObjects(keyword)
     events = objs[0]
     titles = objs[1]
