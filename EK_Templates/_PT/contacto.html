@@ -1,0 +1,76 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+
+{% block title %}:: Contacto{% endblock %}
+{% block contact %}
+
+        <!-- Parallax Hero -->
+      <div class="mini-parallax parallax-ek-1"></div>
+
+
+
+      <div class="container p-top-40 p-bottom-40 heading">
+          <p><span>Parla cu noi</span></p>
+          <h1>Contacto</h1>
+      </div>
+
+
+      <div class="container p-bottom-60">
+        <form id="contactForm">
+            {% csrf_token %}
+
+          <div class="form-row">
+            <div class="col">
+              <input autofocus type="text" class="form-control" placeholder="Nome">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Sobrenome">
+            </div>
+          </div>
+
+          <div class="form-row">
+              <div class="col-6">
+{#                  {{ form.contact_email }}#}
+                  <input type="text" class="form-control" placeholder="Pais">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Cidade">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Tel.">
+              </div>
+            </div>
+
+          <div class="form-group">
+            <label for="contactEmail"></label>
+            <input type="email" class="form-control" id="form-email" placeholder="seunome@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <!-- <label for="contactText">M</label> -->
+            <textarea class="form-control" id="form-message" rows="5" maxlength="300" placeholder="Mensagem [máx. 300 caracteres]" required></textarea>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="subscription">
+              Subscreva-me à lista de emails.
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" value="internship">
+              Estou interessado em estagiar.
+            </label>
+          </div>
+          <div class="form-check">
+            <div class="form-check-button">
+              <button type="submit" name="button" class="btn btn-primary">Enviar</button>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+  {% endblock %}

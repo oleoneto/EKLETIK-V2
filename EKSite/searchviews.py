@@ -1,40 +1,6 @@
 from ViewsLibraries import *
 from .models import *
 
-# SEARCH in DOCS
-def SearchDocs(kewyword, request):
-    try:
-        docs = Doc.objects.filter(title__icontains=kewyword).filter(status='p')
-        if not docs:
-            docs = Doc.objects.filter(slug__icontains=kewyword).filter(status='p')
-            if not docs:
-                docs = Doc.objects.filter(content__icontains=kewyword).filter(status='p')
-                if not docs:
-                    docs = Doc.objects.filter(summary__icontains=kewyword).filter(status='p')
-                    if not docs:
-                        docs = Doc.objects.filter(programmingLanguage__icontains=kewyword).filter(status='p')
-                        if not docs:
-                            docs = Doc.objects.filter(author__name__icontains=kewyword).filter(status='p')
-                            if not docs:
-                                docs = Doc.objects.filter(author__author_bio__icontains=kewyword).filter(status='p')
-    except Doc.DoesNotExist:
-        erro = True
-        raise Http404('Nothing found')
-    return docs
-
-
-
-
-
-
-# SEARCH in PEOPLE
-def SearchPeople(keyword):
-    try:
-        people = Person.objects.filter(name__icontains=keyword)
-    except Person.DoesNotExist:
-        erro = True
-        raise Http404('No person...')
-    return people
 
 
 def SearchProjects(keyword):
@@ -48,6 +14,74 @@ def SearchProjects(keyword):
         erro = True
         raise Http404('No project...')
     return projects
+
+
+
+def ImprovedDocSearch(keyword):
+    try:
+        docsbyauthorname = Doc.objects.filter(author__name__icontains=keyword)
+        docsbyauthorslug = Doc.objects.filter(author__slug__icontains=keyword)
+        docsbyslug   = Doc.objects.filter(slug__icontains=keyword)
+        docsbytitle  = Doc.objects.filter(title__icontains=keyword)
+        docsbytopic  = Doc.objects.filter(programmingLanguage__icontains=keyword)
+        docs = docsbyauthorname + docsbyauthorslug + docsbyslug + docsbytitle + docsbytopic
+    except Doc.DoesNotExist:
+        raise Http404()
+    return docs
+
+
+
+
+# SEARCH in PEOPLE
+def SearchPeople(keyword):
+    try:
+        people = Person.objects.filter(name__icontains=keyword)
+        if not people:
+            people = Person.objects.filter(name__contains=keyword)
+            if not people:
+                people = Person.objects.filter(slug__contains=keyword)
+                if not people:
+                    people = Person.objects.filter(slug__icontains=keyword)
+    except Person.DoesNotExist:
+        erro = True
+        raise Http404('No person...')
+    return people
+
+
+
+# SEARCH in DOCS
+def SearchDocs(keyword, request):
+    people = SearchPeople(keyword)
+    try:
+        docs = Doc.objects.filter(author__name__icontains=keyword).filter(status='p')
+        if not docs:
+            docs = Doc.objects.filter(author__slug__icontains=keyword).filter(status='p')
+        if not docs:
+            docs = Doc.objects.filter(title__icontains=keyword).filter(status='p')
+            if not docs:
+                docs = Doc.objects.filter(slug__icontains=keyword).filter(status='p')
+                if not docs:
+                    docs = Doc.objects.filter(content__icontains=keyword).filter(status='p')
+                    if not docs:
+                        docs = Doc.objects.filter(summary__icontains=keyword).filter(status='p')
+                        if not docs:
+                            docs = Doc.objects.filter(programmingLanguage__icontains=keyword).filter(status='p')
+                            if not docs:
+                                docs = Doc.objects.filter(author__author_bio__icontains=keyword).filter(status='p')
+    except Doc.DoesNotExist:
+        erro = True
+        raise Http404('Nothing found')
+    return docs
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -74,7 +108,7 @@ def SearchResults(request):
         if not docs:
             return redirect('/portfolio/{}'.format(projects[0].slug))
 
-    return render(request, 'PT/searchResults.html', {
+    return render(request, '_PT/pesquisa.html', {
         'main': 'Pesquisar',
         'pageName': 'Search',
         'r': requestKeyword,

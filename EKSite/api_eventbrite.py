@@ -1,6 +1,5 @@
 """
-
- newsapi.py
+ eventbriteAPI.py
  By Leo N.
  An implementation of the News API.
  Requirements: Python 3+, Internet, News API Key.
@@ -14,34 +13,9 @@ import random, json, urllib.parse, requests
 
 # ------- Global Variables ----- #
 
-TITLES = []
 CITIES = ['Dijon', 'Indianapolis', 'Chicago', 'Phoenix', 'Philadelphia',
           'Boulder', 'CapeTown', 'Luanda', 'Paris', 'Lisbon',
           'Porto', 'SaoPaulo', 'Portland', 'Seattle']
-
-
-# ------------ NEWS ------------ #
-
-
-def NewsObjects():
-    NEWS = []
-    ARTICLES = []
-
-    # Developer API key
-    key = "f355c018b1474aef93c183aebcb3b845"
-    # API Endpoint: Querying News
-    api = 'https://newsapi.org/v2/top-headlines?sources=bbc-news,associated-press,abc-news,cbc-news,engadget,the-economist,the-guardian-au&apiKey=' + key
-    alt = 'https://newsapi.org/v2/top-headlines?sources=el-mundo,la-gaceta,la-nacion,infobae,marca&apiKey=' + key
-    data = requests.get(
-        api,).json()
-
-    size = len(data['articles'])
-
-    for i in range(size):
-        ARTICLES.insert(i, data['articles'][i])
-
-    return ARTICLES
-
 
 
 # --------- EVENTMATE ---------- #
@@ -50,6 +24,7 @@ def NewsObjects():
 def BuildObjects(keyword):
 
     EVENTS = []
+    TITLES = []
 
     # Developer API key
     key = "PU66GQF3VVQ5HODZNZFH"
@@ -91,11 +66,10 @@ def BuildObjects(keyword):
     return EVENTS, TITLES, city
 
 
-
 # ------------------------------- #
 
 def main():
-    print(NewsObjects())
+    print(BuildObjects("Luanda"))
 
 # ------------------------------- #
 

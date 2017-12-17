@@ -26,8 +26,6 @@ from EKSite import labviews as labs
 from rest_framework import routers, serializers, viewsets
 from rest_framework.urlpatterns import format_suffix_patterns
 
-# admin.autodiscover()
-
 
 urlpatterns = [
     # Admin / Auth / Status Codes Views
@@ -47,19 +45,22 @@ urlpatterns = [
     url(r'^i/auth/$', site.userauth, name='userauth'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
+    #url(r'^register/$', site.register, name='register'),
+
 
     # MAIN Views
-    url(r'^$', site.home, name='home'),
+    url(r'^$', site.home, name='docs'),
     url(r'^portfolio/(?P<key>\D+)', site.singleProject, name='project'),
     url(r'^portfolio/', site.portfolio, name='portfolio'),
     url(r'^empresa/', site.company, name='company'),
     url(r'^contacto/', site.contact, name='contact'),
     url(r'^message/', site.message, name='message'),
-    url(r'^eventmate/(?P<keyword>\D+)', labs.eventmate),
-    url(r'^eventmate/(?P<keyword>\d+)', labs.eventmate),
-    url(r'^eventmate', labs.eventmate),
+    url(r'^eventmate/(?P<keyword>\D+)', labs.eventmate, name='eventmate'),
+    url(r'^eventmate/(?P<keyword>\d+)', labs.eventmate, name='eventmate'),
+    url(r'^eventmate', labs.eventmate, name='eventmate'),
     url(r'^spotify/', labs.musicplayer),
-    url(r'^news/', labs.news),
+    url(r'^news/(?P<keyword>\D+)', site.news, name='news'),
+    url(r'^news/', site.news, name='news'),
 
     # SEARCH
     url(r'^p/', Search.SearchResults, name='searchResults'),
@@ -73,11 +74,11 @@ urlpatterns = [
     # DOCS / ARTICLES / BLOG Views
     url(r'^docs/autor/(?P<key>\D+)', docs.authorDoc, name='docAuthor'),
     url(r'^docs/(?P<key>\D+)', docs.singleDoc, name='doc'),
-    url(r'^docs/', docs.home, name='docs'),
+    url(r'^docs/', docs.docs, name='docs'),
 
     url(r'^blog/author/(?P<key>\D+)', docs.authorDoc, name='postAuthor'),
     url(r'^blog/(?P<key>\D+)', docs.singleDoc, name='post'),
-    url(r'^blog/', docs.home, name='posts'),
+    url(r'^blog/', docs.docs, name='posts'),
 
     #----------
 
@@ -116,7 +117,7 @@ urlpatterns = [
     url(r'^labs/morcovi/', labs.morcovii, name="morcovi"),
     url(r'^labs/cartofi/', labs.horas, name="cartofi"),
     url(r'^labs/bot/', labs.horas, name="bot"),
-    url(r'^labs/news/', labs.news, name='news'),
+    url(r'^labs/news/', labs.news, name='newslab'),
     url(r'^labs/jax-audio/', labs.jax_audio, name='jax-audio'),
     url(r'^labs/jax/', labs.jax, name='jax'),
     url(r'^labs/', labs.experimentos, name="labs"),

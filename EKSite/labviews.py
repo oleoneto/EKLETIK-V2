@@ -1,11 +1,16 @@
 from ViewsLibraries import *
-from EKSite.ExternalAPIs import NewsObjects, BuildObjects
-from EKSite.SpotifyAPI import BuildTracks
+from EKSite.api_eventbrite import BuildObjects
+from EKSite.api_news import NewsObjects
+from EKSite.api_spotify import BuildTracks
+
+
 
 """
 
 Written by Leo Neto
-Updated on Sept 16, 2017
+Updated on Dec 3, 2017
+http://brython.info/static_doc/en/intro.html?lang=en
+http://stephen.band/jparallax/
 
 """
 
@@ -15,32 +20,33 @@ Updated on Sept 16, 2017
 
 def horas(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
-    return render(request, 'Labs/hora.html', {
+    return render(request, 'labs/hora.html', {
         'docs': docs,
     })
 
 def morcovii(request):
-    return render(request, 'Labs/morcovi.html')
+    return render(request, 'labs/morcovi.html')
 
 def experimentos(request):
-    return render(request, 'Labs/labs.html')
+    return render(request, 'labs/labs.html')
 
 def musicplayer(request):
     audios = BuildTracks()
-    total = len(audios)
-    return render(request, 'Labs/oiseau.html', {
+    total = 10
+    return render(request, 'labs/oiseau.html', {
         'page': 'oiseau',
         'audios': audios.__reversed__(),
         'total': total,
+        'max': 12,
     })
 
 def radio(request):
-    return render(request, 'Labs/radio.html')
+    return render(request, 'labs/radio.html')
 
-def news(request):
-    articles = NewsObjects()
+def news(request, keyword="1"):
+    articles = NewsObjects(keyword)
 
-    return render(request, 'Labs/news.html', {
+    return render(request, 'labs/news.html', {
         'page': 'news',
         'articles': articles,
         'total': len(articles),
@@ -52,7 +58,7 @@ def eventmate(request, keyword="Indianapolis"):
     titles = objs[1]
     city = objs[2]
 
-    return render(request, 'Labs/eventmate.html', {
+    return render(request, 'labs/eventmate.html', {
         'page': "eventmate",
         'events': events,
         'total': len(titles),
@@ -60,7 +66,7 @@ def eventmate(request, keyword="Indianapolis"):
     })
 
 def jax(request):
-    return render(request, 'Labs/jax.html')
+    return render(request, 'labs/jax.html')
 
 def jax_audio(request):
-    return render(request, 'Labs/jax-audio.html')
+    return render(request, 'labs/jax-audio.html')

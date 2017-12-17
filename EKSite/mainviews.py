@@ -1,11 +1,13 @@
 from ViewsLibraries import *
 from .models import *
 from .forms import *
+from .api_news import NewsObjects
+# from .api_eventbrite import BuildObjects
 
 """
 
 Written by Leo Neto
-Updated on November 18, 2017
+Updated on December 3, 2017
 
 """
 
@@ -21,8 +23,8 @@ def error_report(errorMessage):
 def error_401(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, 'Masters/401.html', {
-        'origin': requestOrigin,
+    return render(request, '401.html', {
+        'origin': requestOrigin.replace("/", ""),
         'pageName': '401',
         'docs': docs,
     })
@@ -30,8 +32,8 @@ def error_401(request):
 def error_403(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, 'Masters/403.html', {
-        'origin': requestOrigin,
+    return render(request, '403.html', {
+        'origin': requestOrigin.replace("/", ""),
         'pageName': '403',
         'docs': docs,
     })
@@ -39,8 +41,8 @@ def error_403(request):
 def error_404(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, 'Masters/404.html', {
-        'origin': requestOrigin,
+    return render(request, '404.html', {
+        'origin': requestOrigin.replace("/", ""),
         'pageName': '404',
         'docs': docs,
     })
@@ -48,8 +50,8 @@ def error_404(request):
 def error_405(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, 'Masters/405.html', {
-        'origin': requestOrigin,
+    return render(request, '405.html', {
+        'origin': requestOrigin.replace("/", ""),
         'pageName': '405',
         'docs': docs,
     })
@@ -57,16 +59,20 @@ def error_405(request):
 def error_500(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     requestOrigin = request.get_full_path()
-    return render(request, 'Masters/500.html', {
-        'origin': requestOrigin,
+    return render(request, '500.html', {
+        'origin': requestOrigin.replace("/", ""),
         'pageName': '500',
         'docs': docs,
     })
 
 
+
+
+
+
 #_______________ LOGIN ___________________
 def userlogin(request):
-    return render(request, 'Masters/loginPT.html')
+    return render(request, 'masters/loginPT.html')
 
 def userauth(request):
     session_username = request.POST['username']
@@ -77,11 +83,24 @@ def userauth(request):
         # print(reverse('admin:EKSite'))
         return redirect('/i/sys/')
     else:
-        return render(request, 'Masters/500.html')
+        return render(request, '500.html')
 
 
 
 
+#_______________REGISTER___________________
+
+def register(request):
+    if request.method =='POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('accounts:home'))
+    else:
+        form = RegistrationForm()
+
+        args = {'form': form}
+        return render(request, '_PT/registro.html', args)
 
 
 
@@ -96,8 +115,8 @@ def home(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
     total = projects.count()
     grid = 'col-lg-4 col-md-4 col-sm-12'
-    return render(request, 'PT/index.html', {
-        'pageName': 'home',
+    return render(request, '_PT/index.html', {
+        'pageName': 'docs',
         'persons': persons,
         'projects': projects,
         'docs': docs,
@@ -114,7 +133,7 @@ def homeEN(request):
     total = projects.count()
     grid = 'col-lg-4 col-md-4 col-sm-12'
     return render(request, 'EN/index.html', {
-        'pageName': 'home',
+        'pageName': 'docs',
         'persons': persons,
         'projects': projects,
         'docs': docs,
@@ -132,7 +151,7 @@ def company(request):
         grid = 'col-lg-3 col-md-3 col-sm-12'
     else:
         grid = 'col-lg-4 col-md-4 col-sm-12'
-    return render(request, 'PT/empresa.html', {
+    return render(request, '_PT/empresa.html', {
         'pageName': 'empresa',
         'people': people,
         'totalPeople': total,
@@ -148,8 +167,8 @@ def portfolio(request):
     # will check for something else later
     if total%3 == 0:
         grid = 'col-lg-4 col-md-4 col-sm-12'
-    return render(request, 'PT/portfolio.html', {
-        'page': 'portfolio-home',
+    return render(request, '_PT/portfolio.html', {
+        'page': 'portfolio-docs',
         'projects': projects,
         'featured': featured,
         'featuredTotal': featured.count(),
@@ -175,7 +194,7 @@ def singleProject(request, key):
         audios = Audio.objects.filter(project=project.id).order_by('number')
     except Audio.DoesNotExist:
         raise Http404('No Audio')
-    return render(request, 'PT/portfolio.html', {
+    return render(request, '_PT/portfolio.html', {
         'page': 'portfolio-single',
         'project': project,
         'client': project.client,
@@ -190,7 +209,7 @@ def singleProject(request, key):
 
 def contact(request):
     formClass = ContactForm
-    return render(request, 'PT/contacto.html', {
+    return render(request, '_PT/contacto.html', {
         'pageName': 'contacto',
         'form': formClass,
         'choices': SOLICIT_CHOICES,
@@ -198,18 +217,39 @@ def contact(request):
 
 def message(request):
     formClass = MessageForm
-    return render(request, 'PT/mensagem.html', {
+    return render(request, '_PT/mensagem.html', {
         'pageName': 'mensagem',
         'form': formClass,
         'choices': SOLICIT_CHOICES,
     })
 
+def news(request, keyword='1'):
+    articles = NewsObjects(keyword)
+
+    return render(request, '_PT/news.html', {
+        'page': 'news',
+        'articles': articles,
+        'total': len(articles),
+    })
+
+
+
+
+
+
+
+
 #----------- SEARCH ----------------
 
 def searchResults(request):
-    return render(request, 'PT/searchResults.html', {
+    return render(request, '_PT/pesquisa.html', {
         'pageName': 'results',
     })
+
+
+
+
+
 
 
 
@@ -230,10 +270,5 @@ def felipe(request):
     return redirect('https://github.com/fsilva24')
 
 
-
-
-
-#------ Other Projects -------
-# Check labviews.py
 
 
