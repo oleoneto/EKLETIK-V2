@@ -1,0 +1,57 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+{% block title %}:: Portfolio {% if page == 'portfolio-single' %}:: {{ title }}{% endif %}{% endblock %}
+{% block active-portfolio %}active{% endblock %}
+
+{% comment %}
+This portion loads when viewing a single portfolio project
+{% endcomment %}
+
+{% block hero %}
+{% if page == 'portfolio-single' %}
+<!-- port-single -->
+<div class="portfolio-cover p-top-200" style="background-image: url('{{ artwork }}');"></div>
+{% endif %}
+{% endblock %}
+
+
+{% block gallery %}
+{% comment %}
+This first block is loaded if we are on the main portfolio page.
+The else portion loads when a single portfolio project is loaded.
+{% endcomment %}
+{% if page == 'portfolio-docs' %}
+<div class="p-top-100"></div>
+{% include "Snippets/_gallery.html" %}
+
+{% else %}
+{% include 'Snippets/_project-details.html' %}
+
+{% if photos %}
+{% include 'Snippets/_project-images.html' %}
+{% endif %}
+
+{% if colors %}
+{% include 'Snippets/_project-colors.html' %}
+{% endif %}
+
+{% if audios %}
+{% include 'Snippets/_project-audio.html' %}
+{% endif %}
+
+{% endif %}
+{% endblock %}
+
+
+
+
+{% block js %}
+<script src="{% static 'js/galeria.min.js' %}"></script>
+{% include 'Snippets/_highlightjs.html' %}
+
+{% if type == 'Album' %}
+<script src="{% static 'js/playAudio.js' %}"></script>
+{% endif %}
+
+{% endblock %}

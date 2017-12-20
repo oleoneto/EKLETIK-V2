@@ -51,6 +51,9 @@ pre {
   border-radius    : 4px;
   background-color : #F8F9FA!important;
   font-size        : 13px;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  overflow: auto;
 }
 
 code {
@@ -63,10 +66,14 @@ code {
 .markdown h2,
 .markdown h3 {
   padding-top : 25px;
+  overflow: auto;
+  word-wrap: normal;
 }
 
 .markdown p {
   padding-top : 10px;
+  overflow: auto;
+  word-wrap: normal;
 }
 
 .markdown p:first-of-type {
@@ -895,13 +902,27 @@ code {
   }
 }
 
-.small-artwork{
-  left: 10px;
-  bottom: 10px;
-  position: fixed;
-  height: 200px;
-  width: 200px;
-}
+#mini-viewer{
+    border-top-color: #333;
+    position: fixed;
+    bottom: 0px;
+  }
+  #small-artwork{
+    height: 70px;
+    width: 70px;
+  }
+  .track-info{
+    position: absolute;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .track-info p:nth-child(2){
+    margin-top: -15px;
+  }
+  .track-info p:last-of-type {
+    margin-top: -15px;
+  }
+
 
 .carousel-item img {
   opacity             : .5;
@@ -1114,10 +1135,13 @@ footer span {
   }
 }
 
+
+
 .form-row div {
   padding-top    : 10px;
   padding-bottom : 20px;
 }
+
 
 #equipa span {
   font-size   : 16px;
@@ -1214,9 +1238,63 @@ footer span {
   font-size : 5em;
 }
 
-.audio-item{
 
+
+.audio-item{  }
+
+.album-wrapper{
+  position: relative;
+  border: 2px solid #333;
+  width:  350px;
+  height: 350px;
+  /*margin-top: 50px;*/
+  /*margin-bottom: 50px;*/
+  /*margin-left: 0px;*/
+  background-color: #00FFAA;
 }
+.cover-art-wrapper{
+  height: 100%;
+  width: 100%;
+  background: #F8F9FA;
+  z-index: -1;
+  background-size: cover;
+}
+.play-button-wrapper button {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  padding: 10px;
+  background-color: #f5f0f8;
+  bottom: 0;
+  right: 0;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  border: none;
+}
+.album-wrapper .title{
+  position: absolute;
+  left: 25px;
+  bottom: 30px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.album-wrapper .artist{
+  position: absolute;
+  left: 25px;
+  bottom: 8px;
+  font-size: 18px;
+}
+.song-info-wrapper {
+  background-color: #333333;
+  height: 90px;
+  margin-top: -90px;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+
+
 
 
 

@@ -1,0 +1,20 @@
+{% extends 'masters/master.html' %}
+{% load static from staticfiles %}
+
+{% block title %}:: Docs {% if title %}:: {{ title }}{% elif author %}{{ author }}{% endif %}{% endblock %}
+{% block active-docs %}active{% endblock %}
+
+{% block docs %}
+{% if page == 'doc-author' %}
+{% include "snippets/_doc-author.html" %}
+{% elif page == 'doc-single' %}
+{% include 'snippets/_doc-single.html' %}
+{% else %}
+{% include 'snippets/_docs.html' %}
+{% endif %}
+{% endblock %}
+
+
+{% block js %}
+{% include 'snippets/_highlightjs.html' %}
+{% endblock %}

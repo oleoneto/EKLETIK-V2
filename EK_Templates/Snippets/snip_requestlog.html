@@ -1,9 +1,0 @@
-<!--
-sch: {{ request.scheme | upper }}
-ip: {{ request.META.HTTP_HOST }}
-cur: {{ request.build_absolute_uri }}
-ref: {{ request.META.HTTP_REFERER }}
-date: {% now 'r T' %}
-{#lang: {{ request.META.HTTP_ACCEPT_LANGUAGE }}#}
-agent: {{ request.META.HTTP_USER_AGENT }}
---->

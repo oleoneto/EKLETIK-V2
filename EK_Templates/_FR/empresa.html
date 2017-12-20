@@ -1,0 +1,130 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+
+{% block title %}:: Empresa{% endblock %}
+{% block active-company %} active {% endblock %}
+
+{% block hero %}
+{% include "Snippets/_header-split.html" %}
+{% endblock %}
+
+
+{% block services %}
+<!-- Services -->
+<div class="bg-light">
+<div class="container p-top-100 p-bottom-100 heading center">
+
+    <div class="p-bottom-60 col-md-8 m-auto">
+        <p><span>Experiência e Resiliência</span></p>
+        <h1>Ekletikamente</h1>
+        <p>É missão da Ekletik ajudar empresas e empreendedores a criar
+            e manter uma presença sólida e próspera na internet.
+            Rabiscar, desenvolver e levar à net. Simples como 3, 2, 1...</p>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/design.svg' %}" alt="">
+            <h3>Design</h3>
+            <p>Desde os rabiscos em papel aos protótipos digitais,
+                ajudámo-lo a dar forma às suas ideias e a materializar a sua visão.
+                <a href="/portfolio">Ver portfolio</a>.</p>
+        </div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/desenvolvimento.svg' %}" alt="">
+            <h3>Desenvolvimento</h3>
+            <p>Sejam projectos em idiomas humanos ou em linguagens de programação, iremos guiá-lo seguramente à consolidação do seu projecto.</p>
+        </div>
+        <div class="col-md-4 animated fadeInUp">
+            <img class="circle-service-image p-bottom-20" src="{%  static 'img/alojamento.svg' %}" alt="">
+            <h3>Alojamento</h3>
+            <p class="smiley-symbol">Tiramos a massada à gestão do seu negócio online. Mantenha o foco no que sabe fazer melhor e nós o ajudamos com o resto</p>
+        </div>
+    </div>
+    <div class="col-md-4 m-auto p-top-20 animated fadeInUp d-none">
+        <hr>
+        <p class="center">
+            Talento à sua espera. <a class="text-primary chevron-link" href="/empresa">Conheça-nos melhor</a>
+        </p>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+
+{% block team %}
+<!-- Team -->
+<div class="bg-white p-bottom-60">
+<div class="container">
+  <div class="p-top-60 p-bottom-60 heading animated fadeInUp">
+    <p><span>Maestros e Líderes</span></p>
+    <h1>Eklétikos</h1>
+  </div>
+  <div class="row" id="equipa">
+ {% for i in people %}
+    <div class="team-member animated fadeInUp level-1 {{ grid }}">
+        <img class="img-fluid" src="{{ i.photo.url }}" alt="{{ i.name }}" style="border-radius: 7px">
+        <h4>{{ i.name }}, <span>{{ i.position }}</span></h4>
+        <p>{{ i.bio | safe }}</p>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+</div>
+<!--end Team -->
+{% endblock %}
+
+
+
+{% block mission %}
+<!-- Mission -->
+<div class="blue">
+  <div class="container p-top-40 p-bottom-100">
+
+    <div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+      <p><span>Assim Pensamos</span></p>
+      <h1>Missão e Valores</h1>
+
+      <h3>A missão da Ekletik é ajudar empresas e empreendedores <br>
+        a criar e manter uma presença sólida e próspera na internet.</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 animated fadeInUp">
+          <h4>Lealdade</h4>
+          <p>Temos grande prazer em oferecer serviços de qualidade a todos os nossos clientes.
+          Se ao acaso não nos for possível dar solução ao seu pedido, teremos todo gosto em recomendá-lo
+          à agências da nossa confiança.</p>
+      </div>
+      <div class="col-md-4 animated fadeInUp">
+          <h4>Comunicação</h4>
+          <p>Convenhamos que, a título de discussão, nem sempre o cliente está com a razão.
+          Por isso, procuramos dialogar com o cliente a fim de sincronizarmos
+          as suas exigências e os nossos serviços.</p>
+      </div>
+      <div class="col-md-4 animated fadeInUp">
+          <h4>Pontualidade</h4>
+        <p>Nos habituámos a trabalhar sob pressão e sabemos como adiar a dita procrastinação.
+          No que tange aos projectos dos nossos clientes, nos esforçamos sempre
+          para que os ponteiros nos sejam favoráveis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Mission -->
+{% endblock %}
+
+
+{% block js %}
+<script src="{% static 'js/header.js' %}"></script>
+{% endblock %}
+
+
+{% comment %}
+<p>The 1<sup>st</sup> person to reply is never the one you really want to get an answer from.</p>
+<p>An all-round object-oriented language nerd <i>straight out d'jango</i>.</p>
+<p>P for performance, proactiveness, productivity, and procrastination.</p>
+{% endcomment %}

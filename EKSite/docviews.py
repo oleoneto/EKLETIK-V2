@@ -3,12 +3,10 @@ from .models import *
 
 
 
-
-
-def home(request):
+def docs(request):
     docs = Doc.objects.filter(status='p').filter(language='pt').order_by('-publishedDate')
-    return render(request, 'PT/docs.html', {
-        'page': 'doc-home',
+    return render(request, '_PT/docs.html', {
+        'page': 'doc-docs',
         'docs': docs,
         'doc_max': 100,
     })
@@ -25,9 +23,9 @@ def singleDoc(request, key):
         authorID = doc.author_id
         authorTotal = Doc.objects.filter(author=authorID).filter(status='p').count()
     except Doc.DoesNotExist:
-        raise Http404('404 - Doc not found')
+        raise Http404('404 - Doc not found', {'pageName': '404'})
 
-    return render(request, 'PT/docs.html', {
+    return render(request, '_PT/docs.html', {
         'page': 'doc-single',
         'doc': doc,
         'title': doc.title,
@@ -49,11 +47,10 @@ def singleDoc(request, key):
 def authorDoc(request, key):
     try:
         author = Person.objects.get(slug=key)
-        docs = Doc.objects.filter(author__slug=key).order_by('-publishedDate')
-        #docs = docs.filter(language='pt').filter(status='p')
+        docs = Doc.objects.filter(author__slug=key).order_by('-publishedDate').filter(status='p')
     except Doc.DoesNotExist:
         raise Http404('Author has no docs')
-    return render(request, 'PT/docs.html', {
+    return render(request, '_PT/docs.html', {
         'page': 'doc-author',
         'docs': docs,
         'author': author,
@@ -61,15 +58,6 @@ def authorDoc(request, key):
         'authorBio': author.author_bio,
         'authorGithub': author.github_username,
     })
-
-
-
-
-
-
-
-
-
 
 
 def django(request):
@@ -80,7 +68,7 @@ def django(request):
         doc = Doc.objects.get(slug=key)
     except Doc.DoesNotExist:
         raise Http404('Doc 404')
-    return render(request, 'PT/docs.html', {
+    return render(request, '_PT/docs.html', {
         'page': 'doc-single',
         'doc': doc,
         'title': doc.title,
@@ -100,6 +88,6 @@ def django(request):
 
 def homeEN(request):
     docs = Doc.objects.filter(status='p').filter(language='en').order_by('-publishedDate')
-    return render(request, 'EN/docSingle.html', {
+    return render(request, '_EN/docs.html', {
         'docs': docs,
     })

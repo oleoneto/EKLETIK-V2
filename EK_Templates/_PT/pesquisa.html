@@ -1,0 +1,65 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+{% block title %}:: Pesquisa :: {{ search }}{% endblock %}
+
+{% block searchresults %}
+<div class="container p-top-100 p-bottom-100">
+
+
+<div class="p-top-100 p-bottom-300">
+
+    <h2>Pesquisa: <code>{{ search }}</code></h2>
+    <div class="row p-top-40">
+
+    {#-----------------------#}
+
+    {% if docs %}
+        <div class="col-md-3">
+        <h2><i class="fa fa-files-o"></i></h2>
+        {% for i in docs %}
+            <a href="{% url 'doc' i.slug %}">{{ i }}</a>
+            <br>
+        {% endfor %}
+        </div>
+        {% endif %}
+    {#-----------------------#}
+
+    {% if projects %}
+        <div class="col-md-3">
+        <h2><i class="fa fa-pencil"></i></h2>
+        {% for i in projects %}
+            <a href="{% url 'project' i.slug %}">{{ i }}</a>
+            <br>
+        {% endfor %}
+        </div>
+        {% endif %}
+    {#-----------------------#}
+
+    {% if people %}
+        <div class="col-md-3">
+        <h3><i class="fa fa-users"></i></h3>
+            {% for i in people %}
+                <a href="{% url 'docAuthor' i.slug %}">{{ i }}</a><br>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+
+    {% if not total %}
+        <div class="col-md-12">
+        <h2>Nada corresponde à sua pesquisa.</h2>
+        </div>
+    {% endif %}
+
+
+    </div>
+    </div>
+
+    <hr>
+    <p class="">Obrigado por utilizar este serviço. Clique para voltar à <a href="{% url 'docs' %}"><code>página inicial</code></a>.</p>
+    <hr>
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,54 @@
+{% extends 'labs/labs.html' %}
+{% load static from staticfiles %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/spotify.css' %}">
+{% endblock %}
+
+
+{% block extras %}
+
+
+    <!-- Music -->
+  <div id="section-music" class="heading p-top-100 p-bottom-100">
+    <div class="container">
+      <p><span>Music for the mind</span></p>
+      <h1>Musically.</h1>
+      <div class="row p-top-40">
+
+      {% for audio in audios %}
+        <div class="col-md-4 col-sm-12">
+          <div class="album-wrapper">
+            <div class="cover-art-wrapper">
+              <img src="{{ audio.album.images.0.url }}" alt="{{ audio.name }} by {{ audio.artists.0.name }}" class="img-fluid" id="image-{{ forloop.counter }}">
+            </div>
+            <button class="play-button-wrapper" onclick="PlayTrack(this.id)" id="b{{ forloop.counter }}">
+            <i class="fa fa-play"></i>
+            <audio class="audio-item" src="{{ audio.preview_url }}" id="song-b{{ forloop.counter }}" onended="ProcessEndedTrack(this)">
+          </button>
+          </div>
+        <div class="hidden-info">
+            <p id="title-b{{ forloop.counter }}">{{ audio.name }}</p>
+            <p id="album-b{{ forloop.counter }}">{{ audio.album.name }}</p>
+            <p id="artist-b{{ forloop.counter }}">{{ audio.artists.0.name }}</p>
+        </div>
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+  </div>
+  <!-- end Music -->
+
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block js %}
+<script src="{% static 'js/spotify.js' %}"></script>
+{% endblock %}

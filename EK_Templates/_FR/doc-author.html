@@ -1,0 +1,74 @@
+{% extends 'Masters/master.html' %}
+{% load static from staticfiles %}
+
+{% block active-docs %}active{% endblock %}
+
+
+{% block docs %}
+  <div class="container p-top-100 p-bottom-60 blog-section">
+
+    <div class="p-top-60 p-bottom-40">
+      <p><span>{{ date }} | {{ language }} </span></p>
+      <h1>{{ title }}</h1>
+      <div class="blog-author">
+        <img class="img-fluid" src="{{ authorPhoto }}" alt="{{ author }}">
+        <p class="blog-author-name">
+            Escrito por <a target="_blank" href="https://github.com/{{ authorGithub }}">{{ author }}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row blog-content">
+      <div class="col-md-9 col-sm-12 col-xs-12">
+        <div class="markdown">{{ content }}</div>
+      </div>
+
+    <div class="col-md-3">
+    <h4 class="p-bottom-20">Artigos recentes</h4>
+
+    {% for i in relateddocs %}
+        {% if i.title != title %}
+        {% if forloop.counter <= 7 %}
+            <a href="{% url 'doc' i.slug %}">
+            <h4>{{ i.title }}</h4>
+            </a>
+            {% if i.summary %}
+            <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}">[...]</a></p>
+            {% else %}
+            <p>{{ i.content | slice:'80' }} <a href="{% url 'doc' i.slug %}">[...]</a></p>
+            {% endif %}
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+
+
+    </div>
+
+  </div>
+
+
+    <div class="container p-bottom-60">
+    <hr>
+    <div class="blog-author-bio">
+        <h3>Nota editorial</h3>
+        <p>{{ authorBio | safe }}</p>
+
+    </div>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min.js"></script>
+<!-- Markdown Generator -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".markdown").each(function () {
+            var raw_content = $(this).text()
+            var marked_content = marked(raw_content)
+            $(this).html(marked_content)
+        })
+    })
+</script>
+{% endblock %}
