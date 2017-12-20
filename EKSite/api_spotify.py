@@ -38,26 +38,25 @@ def BuildTracks():
     if not data:
         data = requests.get(alt).json()
 
-    size = len(data['items'])
+    try:
+        size = len(data['items'])
+    except KeyError:
+        size = 0
 
-    # for i in range(size):
-    #     audio = data['items'][i]['track']
-    #     audio['name'] = audio['name'].replace("(Ao Vivo)", "")
-    #     audio['name'] = audio['name'].replace("Live", "")
-    #     audio['name'] = audio['name'].replace("(Faixa Bônus)", "")
-    #     AUDIOS.append(audio)
-    #     PrintTracks(AUDIOS, i)
+    for i in range(size):
+        audio = data['items'][i]['track']
+        audio['name'] = audio['name'].replace("(Ao Vivo)", "")
+        audio['name'] = audio['name'].replace("Live", "")
+        audio['name'] = audio['name'].replace("(Faixa Bônus)", "")
+        AUDIOS.append(audio)
+        PrintTracks(AUDIOS, i)
     return AUDIOS
 
 # ----------------------------
 
 
 def main():
-    # BuildTracks()
-    data = requests.get(
-        alt,
-        verify=True,
-    ).json()
+    BuildTracks()
     variable = 1
 
 

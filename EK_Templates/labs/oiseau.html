@@ -1,91 +1,54 @@
 {% extends 'labs/labs.html' %}
 {% load static from staticfiles %}
 
-{% block extras %}
-<div class="container p-top-100 p-bottom-40 heading">
-    <h1 id="artistHeader" class="mainTitle">Artist's Name</h1>
-    <h3 id="albumHeader" class="subTitle">Album Title</h3>
-</div>
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/spotify.css' %}">
+{% endblock %}
 
-<div class="container">
-<div class="row">
-    {% for audio in audios %}
-  <div class="col-md-4 p-bottom-20">
-    <div class="album-wrapper" id="item-{{ forloop.counter }}" onclick="HoverSong(this)" onmouseover="HoverSong(this)">
-      <div class="cover-art-wrapper" style="background-image: url({{ audio.album.images.0.url }})"></div>
-      <div class="song-info-wrapper">
-        <p class="title text-white" id="item-{{ forloop.counter }}-title">{% if audio.name.length_is >= 20 %}{{ audio.name | slice:"24" }}...{% else %}{{ audio.name }}{% endif %}</p>
-        <p class="artist text-white" id="item-{{ forloop.counter }}-artist">{{ audio.artists.0.name }}</p>
-        <p class="album d-none" id="item-{{ forloop.counter }}-album">{{ audio.album.name }}</p>
-      </div>
-      <div class="play-button-wrapper">
-        <button id="{{ forloop.counter }}" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
-            <audio id="faixa-{{ forloop.counter }}" class="audio" src="{{ audio.preview_url }}" onended="StopAudio(this.parentElement.id)"></audio>
-        </button>
+
+{% block extras %}
+
+
+    <!-- Music -->
+  <div id="section-music" class="heading p-top-100 p-bottom-100">
+    <div class="container">
+      <p><span>Music for the mind</span></p>
+      <h1>Musically.</h1>
+      <div class="row p-top-40">
+
+      {% for audio in audios %}
+        <div class="col-md-4 col-sm-12">
+          <div class="album-wrapper">
+            <div class="cover-art-wrapper">
+              <img src="{{ audio.album.images.0.url }}" alt="{{ audio.name }} by {{ audio.artists.0.name }}" class="img-fluid" id="image-{{ forloop.counter }}">
+            </div>
+            <button class="play-button-wrapper" onclick="PlayTrack(this.id)" id="b{{ forloop.counter }}">
+            <i class="fa fa-play"></i>
+            <audio class="audio-item" src="{{ audio.preview_url }}" id="song-b{{ forloop.counter }}" onended="ProcessEndedTrack(this)">
+          </button>
+          </div>
+        <div class="hidden-info">
+            <p id="title-b{{ forloop.counter }}">{{ audio.name }}</p>
+            <p id="album-b{{ forloop.counter }}">{{ audio.album.name }}</p>
+            <p id="artist-b{{ forloop.counter }}">{{ audio.artists.0.name }}</p>
+        </div>
+        </div>
+      {% endfor %}
+
       </div>
     </div>
   </div>
-    {% endfor %}
-</div>
-</div>
+  <!-- end Music -->
 
 
-<div class="container-fluid gray p-top-10 p-bottom-10" id="mini-viewer">
-    <div class="container">
-        <img src="" alt="" class="img-fluid fixed-img" id="small-artwork">
-        <div class="track-info">
-            <p id="mini-songHeader">Song Title</p>
-            <p id="mini-artistHeader">Artist's Name</p>
-            <p id="mini-albumHeader">Album Title</p>
-        </div>
-    </div>
-</div>
 {% endblock %}
+
+
+
+
+
+
 
 {% block js %}
 <script src="{% static 'js/spotify.js' %}"></script>
-<script src="{% static 'js/playAudio.js' %}"></script>
 {% endblock %}
-
-
-<div class="container p-bottom-100">
-    <div class="row">
-        <div class="col-md-3">
-            <img src="" alt="" class="img-fluid fixed-img" id="artwork">
-        </div>
-        <div class="col-md-9" id="mainTable">
-            <table class="sortable table table-sm table-hover">
-              <thead class="tableHead">
-                <tr>
-                  <th data-sort="name">Título</th>
-                  <th data-sort="name">Artista</th>
-                  <th class="d-none">Álbum</th>
-                  <th class="d-none">Duração</th>
-                  <th class="name">Áudio</th>
-                </tr>
-              </thead>
-
-              <tbody class="tableBody" id="songList">
-                {% for audio in audios %}
-                    {% if forloop.counter < max %}
-                <tr id="item-{{ forloop.counter }}" class="song" onclick="HoverSong(this)" onmouseover="HoverSong(this)">
-                  <td>{{ audio.name }}</td>
-                  <td>{{ audio.artists.0.name }}</td>
-                  <td class="d-none">{{ audio.album.name }}</td>
-                  <td class="d-none">{{ audio.duration_ms }}</td>
-                  <td>
-                    <button id="{{ forloop.counter }}" class="btn black fa fa-play" type="button" onclick="togglePlay(this.id)">
-                        <audio id="faixa-{{ forloop.counter }}" class="audio" src="{{ audio.preview_url }}" onended="StopAudio(this.parentElement.id)"></audio>
-                    </button>
-                  </td>
-                    <img src="{{ audio.album.images.0.url }}" class="d-none" id="album-item-{{ forloop.counter }}" alt="{{ audio.name }}">
-                </tr>
-                    {% endif %}
-                {% endfor %}
-              </tbody>
-            </table>
-{#        <p><span>Total: {{ total }}</span></p>#}
-        </div>
-    </div>
-{#    <img src="" class="small-artwork d-none" id="small-artwork" alt="{{ audio.name }}">#}
-</div>
