@@ -33,7 +33,7 @@ def experimentos(request):
 def musicplayer(request):
     audios = BuildTracks()
     total = 10
-    return render(request, 'labs/oiseau.html', {
+    return render(request, 'labs/spotify.html', {
         'page': 'oiseau',
         'audios': audios.__reversed__(),
         'total': total,
