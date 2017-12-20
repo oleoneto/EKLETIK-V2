@@ -1,4 +1,4 @@
-{% extends 'Masters/master.html' %}
+{% extends 'masters/master.html' %}
 {% load static from staticfiles %}
 
 {% block title %}:: Portfolio {% if page == 'portfolio-single' %}:: {{ title }}{% endif %}{% endblock %}
@@ -23,21 +23,21 @@ The else portion loads when a single portfolio project is loaded.
 {% endcomment %}
 {% if page == 'portfolio-docs' %}
 <div class="p-top-100"></div>
-{% include "Snippets/_gallery.html" %}
+{% include "snippets/_gallery.html" %}
 
 {% else %}
-{% include 'Snippets/_project-details.html' %}
+{% include 'snippets/_project-details.html' %}
 
 {% if photos %}
-{% include 'Snippets/_project-images.html' %}
+{% include 'snippets/_project-images.html' %}
 {% endif %}
 
 {% if colors %}
-{% include 'Snippets/_project-colors.html' %}
+{% include 'snippets/_project-colors.html' %}
 {% endif %}
 
 {% if audios %}
-{% include 'Snippets/_project-audio.html' %}
+{% include 'snippets/_project-audio.html' %}
 {% endif %}
 
 {% endif %}
@@ -48,7 +48,7 @@ The else portion loads when a single portfolio project is loaded.
 
 {% block js %}
 <script src="{% static 'js/galeria.min.js' %}"></script>
-{% include 'Snippets/_highlightjs.html' %}
+{% include 'snippets/_highlightjs.html' %}
 
 {% if type == 'Album' %}
 <script src="{% static 'js/playAudio.js' %}"></script>
