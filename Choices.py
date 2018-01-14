@@ -21,7 +21,7 @@ IDIOMAS = (
 
 TOPICS = (
     ('code', 'Coding'),
-    ('news', 'Notícias'),
+    ('NewsViewController', 'Notícias'),
     ('exp', 'Experimentos'),
     ('aulas', 'Aulas'),
 

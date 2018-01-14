@@ -1,0 +1,11 @@
+<!-- project {{ forloop.counter }} -->
+<a href="{% url 'project' project.slug %}" class="animated fadeInUp level-1 gallery-item {{ projectsCSSGrid }}">
+    <div>
+        <img class="img-fluid" src="{{ project.artwork.url }}" data-tags="{{ project.type }}" alt="{{ project.title }}">
+    </div>
+    <div class="project-overlay-info text-white display-none">
+        <p class="project-overlay-title">{{ project.title }}</p>
+        <p class="project-overlay-client">{{ project.client }}</p>
+    </div>
+</a>
+<!-- end project {{ forloop.counter }} -->

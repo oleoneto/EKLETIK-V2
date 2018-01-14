@@ -4,6 +4,14 @@ from __future__ import unicode_literals
 from django.http import HttpRequest, Http404, HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, logout, login
+from django.views.generic import (
+    TemplateView,
+    CreateView,
+    UpdateView,
+    ListView,
+    DeleteView,
+    DetailView)
+
 # import json, urllib, requests
 
 # REST Api Imports...

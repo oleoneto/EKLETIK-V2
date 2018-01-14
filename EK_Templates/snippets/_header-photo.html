@@ -1,13 +1,13 @@
 {% load static from staticfiles %}
 <!-- Hero -->
-<div class="jumbotron p-top-300 p-bottom-200 blue no-border-radius">
-    <div class="container">
-  <h1 class="display-3">#ekletik</h1>
-  <p class="lead promo-sub p-bottom-10">Criamos algorítmos e sistemas,
-      ao passo que também o ensinamos a pensar e a escrever como um programador.
+<div class="jumbotron top-300 bottom-200 border-radius-0 parallax" style="background-image: url({% static 'img/EKIllustration2.svg' %});">
+    <div class="container text-white">
+  <h1 class="display-3">Ekletik Studios</h1>
+  <p class="lead promo-sub bottom-10">Nos especializamos na criação de algorítmos e sistemas, ao passo que também
+      o ensinamos a pensar e a escrever como um programador.
   </p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="mailto:info@ekletik.com" role="button">Contacte-nos</a>
+    <a class="btn btn-outline-light" href="{% url 'company' %}" role="button">Conheça-nos melhor</a>
   </p>
     </div>
 </div>

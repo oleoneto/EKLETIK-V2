@@ -13,9 +13,9 @@
 {% block services %}
 <!-- Services -->
 <div class="bg-light">
-<div class="container p-top-100 p-bottom-100 heading center">
+<div class="container top-100 bottom-100 heading text-center">
 
-    <div class="p-bottom-60 col-md-8 m-auto">
+    <div class="bottom-60 col-md-8 m-auto">
         <p><span>Experiência e Resiliência</span></p>
         <h1>Ekletikamente</h1>
         <p>É missão da Ekletik ajudar empresas e empreendedores a criar
@@ -26,26 +26,26 @@
     <div class="row">
 
         <div class="col-md-4 animated fadeInUp">
-            <img class="circle-service-image p-bottom-20" src="{%  static 'img/design.svg' %}" alt="">
+            <img class="circle-service-image bottom-20" src="{%  static 'img/design.svg' %}" alt="">
             <h3>Design</h3>
             <p>Desde os rabiscos em papel aos protótipos digitais,
                 ajudámo-lo a dar forma às suas ideias e a materializar a sua visão.
                 <a href="/portfolio">Ver portfolio</a>.</p>
         </div>
         <div class="col-md-4 animated fadeInUp">
-            <img class="circle-service-image p-bottom-20" src="{%  static 'img/desenvolvimento.svg' %}" alt="">
+            <img class="circle-service-image bottom-20" src="{%  static 'img/desenvolvimento.svg' %}" alt="">
             <h3>Desenvolvimento</h3>
             <p>Sejam projectos em idiomas humanos ou em linguagens de programação, iremos guiá-lo seguramente à consolidação do seu projecto.</p>
         </div>
         <div class="col-md-4 animated fadeInUp">
-            <img class="circle-service-image p-bottom-20" src="{%  static 'img/alojamento.svg' %}" alt="">
+            <img class="circle-service-image bottom-20" src="{%  static 'img/alojamento.svg' %}" alt="">
             <h3>Alojamento</h3>
             <p class="smiley-symbol">Tiramos a massada à gestão do seu negócio online. Mantenha o foco no que sabe fazer melhor e nós o ajudamos com o resto</p>
         </div>
     </div>
-    <div class="col-md-4 m-auto p-top-20 animated fadeInUp d-none">
+    <div class="col-md-4 m-auto top-20 animated fadeInUp d-none">
         <hr>
-        <p class="center">
+        <p class="text-center">
             Talento à sua espera. <a class="text-primary chevron-link" href="/empresa">Conheça-nos melhor</a>
         </p>
     </div>
@@ -57,13 +57,13 @@
 
 {% block team %}
 <!-- Team -->
-<div class="bg-white p-bottom-60">
+<div class="bg-white bottom-60">
 <div class="container">
-  <div class="p-top-60 p-bottom-60 heading animated fadeInUp">
+  <div class="top-60 bottom-60 heading animated fadeInUp">
     <p><span>Maestros e Líderes</span></p>
     <h1>Eklétikos</h1>
   </div>
-  <div class="row" id="equipa">
+  <div class="row" id="team">
  {% for i in people %}
     <div class="team-member animated fadeInUp level-1 {{ grid }}">
         <img class="img-fluid" src="{{ i.photo.url }}" alt="{{ i.name }}" style="border-radius: 7px">
@@ -82,9 +82,9 @@
 {% block mission %}
 <!-- Mission -->
 <div class="blue">
-  <div class="container p-top-40 p-bottom-100">
+  <div class="container top-40 bottom-100">
 
-    <div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+    <div class="top-60 bottom-40 heading animated fadeInUp">
       <p><span>Assim Pensamos</span></p>
       <h1>Missão e Valores</h1>
 

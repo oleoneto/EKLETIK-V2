@@ -20,6 +20,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='doc',
             name='programmingLanguage',
-            field=models.CharField(choices=[('code', 'Coding'), ('news', 'Notícias'), ('exp', 'Experimentos'), ('aulas', 'Aulas'), ('rb', 'Ruby'), ('py', 'Python'), ('sh', 'ShellScript'), ('md', 'Markdown'), ('c', 'C'), ('cpp', 'C++'), ('csp', 'C#'), ('java', 'Java'), ('ru', 'Rust'), ('swift', 'Swift'), ('m', 'Objective-C'), ('html', 'HTML'), ('css', 'CSS'), ('js', 'JavaScript'), ('web', 'HTML, CSS, JavaScript'), ('node', 'NodeJS'), ('dj', 'Django'), ('rails', 'Ruby on Rails'), ('as', 'Apple Script'), ('r', 'R')], default='py', max_length=5),
+            field=models.CharField(choices=[('code', 'Coding'), ('NewsViewController', 'Notícias'), ('exp', 'Experimentos'), ('aulas', 'Aulas'), ('rb', 'Ruby'), ('py', 'Python'), ('sh', 'ShellScript'), ('md', 'Markdown'), ('c', 'C'), ('cpp', 'C++'), ('csp', 'C#'), ('java', 'Java'), ('ru', 'Rust'), ('swift', 'Swift'), ('m', 'Objective-C'), ('html', 'HTML'), ('css', 'CSS'), ('js', 'JavaScript'), ('web', 'HTML, CSS, JavaScript'), ('node', 'NodeJS'), ('dj', 'Django'), ('rails', 'Ruby on Rails'), ('as', 'Apple Script'), ('r', 'R')], default='py', max_length=5),
         ),
     ]

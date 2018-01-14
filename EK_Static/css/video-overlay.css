@@ -50,6 +50,6 @@
 .promo-lead{
     text-transform: lowercase;
 }
-.no-border-radius{
+.border-radius-0{
     border-radius: 0 !important;
 }

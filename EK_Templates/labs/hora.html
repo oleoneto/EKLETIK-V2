@@ -1,4 +1,4 @@
-{% extends 'labs/labs.html' %}
+{% extends 'labs/lab.html' %}
 {% load static from staticfiles %}
 {% block title %}:: Horas{% endblock %}
 
@@ -6,8 +6,8 @@
 {% block extras %}
 <!-- Clock -->
 <div class="">
-      <div class="container p-top-200 p-bottom-300">
-        <div class="p-top-100 p-bottom-60 heading text-center animated fadeInUp">
+      <div class="container top-200 bottom-300">
+        <div class="col-md-12 top-100 bottom-60 heading text-center animated fadeInUp">
           <h1 id="greeting" class="clockGreeting"></h1>
           <h4 id="clock" class="clock"></h4>
         </div>

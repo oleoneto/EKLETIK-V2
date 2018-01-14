@@ -1,7 +1,7 @@
 {% extends 'masters/master.html' %}
 {% load static from staticfiles %}
 
-{% block title %}:: Portfolio {% if page == 'portfolio-single' %}:: {{ title }}{% endif %}{% endblock %}
+{% block title %}:: Portfolio {% if page == 'portfolio-single' %}:: {{ project.title }}{% endif %}{% endblock %}
 {% block active-portfolio %}active{% endblock %}
 
 {% comment %}
@@ -9,36 +9,38 @@ This portion loads when viewing a single portfolio project
 {% endcomment %}
 
 {% block hero %}
-{% if page == 'portfolio-single' %}
+{% if page == 'PortfolioSingleViewController' %}
 <!-- port-single -->
-<div class="portfolio-cover p-top-200" style="background-image: url('{{ artwork }}');"></div>
+<div class="portfolio-cover top-200" style="background-image: url('{{ project.artwork.url }}');"></div>
 {% endif %}
 {% endblock %}
 
 
 {% block gallery %}
+
 {% comment %}
 This first block is loaded if we are on the main portfolio page.
 The else portion loads when a single portfolio project is loaded.
 {% endcomment %}
-{% if page == 'portfolio-docs' %}
-<div class="p-top-100"></div>
-{% include "snippets/_gallery.html" %}
+{% if page == 'PortfolioViewController' %}
+    {% include "snippets/_header-portfolio.html" %}
+    {% include "snippets/_gallery.html" %}
 
 {% else %}
-{% include 'snippets/_project-details.html' %}
 
-{% if photos %}
-{% include 'snippets/_project-images.html' %}
-{% endif %}
+    {% include 'snippets/_project-details.html' %}
 
-{% if colors %}
-{% include 'snippets/_project-colors.html' %}
-{% endif %}
+    {% if photos %}
+    {% include 'snippets/_project-images.html' %}
+    {% endif %}
 
-{% if audios %}
-{% include 'snippets/_project-audio.html' %}
-{% endif %}
+    {% if colors %}
+    {% include 'snippets/_project-colors.html' %}
+    {% endif %}
+
+    {% if audios %}
+    {% include 'snippets/_project-audio.html' %}
+    {% endif %}
 
 {% endif %}
 {% endblock %}

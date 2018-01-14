@@ -2,7 +2,7 @@
 
 EKLETIK URL Configuration
 Written by Leo Neto
-Updated on Sept 16, 2017
+Updated on January 4, 2018
 
 """
 
@@ -16,11 +16,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # Importing application views
-from EKSite import mainviews as site
-from EKSite import docviews as docs
-from EKSite import API as API
-from EKSite import searchviews as Search
-from EKSite import labviews as labs
+from EKSite import views_system as system
+from EKSite import views_api as API
+from EKSite import views_search as search
+from EKSite import views_labs as labs
+from EKSite import views
 
 # Importing REST API
 from rest_framework import routers, serializers, viewsets
@@ -29,56 +29,55 @@ from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     # Admin / Auth / Status Codes Views
-    url(r'^401', site.error_401, name='401'),
-    url(r'^403', site.error_403, name='403'),
-    url(r'^404', site.error_404, name='404'),
-    url(r'^405', site.error_405, name='405'),
-    url(r'^500', site.error_500, name='500'),
-    url(r'^admin.*', site.error_404),
-    url(r'^dash.*', site.error_404),
-    url(r'^wp.*', site.error_404),
-    url(r'^login.*', site.error_404),
+    url(r'^401', system.error_401, name='401'),
+    url(r'^403', system.error_403, name='403'),
+    url(r'^404', system.error_404, name='404'),
+    url(r'^405', system.error_405, name='405'),
+    url(r'^500', system.error_500, name='500'),
+    url(r'^admin.*', system.error_404),
+    url(r'^dash.*', system.error_404),
+    url(r'^wp.*', system.error_404),
+    url(r'^login.*', system.error_404),
     url(r'^i/sys/', admin.site.urls, name='sys'),
-
     url(r'^i/logout/$', logout, {'template_name': 'Masters/logout.html'}, name='logout'),
-    url(r'^i/login/$', site.userlogin, name='userlogin'),
-    url(r'^i/auth/$', site.userauth, name='userauth'),
+    url(r'^i/login/$', system.userlogin, name='userlogin'),
+    url(r'^i/auth/$', system.userauth, name='userauth'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
-    #url(r'^register/$', site.register, name='register'),
+    #url(r'^register/$', system.register, name='register'),
 
 
     # MAIN Views
-    url(r'^$', site.home, name='docs'),
-    url(r'^portfolio/(?P<key>\D+)', site.singleProject, name='project'),
-    url(r'^portfolio/', site.portfolio, name='portfolio'),
-    url(r'^empresa/', site.company, name='company'),
-    url(r'^contacto/', site.contact, name='contact'),
-    url(r'^message/', site.message, name='message'),
-    url(r'^eventmate/(?P<keyword>\D+)', labs.eventmate, name='eventmate'),
-    url(r'^eventmate/(?P<keyword>\d+)', labs.eventmate, name='eventmate'),
-    url(r'^eventmate', labs.eventmate, name='eventmate'),
-    url(r'^spotify/', labs.musicplayer),
-    url(r'^news/(?P<keyword>\D+)', site.news, name='news'),
-    url(r'^news/', site.news, name='news'),
+    url(r'^$', views.IndexViewController, name='home'),
+    url(r'^portfolio/(?P<slug>\D+)', views.PortfolioSingleViewController, name='project'),
+    url(r'^portfolio/', views.PortfolioViewController, name='portfolio'),
+    url(r'^empresa/', views.CompanyViewController, name='company'),
 
-    # SEARCH
-    url(r'^p/', Search.SearchResults, name='searchResults'),
+    url(r'^events/(?P<keyword>\D+)', labs.EventsViewController, name='events'),
+    url(r'^events/(?P<keyword>\d+)', labs.EventsViewController, name='events'),
+    url(r'^events/', labs.EventsViewController, name='events'),
+    url(r'^spotify/', labs.SpotifyViewController),
 
-    # MAIN Views English
-    url(r'^en/$', site.homeEN, name='homeEN'),
+    url(r'^news/(?P<keyword>\D+)', labs.NewsViewController, name='news'),
+    url(r'^news/', labs.NewsViewController, name='news'),
 
+    # SEARCH Views
+    url(r'^p/', search.SearchViewController, name='searchResults'),
+    url(r'^pesquisar|search', search.SearchViewController, name='search'),
 
     #----------
 
-    # DOCS / ARTICLES / BLOG Views
-    url(r'^docs/autor/(?P<key>\D+)', docs.authorDoc, name='docAuthor'),
-    url(r'^docs/(?P<key>\D+)', docs.singleDoc, name='doc'),
-    url(r'^docs/', docs.docs, name='docs'),
+    # DOCUMENTATION Views
+    url(r'^docs/autor/(?P<key>\D+)', views.DocAuthorViewController, name='docAuthor'),
+    url(r'^docs/(?P<slug>\D+)/edit', views.DocEditViewController, name="doc-edit"),
+    url(r'^docs/(?P<slug>\D+)', views.DocSingleViewController, name='doc'),
+    url(r'^docs/', views.DocGeneralViewController, name='docs'),
 
-    url(r'^blog/author/(?P<key>\D+)', docs.authorDoc, name='postAuthor'),
-    url(r'^blog/(?P<key>\D+)', docs.singleDoc, name='post'),
-    url(r'^blog/', docs.docs, name='posts'),
+    url(r'^post/create', views.DocCreateViewController, name='doc-create'),
+
+
+    url(r'^blog/author/(?P<key>\D+)', views.DocAuthorViewController, name='postAuthor'),
+    url(r'^blog/(?P<slug>\D+)', views.DocSingleViewController, name='post'),
+    url(r'^blog/', views.DocGeneralViewController, name='posts'),
 
     #----------
 
@@ -86,7 +85,6 @@ urlpatterns = [
     url(r'^api/docs/(?P<pk>\d+)', API.DocDetailAPIView.as_view()),
     url(r'^api/docs/(?P<slug>[\w-]+)', API.DocDetailAPIViewSlug.as_view()),
     url(r'^api/docs', API.DocListAPIView.as_view()),
-
 
     url(r'^api/pessoas/(?P<pk>\d+)', API.PersonDetailAPIView.as_view()),
     url(r'^api/pessoas/(?P<slug>\D+)', API.PersonDetailAPIViewSlug.as_view()),
@@ -106,25 +104,8 @@ urlpatterns = [
     url(r'^api/audios/(?P<pk>\d+)', API.AudioDetailAPIView.as_view()),
     url(r'^api/audios/', API.AudioListAPIView.as_view()),
 
-    #----------
 
-
-    # EXPERIMENT and LAB Views
-    url(r'^labs/relogio/', labs.horas, name="relogio"),
-    url(r'^labs/oiseau/', labs.musicplayer, name="musicplayer"),
-    url(r'^labs/radio/', labs.radio, name="radio"),
-    url(r'^labs/haricots/', labs.horas, name="haricots"),
-    url(r'^labs/morcovi/', labs.morcovii, name="morcovi"),
-    url(r'^labs/cartofi/', labs.horas, name="cartofi"),
-    url(r'^labs/bot/', labs.horas, name="bot"),
-    url(r'^labs/news/', labs.news, name='newslab'),
-    url(r'^labs/jax-audio/', labs.jax_audio, name='jax-audio'),
-    url(r'^labs/jax/', labs.jax, name='jax'),
-    url(r'^labs/', labs.experimentos, name="labs"),
-
-
-    #----------
-
+    #-----------------------------
     # These api endpoints are here for compatibility reasons.
     # Use main endpoints whenever possible...
     url(r'^api/blog/(?P<pk>\d+)', API.DocDetailAPIView.as_view()),
@@ -135,17 +116,31 @@ urlpatterns = [
     url(r'^api/projects', API.PortfolioProjectListAPIView.as_view()),
 
 
+    #-----------------------------
+    # LAB Views
+    url(r'^labs/relogio/', labs.ClockViewController, name="relogio"),
+    url(r'^labs/oiseau/', labs.SpotifyViewController, name="spotify"),
+    url(r'^labs/RadioViewController/', labs.RadioViewController, name="radio"),
+    url(r'^labs/haricots/', labs.ClockViewController, name="haricots"),
+    url(r'^labs/morcovi/', labs.MorcoviiViewController, name="morcovi"),
+    url(r'^labs/cartofi/', labs.ClockViewController, name="cartofi"),
+    url(r'^labs/bot/', labs.ClockViewController, name="bot"),
+    url(r'^labs/news/', labs.NewsViewController, name='newslab'),
+    url(r'^labs/audio/', labs.jax_audio, name='audio'),
+    url(r'^labs/jax/', labs.AjaxViewController, name='jax'),
+    url(r'^labs/', labs.LabViewController, name="labs"),
+
+
     # REDIRECT Views
-    url(r'^azinca', site.azinca),
-    url(r'^azinka', site.azinca),
-    url(r'^m8', site.meight),
-    url(r'^mate', site.meight),
-    url(r'^meight', site.meight),
-    url(r'^django', docs.django),
-    url(r'^felipe', site.felipe),
-    url(r'^paulo', site.paulo),
-    url(r'^leo', site.leo),
+    url(r'^azinca|azinka|azinco|azinc|azink', system.azinca),
+    url(r'^mate|m8|meight', system.meight),
+    url(r'^django', views.DocViewControllerForDjangoTutorial),
+    url(r'^felipe', system.felipe),
+    url(r'^paulo', system.paulo),
+    url(r'^leo', system.leo),
+    url(r'^git|github|bitbucket|source', system.source_control),
     #url(r'^', include(router.urls)),
+
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

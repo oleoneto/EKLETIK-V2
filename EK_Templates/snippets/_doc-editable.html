@@ -1,0 +1,19 @@
+{% load static from staticfiles %}
+<!-- single doc -->
+<div class="container top-100 bottom-60 blog-section">
+
+    <div class="top-60 bottom-40">
+      <p><span>{{ date }} | {{ language }} </span></p>
+      <h1 contenteditable="true">{{ doc.title }}</h1>
+    </div>
+
+    <form action="" method="" class="form-group">
+        <div class="blog-content">
+          <div class="col-md-9 col-sm-12 col-xs-12">
+            <article class="" contenteditable="true">{{ doc.content | linebreaks }}</article>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-blue">Guardar alterações</button>
+    </form>
+
+</div>

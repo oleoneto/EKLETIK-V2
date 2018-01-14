@@ -1,63 +1,26 @@
 {% load static from staticfiles %}
 <!-- single doc -->
-<div class="container p-top-100 p-bottom-60 blog-section">
+<div class="container top-100 bottom-60 blog-section">
 
-<div class="p-top-60 p-bottom-40">
-  <p><span>{{ date }} | {{ language }} </span></p>
-  <h1>{{ title }}</h1>
-  <div class="blog-author">
-    <img class="img-fluid" src="{{ authorPhoto }}" alt="{{ author }}">
-    <p class="blog-author-name">
-        Escrito por
-        {% if authorTotal %}
-        <a href="{% url 'docAuthor' authorSlug %}">{{ author }}</a>
-        {% else %}
-        <a target="_blank" href="https://github.com/{{ authorGithub }}">{{ author }}</a>
-        {% endif %}
-    </p>
-  </div>
-</div>
 
+{% include 'snippets/_doc-info.html' %}
+
+<!-- single doc -->
 <div class="row blog-content">
   <div class="col-md-9 col-sm-12 col-xs-12">
     {% if language == "Aulas" %}
-    <div id="aula">{{ content }}</div>
+    <div id="aula">{{ doc.content }}</div>
     {% else %}
-    <div class="markdown">{{ content }}</div>
+    <div class="markdown">{{ doc.content }}</div>
     {% endif %}
   </div>
 <!--end single doc -->
 
+{% include 'snippets/_doc-related.html' %}
 
-<!-- related docs -->
-<div class="col-md-3">
-<h3 class="p-bottom-20 heading">Artigos recentes</h3>
-{% for doc in relateddocs %}
-{% if doc.title != title %}
-{% if forloop.counter <= 10 %}
-    <a href="{% url 'doc' doc.slug %}"><h4>{{ doc.title }}</h4></a>
-{% if doc.summary %}
-    <p>{{ doc.summary }} <a href="{% url 'doc' doc.slug %}">[...]</a></p>
-{% else %}
-    <p>{{ doc.content | slice:'80' }} <a href="{% url 'doc' doc.slug %}">[...]</a></p>
-{% endif %}
-{% endif %}
-{% endif %}
-{% endfor %}
 </div>
 </div>
-</div>
-<!--end related docs -->
 
-
-{% if authorBio %}
-<!-- editorial note -->
-<div class="container p-bottom-60">
-<hr>
-<div class="blog-author-bio heading">
-    <h2>Nota editorial</h2>
-    <p>{{ authorBio | safe }}</p>
-</div>
-</div>
-<!-- end editorial note -->
+{% if doc.author.author_bio %}
+{% include 'snippets/_doc-editorial.html' %}
 {% endif %}

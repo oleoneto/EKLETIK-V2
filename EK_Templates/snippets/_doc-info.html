@@ -1,0 +1,19 @@
+<div class="top-60 bottom-40">
+  <p>
+      <span>{{ doc.publishedDate }} | {{ doc.get_programmingLanguage_display }}</span>
+  </p>
+  <h1>{{ doc.title }}</h1>
+  <div class="blog-author">
+    <img class="img-fluid" src="{{ doc.author.photo.url }}" alt="{{ doc.author.name }}">
+    <p class="blog-author-name">
+        Escrito por
+        {% if totalByAuthor > 1 %}
+        <a href="{% url 'docAuthor' doc.author.slug %}">{{ doc.author.name }}</a>
+        {% else %}
+        <a target="_blank" href="https://github.com/{{ doc.author.github_username }}">
+            {{ doc.author.name }}
+        </a>
+        {% endif %}
+    </p>
+  </div>
+</div>

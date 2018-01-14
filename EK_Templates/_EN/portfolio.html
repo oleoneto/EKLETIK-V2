@@ -11,7 +11,7 @@ This portion loads when viewing a single portfolio project
 {% block hero %}
 {% if page == 'portfolio-single' %}
 <!-- port-single -->
-<div class="portfolio-cover p-top-200" style="background-image: url('{{ artwork }}');"></div>
+<div class="portfolio-cover top-200" style="background-image: url('{{ artwork }}');"></div>
 {% endif %}
 {% endblock %}
 
@@ -21,8 +21,8 @@ This portion loads when viewing a single portfolio project
 This first block is loaded if we are on the main portfolio page.
 The else portion loads when a single portfolio project is loaded.
 {% endcomment %}
-{% if page == 'portfolio-docs' %}
-<div class="p-top-100"></div>
+{% if page == 'portfolio-DocGeneralViewController' %}
+<div class="top-100"></div>
 {% include "Snippets/_gallery.html" %}
 
 {% else %}

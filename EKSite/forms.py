@@ -7,8 +7,6 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
 
-
-
 class DocForm(forms.ModelForm):
     class Meta:
         model = Doc
@@ -20,17 +18,17 @@ class ContactForm(forms.Form):
     contact_firstname = forms.CharField(required=True)
     contact_lastname  = forms.CharField(required=True)
     contact_email = forms.EmailField(required=True)
+
     content = forms.CharField(
         required=True,
         widget=forms.Textarea
     )
 
+
 class MessageForm(forms.Form):
     class Meta:
         model = Message
         fields = ('sender', 'message', 'origin', 'subject')
-
-
 
 
 #______________________________

@@ -1,23 +1,20 @@
 {% load static from staticfiles %}
+
 <!-- Docs -->
-<div class="container p-top-40 p-bottom-100">
-    <div class="blog-section p-top-60 p-bottom-40">
+<div class="container top-40 bottom-100">
+
+    <div class="top-60 bottom-40">
         <p><span>Docs &amp; Nerdices</span></p>
         <h1>Docs.</h1>
     </div>
+
     <div class="row blog-section">
-    {% for i in docs %}
-        {% if forloop.counter <= doc_max %}
-      <div class="col-md-3">
-        <a href="{% url 'doc' i.slug %}"><h4>{{ i.title }}</h4></a>
-      {% if i.summary %}
-        <p>{{ i.summary }} <a href="{% url 'doc' i.slug %}">Ler mais</a></p>
-      {% else %}
-        <p>{{ i.content | slice:'75' }}... <a href="{% url 'doc' i.slug %}">Ler mais</a></p>
-      {% endif %}
-      </div>
-      {% endif %}
+    {% for doc in docsInPortuguese %}
+    {% if forloop.counter <= docMax %}
+        {% include 'snippets/_doc-preview.html' %}
+    {% endif %}
     {% endfor %}
     </div>
+
 </div>
 <!-- end Docs -->

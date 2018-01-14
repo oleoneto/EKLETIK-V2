@@ -1,4 +1,4 @@
-from ModelsLibraries import *
+from LibrariesForModels import *
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
@@ -32,16 +32,17 @@ class Person(models.Model):
         name = name.replace(" ", "-")
         return name
 
+    def docs_count(self):
+        return "Total number of posts"
+
+    def get_github(self):
+        return self.slug
+
+    def get_linkedin(self):
+        return self.slug
+
     def __str__(self):
         return self.name
-
-
-
-
-
-
-
-
 
 
 #_____________________________________
@@ -72,6 +73,7 @@ class PortfolioProject(models.Model):
     def get_author(self):
         return self.author.name
 
+
 #end Project
 
 
@@ -86,17 +88,19 @@ class PortfolioProject(models.Model):
 # This class can be featured alongside Project
 # When alongside Project, multiple instances of Color can be created in the admin panel.
 class Color(models.Model):
-    projectName = models.ForeignKey(PortfolioProject)
+    related_project = models.ForeignKey(PortfolioProject)
     hexColor = models.CharField(max_length=7)
 
-    def projectTitle(self):
-        return self.projectName.title
+    def project(self):
+        return self.related_project.title
 
-    def hex(self):
+    def hexvalue(self):
         return self.hexColor
 
     def __str__(self):
         return self.hexColor
+
+
 #end Color
 
 
@@ -106,18 +110,20 @@ class Color(models.Model):
 # Similar to Color, Photo can be featured alongside Project.
 # Multiple instances of Photo can also be created in the admin panel.
 class Photo(models.Model):
-    projectName = models.ForeignKey(PortfolioProject)
+    related_project = models.ForeignKey(PortfolioProject)
     photo = models.ImageField(upload_to='uploads/projects/', max_length=45)
 
-    def projectTitle(self):
-        return self.projectName.title
+    def project(self):
+        return self.related_project.title
+
+
 #end Photo
 
 
 
 #___________________________________________
 class Audio(models.Model):
-    project = models.ForeignKey(PortfolioProject)
+    related_project = models.ForeignKey(PortfolioProject)
     source = models.FileField(upload_to='uploads/audios/', max_length=60)
     number = models.IntegerField(blank=True)
     title = models.CharField(max_length=50, blank=False)
@@ -126,8 +132,8 @@ class Audio(models.Model):
     genre = models.CharField(max_length=15, blank=True)
     slug = models.SlugField(max_length=50, blank=True)
 
-    def related_project(self):
-        return self.project.title
+    def project(self):
+        return self.related_project.title
 
     def set_slug(self):
         slug = self.title.lower().replace(" ", "-")
@@ -141,6 +147,8 @@ class Audio(models.Model):
 
     def __str__(self):
         return self.title
+
+
 #end Audio
 
 

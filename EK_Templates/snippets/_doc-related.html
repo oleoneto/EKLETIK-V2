@@ -1,0 +1,25 @@
+<!-- related docs -->
+<div class="col-md-3">
+<h3 class="bottom-20 heading text-semibold">Artigos recentes</h3>
+
+{% for related in relateddocs %}
+{% if related.title != doc.title %}
+{% if forloop.counter <= 10 %}
+    <a href="{% url 'doc' related.slug %}">
+        <h4 class="text-semibold">{{ related.title }}</h4>
+    </a>
+{% if doc.summary %}
+    <p>{{ related.summary }}
+        <a href="{% url 'doc' related.slug %}">[...]</a>
+    </p>
+{% else %}
+    <p>{{ related.content | slice:'80' }}
+        <a href="{% url 'doc' related.slug %}">[...]</a>
+    </p>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+</div>
+<!--end related docs -->

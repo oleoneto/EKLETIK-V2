@@ -48,7 +48,7 @@ Date: October 16, 2017
     This section will display a div with information of the currently logged in user.
     {% endcomment %}
     {% if user.is_authenticated %}
-    <div class="fixed-top p-top-60" id="loggedIn"></div>
+    <div class="fixed-top top-60" id="loggedIn"></div>
     {% endif %}
 
     {% comment %}
@@ -56,7 +56,7 @@ Date: October 16, 2017
     {% endcomment %}
     {% block navbar %}
     <!-- navigation -->
-    <div class="nav-white-blue nav-border fixed-top {% if user.is_authenticated %}grey-border-bottom{% endif %}" id="navigation">
+    <div class="nav-white-blue nav-border fixed-top {% if request.user.is_authenticated %}logged-in{% endif %}" id="navigation">
         <nav class="container navbar navbar-expand-lg navbar-light">
             {# <a class="navbar-brand" href="/">Ekletik <span>Studios</span></a> #}
             <a href="/" class="navbar-brand">

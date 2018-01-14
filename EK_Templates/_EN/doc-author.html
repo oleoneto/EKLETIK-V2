@@ -5,9 +5,9 @@
 
 
 {% block docs %}
-  <div class="container p-top-100 p-bottom-60 blog-section">
+  <div class="container top-100 bottom-60 blog-section">
 
-    <div class="p-top-60 p-bottom-40">
+    <div class="top-60 bottom-40">
       <p><span>{{ date }} | {{ language }} </span></p>
       <h1>{{ title }}</h1>
       <div class="blog-author">
@@ -24,7 +24,7 @@
       </div>
 
     <div class="col-md-3">
-    <h4 class="p-bottom-20">Artigos recentes</h4>
+    <h4 class="bottom-20">Artigos recentes</h4>
 
     {% for i in relateddocs %}
         {% if i.title != title %}
@@ -48,7 +48,7 @@
   </div>
 
 
-    <div class="container p-bottom-60">
+    <div class="container bottom-60">
     <hr>
     <div class="blog-author-bio">
         <h3>Nota editorial</h3>

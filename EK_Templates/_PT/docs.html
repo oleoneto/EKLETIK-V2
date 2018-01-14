@@ -5,12 +5,16 @@
 {% block active-docs %}active{% endblock %}
 
 {% block docs %}
-{% if page == 'doc-author' %}
-{% include "snippets/_doc-author.html" %}
-{% elif page == 'doc-single' %}
-{% include 'snippets/_doc-single.html' %}
+{% if pageName == 'DocAuthorViewController' %}
+    {% include "snippets/_doc-author.html" %}
+{% elif pageName == 'DocSingleViewController' %}
+    {% include 'snippets/_doc-single.html' %}
+{% elif pageName == 'DocCreateViewController' %}
+    {% include 'snippets/_doc-create.html' %}
+{% elif pageName == 'DocEditViewController' %}
+    {% include 'snippets/_doc-editable.html' %}
 {% else %}
-{% include 'snippets/_docs.html' %}
+    {% include 'snippets/_docs.html' %}
 {% endif %}
 {% endblock %}
 

@@ -4,5 +4,5 @@ cur: {{ request.build_absolute_uri }}
 ref: {{ request.META.HTTP_REFERER }}
 date: {% now 'r T' %}
 agent: {{ request.META.HTTP_USER_AGENT }}
-code: {{ response.status_code }}
+user: {{ request.user }}
 --->

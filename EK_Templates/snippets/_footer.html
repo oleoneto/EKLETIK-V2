@@ -4,7 +4,7 @@
         <p class="footer-copy">Ekletik Studios</p>
         <p class="footer-menu">
             {% if user.is_authenticated %}
-            <a href="{% url 'logout' %}">Logged in as: {{ user.first_name | capfirst}}</a>
+            <a href="{% url 'logout' %}">Log out</a>
              {% endif %}
             <a href="{% url 'company' %}">Empresa</a>
             <a href="{% url 'portfolio' %}">Portfolio</a>

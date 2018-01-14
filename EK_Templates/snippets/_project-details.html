@@ -1,12 +1,12 @@
 {% load static from staticfiles %}
 <!-- project details -->
-<div class="gallery bg-white p-top-100 p-bottom-60">
+<div class="gallery bg-white top-100 bottom-60">
 <div class="container heading">
-  <div class="row p-top-20" id="ek-project">
-      <div class="col-md-12 p-bottom-20">
-           <p><span>{{ client }}</span></p>
-           <h1>{{ title }}</h1>
-           <article class="markdown">{{ description | safe }}</article>
+  <div class="row top-20" id="ek-project">
+      <div class="col-md-12 bottom-20">
+           <p><span>{{ project.client }}</span></p>
+           <h1>{{ project.title }}</h1>
+           <article class="markdown">{{ project.description | safe }}</article>
       </div>
   </div>
 <hr>

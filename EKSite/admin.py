@@ -1,3 +1,8 @@
+"""
+Written by Leo Neto
+Updated on January 4, 2018
+"""
+
 from django.contrib import admin
 from EKSite.models import *
 
@@ -9,13 +14,16 @@ def make_published(modeladmin, request, queryset):
     queryset.update(status='p')
 make_published.short_description = "Mark elements as published"
 
+
 def make_draft(modeladmin, request, queryset):
     queryset.update(status='d')
 make_draft.short_description = "Mark elements as draft"
 
+
 def make_featured(modeladmin, request, queryset):
     queryset.update(featured=True)
 make_featured.short_description = "Mark as featured content"
+
 
 def make_unfeatured(modeladmin, request, queryset):
     queryset.update(destaque=False)
@@ -50,15 +58,21 @@ class DocAdmin(admin.ModelAdmin):
                     'updatedDate','status']
     prepopulated_fields = {"slug": ("title",)}
     actions = [make_draft, make_published]
+    list_editable = ['status']
+
+
 
 
 # Person admin class featuring model actions
 class PersonAdmin(admin.ModelAdmin):
     ordering = ['name']
-    list_display = ['name', 'position', 'github_username']
+    list_display = ['name', 'position', 'github_username', 'status', 'board_member']
     prepopulated_fields = {"slug": ("name",)}
     actions = [make_published, make_draft]
     short_description = 'name'
+    list_editable = ['status', 'board_member']
+
+
 
 
 # Project admin class featuring the Color model and model actions
@@ -69,6 +83,9 @@ class PortfolioProjectAdmin(admin.ModelAdmin):
     actions = [make_featured, make_draft, make_published, make_unfeatured]
     inlines = [ColorInLine, PhotoInLine, AudioInLine]
     prepopulated_fields = {"slug": ("title",)}
+    list_editable = ['featured', 'status']
+
+
 
 
 class AudioAdmin(admin.ModelAdmin):
@@ -90,4 +107,4 @@ class AudioAdmin(admin.ModelAdmin):
 admin.site.site_header = "Ekletik Studios"
 admin.site.register(Doc, DocAdmin)
 admin.site.register(PortfolioProject, PortfolioProjectAdmin)
-# admin.site.register(Person,PersonAdmin)
+admin.site.register(Person,PersonAdmin)

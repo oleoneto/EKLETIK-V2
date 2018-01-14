@@ -1,18 +1,18 @@
 {% load static from staticfiles %}
 
 <!-- author docs -->
-<div class="container p-top-100 p-bottom-60 blog-section">
+<div class="container top-100 bottom-60 blog-section">
 <div class="blog-author">
     <img class="img-fluid" src="{{ authorPhoto }}" alt="{{ author }}">
     <h3 class="blog-author-name">
-        Docs por <a target="_blank" href="https://github.com/{{ authorGithub }}">{{ author }}</a>
+        Artigos escritos por <a target="_blank" href="https://github.com/{{ authorGithub }}">{{ author }}</a>
     </h3>
   </div>
 
 
 {% for doc in docs %}
 <!-- single doc -->
-<div class="p-top-60 p-bottom-40">
+<div class="top-20 bottom-40">
   <p><span>{{ doc.publishedDate }} | {{ doc.get_programmingLanguage_display }} </span></p>
   <h1>{{ doc.title }}</h1>
 </div>
@@ -29,7 +29,7 @@
 
 {% if authorBio %}
 <!-- editorial note -->
-<div class="container p-bottom-60">
+<div class="container bottom-60">
 <div class="blog-author-bio heading">
     <h2>Nota editorial</h2>
     <p>{{ authorBio | safe }}</p>

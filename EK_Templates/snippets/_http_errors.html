@@ -2,8 +2,8 @@
 
 {% block error %}
 <div class="raisin-black">
-<div class="container p-top-100 p-bottom-200">
-<div class="p-top-60 p-bottom-40 heading animated fadeInUp">
+<div class="container top-100 bottom-200">
+<div class="top-60 bottom-40 heading animated fadeInUp">
 
 {% if pageName == '403' %}
   <p><span>Acesso Negado</span></p>
@@ -44,7 +44,7 @@
 
 {% if docs %}
 <hr>
-<p class="heading p-top-10 p-bottom-100">
+<p class="heading top-10 bottom-100">
 <span>Docs Recentes</span>
 </p>
 <div class="row">
@@ -54,10 +54,10 @@
   <a href="{% url 'doc' i.slug %}" class=""><h4>{{ i.title }}</h4></a>
   {% if i.summary %}
       <p>{{ i.summary }} </p>
-      <p><a href="{% url 'doc' i.slug %}" class="underlined">Ler mais.</a></p>
+      <p><a href="{% url 'doc' i.slug %}" class="text-underlined">Ler mais.</a></p>
   {% else %}
     <p>{{ i.content | slice:'100' }}...</p><br>
-    <p><a href="{% url 'doc' i.slug %}" class="underlined">Ler mais.</a></p>
+    <p><a href="{% url 'doc' i.slug %}" class="text-underlined">Ler mais.</a></p>
   {% endif %}
 </div>
 {% endif %}

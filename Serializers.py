@@ -13,7 +13,7 @@ from EKSite.models import *
 class ColorSerializer(ModelSerializer):
     class Meta:
         model = Color
-        fields = ('projectTitle','hexColor',)
+        fields = ('project','hexvalue',)
 #end ColorSerializer
 
 
@@ -21,7 +21,7 @@ class ColorSerializer(ModelSerializer):
 class AudioSerializer(ModelSerializer):
     class Meta:
         model = Audio
-        fields = ('id', 'title', 'related_project', 'source', 'slug')
+        fields = ('id', 'title', 'project', 'source', 'slug')
 #end AudioSerializer
 
 

@@ -14,16 +14,16 @@
     background-color: #00FFAA;
     box-shadow: 3px 4px rgba(157,180,192, 0.4);
 }
-.cover-art-wrapper{
+.album-cover-wrapper{
     background: #F8F9FA;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.cover-art-wrapper > img {
+.album-cover-wrapper > img {
     /*height: 100%;*/
     /*width: 100%;*/
 }
-.song-info-wrapper {
+.alum-song-info {
     display: none;
     background-blend-mode: multiply;
     border: 1px solid #EEE;
@@ -45,7 +45,7 @@
     bottom: 1px;
     font-size: 100%;
 }
-.play-button-wrapper {
+.album-play-button {
     position: absolute;
     height: 50px;
     width: 50px;

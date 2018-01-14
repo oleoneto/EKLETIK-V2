@@ -2,7 +2,7 @@
 Django settings for EKLETIK project.
 Using Django 1.11
 Project by Leo Neto
-Updated on November 15, 2017
+Updated on December 28, 2017
 """
 
 import os
@@ -10,10 +10,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'gh76p)=@^*8+3(n3mu1empzhc3nr8#g%jzuu_e=f!r7j0^t#os'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1', 'localhost' ,'.localtunnel.me',]
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost' ,'.localtunnel.me', 'io']
 else:
     ALLOWED_HOSTS = ['.ekletik.com',]
 

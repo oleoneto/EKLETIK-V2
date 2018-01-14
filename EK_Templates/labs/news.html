@@ -1,20 +1,20 @@
-{% extends 'labs/labs.html' %}
+{% extends 'labs/lab.html' %}
 {% load static from staticfiles %}
 
 {% block extras %}
 
-<div class="container p-top-100">
+<div class="container top-100">
     <div id="news">
-    <div class="p-top-60 p-bottom-40">
+    <div class="top-60 bottom-40">
     <div class="blog-content">
         {% for article in articles %}
-            <div class="col-md-9 mr-auto p-bottom-40">
+            <div class="col-md-9 bottom-40">
                 <p><span>{{ article.source.id }}</span></p>
                 <a href="{{ article.url }}" target="_blank">
-                    <h1 class="p-bottom-10">{{ article.title }}</h1>
+                    <h1 class="bottom-10">{{ article.title }}</h1>
                 </a>
                 <img class="img-fluid" src="{{ article.urlToImage }}">
-                <div class="p-top-10 p-bottom-10">{{ article.description }}</div>
+                <div class="top-10 bottom-10">{{ article.description }}</div>
             </div>
         {% endfor %}
     </div>

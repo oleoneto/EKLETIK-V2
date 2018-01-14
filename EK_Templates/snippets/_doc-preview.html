@@ -1,0 +1,8 @@
+<div class="blog-card card padding-0 {{ docsCSS }} border-radius-0">
+  <div class="card-body">
+    <h5 class="card-title text-semibold">{{ doc.title }}</h5>
+    <h6 class="card-subtitle mb-2">{{ doc.publishedDate }}</h6>
+    <p class="card-text">{{ doc.summary }}</p>
+    <a href="{% url 'doc' doc.slug %}" class="card-link">Continue a ler</a>
+  </div>
+</div>

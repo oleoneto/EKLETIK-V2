@@ -2,22 +2,22 @@
 {% load static from staticfiles %}
 
 {% block extras %}
-<div class="container p-top-100">
+<div class="container top-100">
 
     <div class="row">
-    <div id="news" class="col-md-8">
+    <div id="news" class="col-md-9">
     <div class="blog-content">
         {% for article in articles %}
-            <div id="article-{{ forloop.counter }}" class="p-bottom-20">
+            <!-- article #{{ forloop.counter }}-->
+            <div id="article-{{ forloop.counter }}" class="bottom-20">
                 <p><span>{{ article.source.id }}</span></p>
                 <a href="{{ article.url }}" target="_blank">
-                    <h1 class="p-bottom-10">{{ article.title }}</h1>
-                </a>
-                {% if article.urlToImage %}
-                <img class="img-fluid" src="{{ article.urlToImage }}">
-                {% endif %}
-                <div class="p-top-10 p-bottom-10">{{ article.description }}</div>
+                    <h1 class="bottom-10">{{ article.title }}</h1>
+                </a>{% if article.urlToImage %}
+                <img class="img-fluid" src="{{ article.urlToImage }}">{% endif %}
+                <div class="top-10 bottom-10">{{ article.description }}</div>
             </div>
+            <!-- end of article #{{ forloop.counter }}-->
         {% endfor %}
     </div>
     </div>
